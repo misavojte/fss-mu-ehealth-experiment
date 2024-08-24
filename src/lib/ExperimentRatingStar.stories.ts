@@ -5,7 +5,12 @@ import ExperimentRatingStar from './ExperimentRatingStar.svelte';
 const meta = {
 	title: 'Experiment/ExperimentRatingStar',
 	component: ExperimentRatingStar,
-	tags: ['autodocs']
+	tags: ['autodocs'],
+	argTypes: {
+		starBackgroundColor: { control: 'color' },
+		starFillColor: { control: 'color' },
+		starOutlineColor: { control: 'color' }
+	}
 } satisfies Meta<ExperimentRatingStar>;
 
 export default meta;

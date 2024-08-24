@@ -4,8 +4,26 @@
 	export let rating: number = 2.45;
 	export let maxRating: number = 5;
 	export let numStars: number = 5;
-	export let showRatingNumber: boolean = true;
-	export let showRatingNumberFractionDigits: number = 2;
+
+	/**
+	 * Non-reactive
+	 */
+	export let starBackgroundColor = '#d4d4d4';
+
+	/**
+	 * Non-reactive
+	 */
+	export let starFillColor = '#eab308';
+
+	/**
+	 * Non-reactive
+	 */
+	export let starOutlineColor = 'transparent';
+
+	/**
+	 * Non-reactive
+	 */
+	export let starOutlineWidth = '0px';
 
 	// Reactive statement for calculating fill rates
 	$: fillRates = Array(numStars)
@@ -31,13 +49,14 @@
 
 <div class="flex gap-4 items-center">
 	<div class="flex space-x-1">
-		{#each fillRates as fillRate, index}
-			<ExperimentRatingStar {fillRate} />
+		{#each fillRates as fillRate}
+			<ExperimentRatingStar
+				{fillRate}
+				{starBackgroundColor}
+				{starFillColor}
+				{starOutlineColor}
+				{starOutlineWidth}
+			/>
 		{/each}
 	</div>
-	{#if showRatingNumber}
-		<div class="font-thin text-lg text-neutral-700 leading-none mt-1">
-			{rating.toFixed(showRatingNumberFractionDigits)}
-		</div>
-	{/if}
 </div>
