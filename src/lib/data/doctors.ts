@@ -1,7 +1,7 @@
 /*
 Automatically generated stimuli data from the Excel sheet
 */
-const data = [
+export const data = [
 	{
 		pict_id: 'p_00a_f',
 		type: 'practice',
