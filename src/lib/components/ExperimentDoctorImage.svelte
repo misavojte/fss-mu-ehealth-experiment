@@ -22,7 +22,9 @@
 	$: pictureMargin = pictureCorrection * -50 + '%';
 </script>
 
-<div class="rounded-full w-32 h-32 bg-neutral-300 overflow-hidden relative">
+<div
+	class="rounded-full w-32 h-32 bg-neutral-300 overflow-hidden relative border border-neutral-300"
+>
 	{#await loadImagePromise then loadedImage}
 		<img
 			src={loadedImage.src}
