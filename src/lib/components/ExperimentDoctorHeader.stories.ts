@@ -1,12 +1,12 @@
 import type { Meta, StoryObj } from '@storybook/svelte';
-import ExperimentDoctor from './ExperimentDoctor.svelte';
+import ExperimentDoctorHeader from './ExperimentDoctorHeader.svelte';
 
 // More on how to set up stories at: https://storybook.js.org/docs/writing-stories
 const meta = {
-	title: 'Experiment/ExperimentDoctor',
-	component: ExperimentDoctor,
+	title: 'Experiment/ExperimentDoctorHeader',
+	component: ExperimentDoctorHeader,
 	tags: ['autodocs']
-} satisfies Meta<ExperimentDoctor>;
+} satisfies Meta<ExperimentDoctorHeader>;
 
 export default meta;
 type Story = StoryObj<typeof meta>;

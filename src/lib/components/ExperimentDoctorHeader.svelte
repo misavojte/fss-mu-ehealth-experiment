@@ -1,6 +1,9 @@
 <script lang="ts">
 	import ExperimentDoctorImage from './ExperimentDoctorImage.svelte';
-	import LayoutCard from './LayoutCard.svelte';
+
+	export let doctorName: string = 'MUDr. Eva Malá';
+
+	export let doctorAvgRating: number = 4.3;
 
 	export let pictureId: string;
 
@@ -17,8 +20,14 @@
 	export let pictureCorrection: number = 0.15;
 </script>
 
-<LayoutCard>
-	<div class="flex items-center justify-center">
-		<ExperimentDoctorImage {pictureId} {pictureBase} {picureExtension} {pictureCorrection} />
+<div class="flex gap-6 items-center">
+	<ExperimentDoctorImage {pictureId} {pictureBase} {picureExtension} {pictureCorrection} />
+	<div>
+		<div class="text-2xl font-bold text-neutral-700 mb-2">
+			{doctorName}
+		</div>
+		<div class="text-neutral-700">
+			Celkové hodnocení {doctorAvgRating}
+		</div>
 	</div>
-</LayoutCard>
+</div>

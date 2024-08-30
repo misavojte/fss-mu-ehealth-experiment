@@ -16,7 +16,8 @@
 
 	export let value: string = '';
 
-	export let question: string = 'Jak to hodnotíte?';
+	export let question: string =
+		'Jak moc je pravděpodobné, že byste si za svého ošetřujícího lékaře vybrali tohoto člověka?';
 </script>
 
 <LayoutCard>
