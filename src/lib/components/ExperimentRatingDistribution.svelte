@@ -6,14 +6,47 @@
 	export let numberOfThreeStars: number = 0;
 	export let numberOfFourStars: number = 22;
 	export let numberOfFiveStars: number = 48;
+
+	/**
+	 * Non-reactive
+	 */
+	export let starBackgroundColor = '#d4d4d4';
+
+	/**
+	 * Non-reactive
+	 */
+	export let starFillColor = '#eab308';
+
+	/**
+	 * Non-reactive
+	 */
+	export let starOutlineColor = 'transparent';
+
+	/**
+	 * Non-reactive
+	 */
+	export let starOutlineWidth = '1px';
+
+	let numberOfStarsDistribution: { [key: number]: number };
+	$: numberOfStarsDistribution = {
+		1: numberOfOneStars,
+		2: numberOfTwoStars,
+		3: numberOfThreeStars,
+		4: numberOfFourStars,
+		5: numberOfFiveStars
+	};
 </script>
 
 <div class="grid items-center text-neutral-700 w-fit gap-x-4 gap-y-2 rating-grid">
-	<ExperimentRating rating={5} /><span class="w-fit">{numberOfFiveStars} recenzí</span>
-	<ExperimentRating rating={4} /><span class="w-fit">{numberOfFourStars} recenzí</span>
-	<ExperimentRating rating={3} /><span class="w-fit">{numberOfThreeStars} recenzí</span>
-	<ExperimentRating rating={2} /><span class="w-fit">{numberOfTwoStars} recenzí</span>
-	<ExperimentRating rating={1} /><span class="w-fit">{numberOfOneStars} recenzí</span>
+	{#each [5, 4, 3, 2, 1] as i}
+		<ExperimentRating
+			rating={i}
+			{starBackgroundColor}
+			{starFillColor}
+			{starOutlineColor}
+			{starOutlineWidth}
+		/><span class="w-fit">{numberOfStarsDistribution[i]} recenzí</span>
+	{/each}
 </div>
 
 <style>

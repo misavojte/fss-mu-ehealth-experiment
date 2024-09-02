@@ -6,10 +6,10 @@
 
 <div class="flex items-center justify-center" style="background: {backgroundColor};">
 	<div class="grid grid-cols-2 gap-4 p-4">
-		<slot>
+		<slot name="left">
 			<LayoutCard />
 		</slot>
-		<slot>
+		<slot name="right">
 			<LayoutCard />
 		</slot>
 	</div>

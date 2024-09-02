@@ -1,6 +1,5 @@
 <script lang="ts">
 	import ExperimentDoctorHeader from './ExperimentDoctorHeader.svelte';
-	import ExperimentDoctorImage from './ExperimentDoctorImage.svelte';
 	import ExperimentRatingDistribution from './ExperimentRatingDistribution.svelte';
 	import LayoutCard from './LayoutCard.svelte';
 
@@ -23,12 +22,36 @@
 	export let numberOfThreeStars: number = 0;
 	export let numberOfFourStars: number = 22;
 	export let numberOfFiveStars: number = 48;
+
+	/**
+	 * Non-reactive
+	 */
+	export let starBackgroundColor = '#d4d4d4';
+
+	/**
+	 * Non-reactive
+	 */
+	export let starFillColor = '#eab308';
+
+	/**
+	 * Non-reactive
+	 */
+	export let starOutlineColor = 'transparent';
+
+	/**
+	 * Non-reactive
+	 */
+	export let starOutlineWidth = '1px';
 </script>
 
 <LayoutCard>
 	<div class="flex flex-col items-center justify-center gap-8">
 		<ExperimentDoctorHeader {pictureId} {pictureBase} {picureExtension} {pictureCorrection} />
 		<ExperimentRatingDistribution
+			{starBackgroundColor}
+			{starFillColor}
+			{starOutlineColor}
+			{starOutlineWidth}
 			{numberOfOneStars}
 			{numberOfTwoStars}
 			{numberOfThreeStars}

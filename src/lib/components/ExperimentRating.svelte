@@ -36,10 +36,12 @@
 		currentMaxRating: number,
 		currentNumStars: number
 	) {
+		console.log('starIndex', starIndex);
 		const starValue = (currentRating / currentMaxRating) * currentNumStars;
-		if (starIndex < starValue - 1) {
+		console.log('starValue', starValue);
+		if (starIndex + 1 <= starValue) {
 			return 1; // Fully filled star
-		} else if (starIndex > starValue) {
+		} else if (starIndex >= starValue) {
 			return 0; // No fill
 		} else {
 			return starValue - starIndex; // Partially filled star

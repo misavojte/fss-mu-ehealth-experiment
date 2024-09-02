@@ -7,11 +7,11 @@
 
 	export let options: string[] = ['1', '2', '3', '4', '5'];
 
-	export let labelMin: string = 'Vůbec';
+	export let labelMin: string = 'Určitě ne';
 
 	export let labelAvg: string = 'Ani tak, ani onak';
 
-	export let labelMax: string = 'Maximálně';
+	export let labelMax: string = 'Určitě ano';
 
 	export let value: string = '';
 
@@ -24,10 +24,10 @@
 	$: labelContainerMaxWidth = options.length * 4 + 4 + 'rem'; /* 4rem */
 </script>
 
-<div class="flex justify-center flex-col">
+<div class="flex justify-center flex-col w-full">
 	<ul class="flex gap-2 justify-center relative">
 		{#each options as option}
-			<li>
+			<li class="w-16 h-16 shrink aspect-square">
 				<input
 					type="radio"
 					id={id + '_' + option}
@@ -40,7 +40,7 @@
 				/>
 				<label
 					for={id + '_' + option}
-					class="select-none peer flex items-center justify-center w-16 h-16 border-2 border-gray-300 rounded-lg p-4 mb-4 cursor-pointer {value ===
+					class="select-none peer flex items-center justify-center border-2 border-gray-300 rounded-lg p-4 mb-4 cursor-pointer {value ===
 					option
 						? 'bg-blue-500 text-white'
 						: 'bg-white hover:bg-neutral-100'}"
