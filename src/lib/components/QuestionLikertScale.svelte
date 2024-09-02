@@ -18,7 +18,7 @@
 	const dispatch = createEventDispatcher();
 
 	const handleOptionChange = () => {
-		dispatch('input');
+		dispatch('input', value);
 	};
 
 	$: labelContainerMaxWidth = options.length * 4 + 4 + 'rem'; /* 4rem */
