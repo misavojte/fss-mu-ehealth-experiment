@@ -41,6 +41,16 @@
 	};
 </script>
 
+<svelte:head>
+	<title>Experiment</title>
+	{#each doctorManager.getDoctorObjectForPractice() as doctor}
+		<link rel="preload" href={pictureBase + '/' + doctor.pict_id + '.png'} as="image" />
+	{/each}
+	{#each doctorManager.getDoctorObjectForTrial() as doctor}
+		<link rel="preload" href="{pictureBase}/{doctor.pict_id}.png" as="image" />
+	{/each}
+</svelte:head>
+
 <main class="w-screen h-screen relative">
 	{#if state === 'start'}
 		<div
