@@ -1,6 +1,7 @@
 <script lang="ts">
 	import type { IDoctorObject } from '$lib/interfaces/IDoctor';
 	import ExperimentSlide from './ExperimentSlide.svelte';
+	import { fade } from 'svelte/transition';
 	import { createEventDispatcher } from 'svelte';
 
 	export let backgroundColor: string = '#0097b2';
@@ -50,7 +51,11 @@
 <div class="relative w-screen h-screen" style="background: {backgroundColor};">
 	{#each doctors as doctor, index (doctor.pict_id)}
 		{#if currentDoctorIndex === index}
-			<div class="absolute w-screen h-screen flex items-center justify-center">
+			<div
+				class="absolute w-screen h-screen flex items-center justify-center"
+				in:fade={{ duration: 200, delay: 500 }}
+				out:fade={{ duration: 200 }}
+			>
 				<ExperimentSlide
 					pictureId={doctor.pict_id}
 					numberOfFiveStars={doctor.star_5}

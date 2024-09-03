@@ -31,6 +31,34 @@ type RootTranslation = {
 		 */
 		text: string
 	}
+	start: {
+		/**
+		 * V​í​t​e​j​t​e​!
+		 */
+		title: string
+		/**
+		 * Z​a​č​í​t
+		 */
+		button: string
+		/**
+		 * L​o​r​e​m​ ​i​p​s​u​m​ ​d​o​l​o​r​ ​s​i​t​ ​a​m​e​t​,​ ​c​o​n​s​e​c​t​e​t​u​r​ ​a​d​i​p​i​s​c​i​n​g​ ​e​l​i​t​.​ ​N​u​l​l​a​m​ ​n​e​c​ ​p​u​r​u​s​ ​n​e​c​ ​n​u​n​c​ ​t​i​n​c​i​d​u​n​t​ ​a​l​i​q​u​a​m​.​ ​N​u​l​l​a​m​ ​n​e​c​ ​p​u​r​u​s​ ​n​e​c​ ​n​u​n​c​ ​t​i​n​c​i​d​u​n​t​ ​a​l​i​q​u​a​m​.
+		 */
+		text: string
+	}
+	intermezzo: {
+		/**
+		 * O​s​t​r​é​ ​t​e​s​t​o​v​á​n​í
+		 */
+		title: string
+		/**
+		 * P​o​k​r​a​č​o​v​a​t
+		 */
+		button: string
+		/**
+		 * L​o​r​e​m​ ​i​p​s​u​m​ ​d​o​l​o​r​ ​s​i​t​ ​a​m​e​t​,​ ​c​o​n​s​e​c​t​e​t​u​r​ ​a​d​i​p​i​s​c​i​n​g​ ​e​l​i​t​.​ ​N​u​l​l​a​m​ ​n​e​c​ ​p​u​r​u​s​ ​n​e​c​ ​n​u​n​c​ ​t​i​n​c​i​d​u​n​t​ ​a​l​i​q​u​a​m​.​ ​N​u​l​l​a​m​ ​n​e​c​ ​p​u​r​u​s​ ​n​e​c​ ​n​u​n​c​ ​t​i​n​c​i​d​u​n​t​ ​a​l​i​q​u​a​m​.
+		 */
+		text: string
+	}
 }
 
 export type TranslationFunctions = {
@@ -49,6 +77,34 @@ export type TranslationFunctions = {
 		title: () => LocalizedString
 		/**
 		 * Jste na konci testování. Děkujeme, že jste si našli čas a pomohli nám s testováním..
+		 */
+		text: () => LocalizedString
+	}
+	start: {
+		/**
+		 * Vítejte!
+		 */
+		title: () => LocalizedString
+		/**
+		 * Začít
+		 */
+		button: () => LocalizedString
+		/**
+		 * Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam nec purus nec nunc tincidunt aliquam. Nullam nec purus nec nunc tincidunt aliquam.
+		 */
+		text: () => LocalizedString
+	}
+	intermezzo: {
+		/**
+		 * Ostré testování
+		 */
+		title: () => LocalizedString
+		/**
+		 * Pokračovat
+		 */
+		button: () => LocalizedString
+		/**
+		 * Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam nec purus nec nunc tincidunt aliquam. Nullam nec purus nec nunc tincidunt aliquam.
 		 */
 		text: () => LocalizedString
 	}
