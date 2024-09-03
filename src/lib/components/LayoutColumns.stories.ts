@@ -5,10 +5,7 @@ import LayoutColumns from './LayoutColumns.svelte';
 const meta = {
 	title: 'Layout/LayoutColumns',
 	component: LayoutColumns,
-	tags: ['autodocs'],
-	argTypes: {
-		backgroundColor: { control: 'color' }
-	}
+	tags: ['autodocs']
 } satisfies Meta<LayoutColumns>;
 
 export default meta;

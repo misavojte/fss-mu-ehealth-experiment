@@ -23,6 +23,9 @@
 	export let numberOfFourStars: number = 22;
 	export let numberOfFiveStars: number = 48;
 
+	export let doctorName: string = 'MUDr. Eva Malá';
+	export let doctorAvgRating: number = 4.3;
+
 	/**
 	 * Non-reactive
 	 */
@@ -46,7 +49,14 @@
 
 <LayoutCard>
 	<div class="flex flex-col items-center justify-center gap-8">
-		<ExperimentDoctorHeader {pictureId} {pictureBase} {picureExtension} {pictureCorrection} />
+		<ExperimentDoctorHeader
+			{pictureId}
+			{pictureBase}
+			{picureExtension}
+			{pictureCorrection}
+			{doctorAvgRating}
+			{doctorName}
+		/>
 		<ExperimentRatingDistribution
 			{starBackgroundColor}
 			{starFillColor}

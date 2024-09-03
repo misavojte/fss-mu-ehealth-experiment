@@ -27,7 +27,7 @@
 			{doctorName}
 		</div>
 		<div class="text-neutral-700">
-			Celkové hodnocení {doctorAvgRating}
+			Celkové hodnocení {doctorAvgRating.toFixed(2)}
 		</div>
 	</div>
 </div>

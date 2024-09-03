@@ -23,7 +23,7 @@
 </script>
 
 <div
-	class="rounded-full w-32 h-32 bg-neutral-300 overflow-hidden relative border border-neutral-300"
+	class="rounded-full w-32 h-32 bg-neutral-100 overflow-hidden relative border border-neutral-300 shrink-0"
 >
 	{#await loadImagePromise then loadedImage}
 		<img
