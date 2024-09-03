@@ -24,7 +24,7 @@
 				type: 'img' as const
 			};
 		});
-		await preloadMedia(practiceDoctorsImages);
+		await preloadMedia(practiceDoctorsImages, 100);
 		state = 'practice';
 	};
 
@@ -36,20 +36,10 @@
 				type: 'img' as const
 			};
 		});
-		await preloadMedia(trialDoctorsImages);
+		await preloadMedia(trialDoctorsImages, 100);
 		state = 'experiment';
 	};
 </script>
-
-<svelte:head>
-	<title>Experiment</title>
-	{#each doctorManager.getDoctorObjectForPractice() as doctor}
-		<link rel="preload" href={pictureBase + doctor.pict_id + '.png'} as="image" />
-	{/each}
-	{#each doctorManager.getDoctorObjectForTrial() as doctor}
-		<link rel="preload" href="{pictureBase}{doctor.pict_id}.png" as="image" />
-	{/each}
-</svelte:head>
 
 <main class="w-screen h-screen relative">
 	{#if state === 'start'}
