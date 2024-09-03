@@ -4,14 +4,8 @@ import { DoctorManagerBase } from '$lib/services/DoctorManagerBase';
 
 const doctorManager = new DoctorManagerBase();
 
-async function loadDoctors() {
-	const practiceDoctors = await doctorManager.getDoctorObjectForPractice();
-	const trialDoctors = await doctorManager.getDoctorObjectForTrial();
-	return { practiceDoctors, trialDoctors };
-}
-
-// We wrap the setup in an immediately invoked async function to ensure it's ready before exporting the stories
-const { practiceDoctors, trialDoctors } = await loadDoctors();
+const practiceDoctors = doctorManager.getDoctorObjectForPractice();
+const trialDoctors = doctorManager.getDoctorObjectForTrial();
 
 const meta = {
 	title: 'Experiment/ExperimentSlides',

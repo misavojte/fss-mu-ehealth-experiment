@@ -12,7 +12,7 @@ export type IDoctorObject = {
 };
 
 export interface IDoctorManager {
-	getDoctorObject(id: string): Promise<IDoctorObject>;
-	getDoctorObjectForPractice(): Promise<IDoctorObject[]>;
-	getDoctorObjectForTrial(): Promise<IDoctorObject[]>;
+	getDoctorObject(id: string): IDoctorObject;
+	getDoctorObjectForPractice(): IDoctorObject[];
+	getDoctorObjectForTrial(): IDoctorObject[];
 }

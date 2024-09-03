@@ -6,30 +6,23 @@ import { data } from '$lib/data/doctors';
  * Using "data" as a data source
  */
 export class DoctorManagerBase implements IDoctorManager {
-	getDoctorObject(id: string): Promise<IDoctorObject> {
-		return new Promise((resolve, reject) => {
-			const doctor = data.find((doctor) => doctor.pict_id === id);
-			if (doctor) {
-				resolve(doctor);
-			} else {
-				reject(new Error('Doctor not found'));
-			}
-		});
+	getDoctorObject(id: string): IDoctorObject {
+		const doctor = data.find((doctor) => doctor.pict_id === id);
+		if (!doctor) {
+			throw new Error(`Doctor with id ${id} not found`);
+		}
+		return doctor;
 	}
 
-	getDoctorObjectForPractice(): Promise<IDoctorObject[]> {
-		return new Promise((resolve) => {
-			const doctors = data.filter((doctor) => doctor.type === 'practice');
-			resolve(doctors);
-		});
+	getDoctorObjectForPractice(): IDoctorObject[] {
+		const doctors = data.filter((doctor) => doctor.type === 'practice');
+		return doctors;
 	}
 
-	getDoctorObjectForTrial(): Promise<IDoctorObject[]> {
-		return new Promise((resolve) => {
-			const doctors = data.filter((doctor) => doctor.type === 'trial');
-			// randomize the order of the doctors
-			doctors.sort(() => Math.random() - 0.5);
-			resolve(doctors);
-		});
+	getDoctorObjectForTrial(): IDoctorObject[] {
+		const doctors = data.filter((doctor) => doctor.type === 'trial');
+		// randomize the order of the doctors
+		doctors.sort(() => Math.random() - 0.5);
+		return doctors;
 	}
 }
