@@ -11,7 +11,8 @@
     "lint": "prettier --check . && eslint .",
     "format": "prettier --write .",
     "storybook": "storybook dev -p 6006",
-    "build-storybook": "storybook build"
+    "build-storybook": "storybook build",
+    "typesafe-i18n": "typesafe-i18n"
   },
   "devDependencies": {
     "@chromatic-com/storybook": "^1.7.0",
@@ -51,5 +52,8 @@
     "extends": [
       "plugin:storybook/recommended"
     ]
+  },
+  "dependencies": {
+    "typesafe-i18n": "^5.26.2"
   }
 }
