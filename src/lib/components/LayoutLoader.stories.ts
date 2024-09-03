@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/svelte';
-import InstructionEnd from './InstructionEnd.svelte';
+import LayoutLoader from './LayoutLoader.svelte';
 
 import { setLocale } from '../../i18n/i18n-svelte';
 import { loadLocale } from '../../i18n/i18n-util.sync';
@@ -9,10 +9,10 @@ setLocale('cs');
 
 // More on how to set up stories at: https://storybook.js.org/docs/writing-stories
 const meta = {
-	title: 'Instruction/InstructionEnd',
-	component: InstructionEnd,
+	title: 'Layout/LayoutLoader',
+	component: LayoutLoader,
 	tags: ['autodocs']
-} satisfies Meta<InstructionEnd>;
+} satisfies Meta<LayoutLoader>;
 
 export default meta;
 type Story = StoryObj<typeof meta>;

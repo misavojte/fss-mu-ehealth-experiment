@@ -1,7 +1,12 @@
 import type { BaseTranslation } from '../i18n-types';
 
 const cs = {
-	HI: 'Hi {name:string}! Please leave a star if you like this project: https://github.com/ivanhofer/typesafe-i18n'
+	loading: 'Načítání',
+	pleaseWait: 'Prosím, počkejte na načtení všech dat',
+	end: {
+		title: 'Děkujeme za Vaši účast!',
+		text: 'Jste na konci testování. Děkujeme, že jste si našli čas a pomohli nám s testováním..'
+	}
 } satisfies BaseTranslation;
 
 export default cs;
