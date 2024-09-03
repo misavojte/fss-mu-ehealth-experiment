@@ -44,10 +44,10 @@
 <svelte:head>
 	<title>Experiment</title>
 	{#each doctorManager.getDoctorObjectForPractice() as doctor}
-		<link rel="preload" href={pictureBase + '/' + doctor.pict_id + '.png'} as="image" />
+		<link rel="preload" href={pictureBase + doctor.pict_id + '.png'} as="image" />
 	{/each}
 	{#each doctorManager.getDoctorObjectForTrial() as doctor}
-		<link rel="preload" href="{pictureBase}/{doctor.pict_id}.png" as="image" />
+		<link rel="preload" href="{pictureBase}{doctor.pict_id}.png" as="image" />
 	{/each}
 </svelte:head>
 

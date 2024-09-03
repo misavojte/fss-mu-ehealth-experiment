@@ -3,7 +3,7 @@
 </script>
 
 <div class="flex items-center justify-center">
-	<div class="grid grid-cols-2 gap-4 p-4">
+	<div class="grid grid-cols-2 gap-8 p-4">
 		<slot name="left">
 			<LayoutCard />
 		</slot>
