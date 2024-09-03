@@ -53,7 +53,7 @@
 		{#if currentDoctorIndex === index}
 			<div
 				class="absolute w-screen h-screen flex items-center justify-center"
-				in:fade={{ duration: 200, delay: 500 }}
+				in:fade={{ duration: 200, delay: 400 }}
 				out:fade={{ duration: 200 }}
 			>
 				<ExperimentSlide
