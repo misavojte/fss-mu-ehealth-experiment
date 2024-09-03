@@ -1,10 +1,11 @@
 <script lang="ts">
 	import LL from '../../i18n/i18n-svelte';
+	import LayoutHeading from './LayoutHeading.svelte';
 </script>
 
 <div class="flex justify-center items-center h-full w-full">
 	<div class="flex flex-col items-center">
-		<h1 class="text-3xl font-bold text-gray-700">{$LL.loading()}</h1>
+		<LayoutHeading>{$LL.loading()}</LayoutHeading>
 		<p class="text-lg text-gray-700 mt-2">{$LL.pleaseWait()}</p>
 		<div role="status" class="mt-6">
 			<svg
