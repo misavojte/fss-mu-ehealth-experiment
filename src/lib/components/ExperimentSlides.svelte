@@ -4,7 +4,7 @@
 	import { fade } from 'svelte/transition';
 	import { createEventDispatcher } from 'svelte';
 
-	export let backgroundColor: string = '#0097b2';
+	export let slideBackgroundColor: string = '#0097b2';
 
 	export let starBackgroundColor: string = '#fff';
 
@@ -48,7 +48,7 @@
 	};
 </script>
 
-<div class="relative w-screen h-screen" style="background: {backgroundColor};">
+<div class="relative w-screen h-screen" style="background: {slideBackgroundColor};">
 	{#each doctors as doctor, index (doctor.pict_id)}
 		{#if currentDoctorIndex === index}
 			<div
