@@ -16,6 +16,7 @@
 		"typesafe-i18n": "typesafe-i18n"
 	},
 	"devDependencies": {
+		"@473783/develex-core": "^0.1.2",
 		"@chromatic-com/storybook": "^1.7.0",
 		"@storybook/addon-essentials": "^8.2.9",
 		"@storybook/addon-interactions": "^8.2.9",
