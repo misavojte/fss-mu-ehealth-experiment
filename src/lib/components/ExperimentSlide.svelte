@@ -1,7 +1,10 @@
 <script lang="ts">
+	import { getCancellableAsync, waitForTimeoutCancellable } from '$lib/utils/waitForCondition';
+	import { onDestroy, onMount } from 'svelte';
 	import ExperimentDoctor from './ExperimentDoctor.svelte';
 	import ExperimentLikertScale from './ExperimentLikertScale.svelte';
-	import LayoutColumns from './LayoutColumns.svelte';
+	import LayoutCardAbsolute from './LayoutCardAbsolute.svelte';
+	import { fade, fly } from 'svelte/transition';
 
 	export let starBackgroundColor: string = '#fff';
 
@@ -33,26 +36,60 @@
 
 	export let doctorAvgRating: number = 4.3;
 	export let doctorName: string = 'MUDr. Eva Malá';
+
+	export let timeoutBeforeLikert: number = 5000;
+
+	export let width: number = 720;
+
+	export let heightOfDoctor: number = 420;
+	export let heightOfLikert: number = 300;
+	export let gapHeight: number = 30;
+
+	let isLikertVisible = false;
+
+	const abortController = new AbortController();
+	const logic = async () => {
+		await waitForTimeoutCancellable(timeoutBeforeLikert, abortController.signal);
+		isLikertVisible = true;
+	};
+
+	onMount(() => {
+		getCancellableAsync(logic, abortController.signal);
+	});
+
+	onDestroy(() => {
+		abortController.abort('Aborted');
+	});
 </script>
 
-<LayoutColumns>
-	<ExperimentDoctor
-		{pictureId}
-		{pictureBase}
-		{pictureCorrection}
-		{picureExtension}
-		{numberOfOneStars}
-		{numberOfTwoStars}
-		{numberOfThreeStars}
-		{numberOfFourStars}
-		{numberOfFiveStars}
-		{doctorAvgRating}
-		{doctorName}
-		{starBackgroundColor}
-		{starFillColor}
-		{starOutlineColor}
-		{starOutlineWidth}
-		slot="left"
-	/>
-	<ExperimentLikertScale on:input slot="right" />
-</LayoutColumns>
+<div
+	class="relative"
+	style="height: {heightOfDoctor + heightOfLikert + gapHeight}px; width: {width}px;"
+>
+	<LayoutCardAbsolute {width} height={heightOfDoctor} top={0} left={0}>
+		<ExperimentDoctor
+			{pictureId}
+			{pictureBase}
+			{pictureCorrection}
+			{picureExtension}
+			{numberOfOneStars}
+			{numberOfTwoStars}
+			{numberOfThreeStars}
+			{numberOfFourStars}
+			{numberOfFiveStars}
+			{doctorAvgRating}
+			{doctorName}
+			{starBackgroundColor}
+			{starFillColor}
+			{starOutlineColor}
+			{starOutlineWidth}
+		/>
+	</LayoutCardAbsolute>
+	{#if isLikertVisible}
+		<div in:fly={{ duration: 200, y: 50 }}>
+			<LayoutCardAbsolute {width} height={heightOfLikert} top={heightOfDoctor + gapHeight} left={0}>
+				<ExperimentLikertScale on:input />
+			</LayoutCardAbsolute>
+		</div>
+	{/if}
+</div>

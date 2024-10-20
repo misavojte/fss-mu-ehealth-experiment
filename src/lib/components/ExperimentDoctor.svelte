@@ -47,26 +47,24 @@
 	export let starOutlineWidth = '1px';
 </script>
 
-<LayoutCard>
-	<div class="flex flex-col items-center justify-center gap-8">
-		<ExperimentDoctorHeader
-			{pictureId}
-			{pictureBase}
-			{picureExtension}
-			{pictureCorrection}
-			{doctorAvgRating}
-			{doctorName}
-		/>
-		<ExperimentRatingDistribution
-			{starBackgroundColor}
-			{starFillColor}
-			{starOutlineColor}
-			{starOutlineWidth}
-			{numberOfOneStars}
-			{numberOfTwoStars}
-			{numberOfThreeStars}
-			{numberOfFourStars}
-			{numberOfFiveStars}
-		/>
-	</div>
-</LayoutCard>
+<div class="flex flex-col items-center justify-center gap-8">
+	<ExperimentDoctorHeader
+		{pictureId}
+		{pictureBase}
+		{picureExtension}
+		{pictureCorrection}
+		{doctorAvgRating}
+		{doctorName}
+	/>
+	<ExperimentRatingDistribution
+		{starBackgroundColor}
+		{starFillColor}
+		{starOutlineColor}
+		{starOutlineWidth}
+		{numberOfOneStars}
+		{numberOfTwoStars}
+		{numberOfThreeStars}
+		{numberOfFourStars}
+		{numberOfFiveStars}
+	/>
+</div>
