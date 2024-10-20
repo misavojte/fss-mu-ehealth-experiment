@@ -3,7 +3,7 @@
 	import { fade, fly } from 'svelte/transition';
 	import { createEventDispatcher, onMount } from 'svelte';
 	import type { IQuestionBattery } from '$lib/interfaces/IQuestion';
-	import InterfaceProgress from './InterfaceProgress.svelte';
+	import LayoutProgress from '$lib/components/LayoutProgress.svelte';
 	import QuestionTypeText from './QuestionTypeText.svelte';
 	import QuestionTypeInstruction from './QuestionTypeInstruction.svelte';
 	import LL from '../../i18n/i18n-svelte';
@@ -89,7 +89,7 @@
 	<div class="flex flex-col justify-center items-center row-span-2 w-full h-8">
 		{#if showProgress}
 			<div class="w-full flex justify-center items-center" transition:fade>
-				<InterfaceProgress currentValue={$progressStore} maxValue={questions.length} />
+				<LayoutProgress currentValue={$progressStore} maxValue={questions.length} />
 			</div>
 		{/if}
 	</div>

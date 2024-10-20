@@ -1,17 +1,19 @@
 <script lang="ts">
 	import ExperimentSlides from './ExperimentSlides.svelte';
-	import InstructionStart from './InstructionStart.svelte';
 	import InstructionIntermezzo from './InstructionIntermezzo.svelte';
 	import InstructionEnd from './InstructionEnd.svelte';
 	import LayoutLoader from './LayoutLoader.svelte';
 	import { DoctorManagerBase } from '$lib/services/DoctorManagerBase';
 	import { fade } from 'svelte/transition';
 	import { preloadMedia } from '$lib/utils/preloadMedia';
+	import AppQuestion from './AppQuestion.svelte';
 
 	export let state: 'start' | 'practice' | 'intermezzo' | 'experiment' | 'end' | 'loading' =
 		'start';
 
 	export let pictureBase: string;
+
+	export let questionsService: ITimestampQuestionService;
 
 	const doctorManager = new DoctorManagerBase();
 
@@ -47,7 +49,7 @@
 			transition:fade={{ duration: 200 }}
 			class="absolute w-screen h-screen flex items-center justify-center"
 		>
-			<InstructionStart on:next={handlePostStart} />
+			<AppQuestion {questionsService} on:finished={handlePostStart} />
 		</div>
 	{:else if state === 'practice'}
 		<div
