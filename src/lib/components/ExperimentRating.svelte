@@ -25,6 +25,8 @@
 	 */
 	export let starOutlineWidth = '0px';
 
+	export let scalingFactor = 1;
+
 	// Reactive statement for calculating fill rates
 	$: fillRates = Array(numStars)
 		.fill(0)
@@ -50,7 +52,7 @@
 </script>
 
 <div class="flex gap-4 items-center">
-	<div class="flex space-x-1">
+	<div class="flex space-x-1" style="transform: scale({scalingFactor})">
 		{#each fillRates as fillRate}
 			<ExperimentRatingStar
 				{fillRate}
