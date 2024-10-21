@@ -1,6 +1,5 @@
 <script lang="ts">
 	import QuestionLikertScale from './QuestionLikertScale.svelte';
-	import LayoutCard from './LayoutCard.svelte';
 
 	export let id: string = 'likert';
 

@@ -13,7 +13,7 @@
 <div class="flex gap-6 bg-white justify-start items-start">
 	<!-- Doctor Column -->
 	<div class="p-4 flex-shrink-0 size-64">
-		<h1 class="text-lg leading-snug font-bold mb-4">{name}</h1>
+		<h1 class="text-xl leading-none font-bold mb-4">{name}</h1>
 		<div class="mb-2 flex flex-col gap-2">
 			<ExperimentRating
 				{rating}
@@ -34,7 +34,7 @@
 	<!-- Review Column -->
 	<div>
 		{#each reviews as { title, rating, review }}
-			<ExperimentDoctorReview {title} {rating} {review} />
+			<ExperimentDoctorReview {title} {rating} {review} starFillColor={primaryColor} />
 		{/each}
 	</div>
 </div>
