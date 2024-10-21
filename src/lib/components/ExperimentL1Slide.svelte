@@ -42,7 +42,7 @@
 	export let width: number = 720;
 
 	export let heightOfDoctor: number = 420;
-	export let heightOfLikert: number = 300;
+	export let heightOfLikert: number = 280;
 	export let gapHeight: number = 30;
 
 	let isLikertVisible = false;

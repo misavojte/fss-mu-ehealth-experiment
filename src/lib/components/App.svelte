@@ -2,50 +2,65 @@
 	import ExperimentSlides from './ExperimentL1Slides.svelte';
 	import InstructionIntermezzo from './InstructionIntermezzo.svelte';
 	import InstructionEnd from './InstructionEnd.svelte';
-	import LayoutLoader from './LayoutLoader.svelte';
-	import { DoctorManagerBase } from '$lib/services/DoctorManagerBase';
 	import { fade } from 'svelte/transition';
-	import { preloadMedia } from '$lib/utils/preloadMedia';
 	import AppQuestion from './AppQuestion.svelte';
 	import type { ITimestampQuestionService } from '$lib/interfaces/IQuestion';
+	import AppConnect from './AppConnect.svelte';
+	import { GazeManager } from '@473783/develex-core';
+	import type { IConnectLogger } from '$lib/interfaces/IConnectLogger';
+	import type { IDoctorManager } from '$lib/interfaces/IDoctor';
+	import type { IGazeSaver } from '$lib/interfaces/IGazeSaver';
+	import { onDestroy, onMount, setContext } from 'svelte';
+	import type { AcceptedIntersect } from '$lib/database/repositories/Gaze.repository';
 
-	export let state: 'start' | 'practice' | 'intermezzo' | 'experiment' | 'end' | 'loading' =
-		'start';
+	export let state: 'connect' | 'start' | 'practice' | 'intermezzo' | 'experiment' | 'end' =
+		'connect';
 
 	export let pictureBase: string;
 
 	export let questionsService: ITimestampQuestionService;
+	export let connectLogger: IConnectLogger;
+	export let doctorManager: IDoctorManager;
+	export let gazeSaver: IGazeSaver;
 
-	const doctorManager = new DoctorManagerBase();
+	const gazeManager = new GazeManager();
 
 	const handlePostStart = async () => {
-		state = 'loading';
-		// preloadMedia is a function that preloads images
-		const practiceDoctorsImages = doctorManager.getDoctorObjectForPractice().map((doctor) => {
-			return {
-				src: pictureBase + '/' + doctor.pict_id + '.png',
-				type: 'img' as const
-			};
-		});
-		await preloadMedia(practiceDoctorsImages, 100);
 		state = 'practice';
 	};
 
 	const handlePostIntermezzo = async () => {
-		state = 'loading';
-		const trialDoctorsImages = doctorManager.getDoctorObjectForTrial().map((doctor) => {
-			return {
-				src: pictureBase + '/' + doctor.pict_id + '.png',
-				type: 'img' as const
-			};
-		});
-		await preloadMedia(trialDoctorsImages, 100);
 		state = 'experiment';
 	};
+
+	const handlePostConnect = async () => {
+		state = 'start';
+	};
+
+	const onIntersect = (entry: AcceptedIntersect) => {
+		gazeSaver.saveGazeInteraction(entry);
+	};
+
+	setContext('gazeManager', gazeManager);
+
+	onMount(() => {
+		gazeManager.on('intersect', onIntersect);
+	});
+
+	onDestroy(() => {
+		gazeManager.off('intersect', onIntersect);
+	});
 </script>
 
 <main class="w-screen h-screen relative">
-	{#if state === 'start'}
+	{#if state === 'connect'}
+		<div
+			transition:fade={{ duration: 200 }}
+			class="absolute w-screen h-screen flex items-center justify-center"
+		>
+			<AppConnect {connectLogger} {gazeManager} on:finished={handlePostConnect} />
+		</div>
+	{:else if state === 'start'}
 		<div
 			transition:fade={{ duration: 200 }}
 			class="absolute w-screen h-screen flex items-center justify-center"
@@ -91,13 +106,6 @@
 			class="absolute w-screen h-screen flex items-center justify-center"
 		>
 			<InstructionEnd />
-		</div>
-	{:else if state === 'loading'}
-		<div
-			transition:fade={{ duration: 200 }}
-			class="absolute w-screen h-screen flex items-center justify-center"
-		>
-			<LayoutLoader />
 		</div>
 	{/if}
 </main>
