@@ -1,5 +1,5 @@
 <script lang="ts">
-	import ExperimentSlides from './ExperimentSlides.svelte';
+	import ExperimentSlides from './ExperimentL1Slides.svelte';
 	import InstructionIntermezzo from './InstructionIntermezzo.svelte';
 	import InstructionEnd from './InstructionEnd.svelte';
 	import LayoutLoader from './LayoutLoader.svelte';
@@ -7,6 +7,7 @@
 	import { fade } from 'svelte/transition';
 	import { preloadMedia } from '$lib/utils/preloadMedia';
 	import AppQuestion from './AppQuestion.svelte';
+	import type { ITimestampQuestionService } from '$lib/interfaces/IQuestion';
 
 	export let state: 'start' | 'practice' | 'intermezzo' | 'experiment' | 'end' | 'loading' =
 		'start';

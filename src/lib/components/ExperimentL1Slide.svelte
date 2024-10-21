@@ -1,10 +1,10 @@
 <script lang="ts">
 	import { getCancellableAsync, waitForTimeoutCancellable } from '$lib/utils/waitForCondition';
 	import { onDestroy, onMount } from 'svelte';
-	import ExperimentDoctor from './ExperimentDoctor.svelte';
+	import ExperimentDoctor from './ExperimentL1Doctor.svelte';
 	import ExperimentLikertScale from './ExperimentLikertScale.svelte';
 	import LayoutCardAbsolute from './LayoutCardAbsolute.svelte';
-	import { fade, fly } from 'svelte/transition';
+	import { fly } from 'svelte/transition';
 
 	export let starBackgroundColor: string = '#fff';
 

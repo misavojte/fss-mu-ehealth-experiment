@@ -1,7 +1,6 @@
 <script lang="ts">
 	import ExperimentDoctorHeader from './ExperimentDoctorHeader.svelte';
 	import ExperimentRatingDistribution from './ExperimentRatingDistribution.svelte';
-	import LayoutCard from './LayoutCard.svelte';
 
 	export let pictureId: string;
 
