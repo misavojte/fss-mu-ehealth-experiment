@@ -8,6 +8,7 @@ export const doctorsL2 = [
     doctor_name: "MUDr. Marie Krejčí",
     rev_nr: "12",
     order: "fixed",
+    star_doc: "2024-02-04 00:00:00",
     reviews: [
     {
         nr: "0",
@@ -48,6 +49,7 @@ export const doctorsL2 = [
     doctor_name: "MUDr. Martin Svoboda",
     rev_nr: "57",
     order: "random",
+    star_doc: "2024-02-04 00:00:00",
     reviews: [
     {
         nr: "1",
@@ -88,6 +90,7 @@ export const doctorsL2 = [
     doctor_name: "MUDr. Milan Král",
     rev_nr: "8",
     order: "random",
+    star_doc: "2024-02-04 00:00:00",
     reviews: [
     {
         nr: "10",
@@ -128,6 +131,7 @@ export const doctorsL2 = [
     doctor_name: "MUDr. Jiří Novotný",
     rev_nr: "54",
     order: "random",
+    star_doc: "2024-02-04 00:00:00",
     reviews: [
     {
         nr: "11",
@@ -168,6 +172,7 @@ export const doctorsL2 = [
     doctor_name: "MUDr. David Černý",
     rev_nr: "9",
     order: "random",
+    star_doc: "2024-02-04 00:00:00",
     reviews: [
     {
         nr: "12",
@@ -208,6 +213,7 @@ export const doctorsL2 = [
     doctor_name: "MUDr. Eva Zemanová",
     rev_nr: "6",
     order: "random",
+    star_doc: "2024-02-04 00:00:00",
     reviews: [
     {
         nr: "13",
@@ -248,6 +254,7 @@ export const doctorsL2 = [
     doctor_name: "MUDr. Jana Horáková",
     rev_nr: "5",
     order: "random",
+    star_doc: "2024-02-04 00:00:00",
     reviews: [
     {
         nr: "14",
@@ -288,6 +295,7 @@ export const doctorsL2 = [
     doctor_name: "MUDr. Petr Vávra",
     rev_nr: "8",
     order: "random",
+    star_doc: "2024-02-04 00:00:00",
     reviews: [
     {
         nr: "15",
@@ -328,6 +336,7 @@ export const doctorsL2 = [
     doctor_name: "MUDr. Lucie Benešová",
     rev_nr: "8",
     order: "random",
+    star_doc: "2024-02-04 00:00:00",
     reviews: [
     {
         nr: "16",
@@ -368,6 +377,7 @@ export const doctorsL2 = [
     doctor_name: "MUDr. Anna Malá",
     rev_nr: "52",
     order: "random",
+    star_doc: "2024-02-04 00:00:00",
     reviews: [
     {
         nr: "2",
@@ -408,6 +418,7 @@ export const doctorsL2 = [
     doctor_name: "MUDr. Alena Veselá",
     rev_nr: "58",
     order: "random",
+    star_doc: "2024-02-04 00:00:00",
     reviews: [
     {
         nr: "3",
@@ -448,6 +459,7 @@ export const doctorsL2 = [
     doctor_name: "MUDr. Tomáš Marek",
     rev_nr: "62",
     order: "random",
+    star_doc: "2024-02-04 00:00:00",
     reviews: [
     {
         nr: "4",
@@ -488,6 +500,7 @@ export const doctorsL2 = [
     doctor_name: "MUDr. Jan Doležal",
     rev_nr: "7",
     order: "random",
+    star_doc: "2024-02-04 00:00:00",
     reviews: [
     {
         nr: "5",
@@ -528,6 +541,7 @@ export const doctorsL2 = [
     doctor_name: "MUDr. Radek Hruška",
     rev_nr: "61",
     order: "random",
+    star_doc: "2024-02-04 00:00:00",
     reviews: [
     {
         nr: "6",
@@ -568,6 +582,7 @@ export const doctorsL2 = [
     doctor_name: "MUDr. Tereza Pospíšilová",
     rev_nr: "6",
     order: "random",
+    star_doc: "2024-02-04 00:00:00",
     reviews: [
     {
         nr: "7",
@@ -608,6 +623,7 @@ export const doctorsL2 = [
     doctor_name: "MUDr. Lenka Kučerová",
     rev_nr: "65",
     order: "random",
+    star_doc: "2024-02-04 00:00:00",
     reviews: [
     {
         nr: "8",
@@ -648,6 +664,7 @@ export const doctorsL2 = [
     doctor_name: "MUDr. Petra Nováková",
     rev_nr: "69",
     order: "random",
+    star_doc: "2024-02-04 00:00:00",
     reviews: [
     {
         nr: "9",

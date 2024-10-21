@@ -11,7 +11,7 @@
 	export let rating: number;
 	export let reviewCount: number;
 	export let primaryColor: string = '#0097b2';
-	export let reviews: Array<{ title: string; rating: number; review: string }>;
+	export let reviews: Array<{ id: string; title: string; rating: number; review: string }>;
 
 	export let heightOfDoctor = 500;
 	export let heightOfLikert = 280;

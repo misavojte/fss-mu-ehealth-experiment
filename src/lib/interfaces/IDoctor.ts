@@ -15,6 +15,7 @@ export type IDoctorObjectL2 = {
 	nr: string;
 	doctor_name: string;
 	rev_nr: string;
+	star_doc: string;
 	order: 'fixed' | 'random';
 	reviews: Array<{
 		nr: string;
