@@ -8,13 +8,13 @@
 	import { ConnectLoggerIDB } from '$lib/services/ConnectLoggerIDB';
 	import { GazeSaverIDB } from '$lib/services/GazeSaverIDB';
 	import { TimestampQuestionServiceIDB } from '$lib/services/TimestampQuestionServiceIDB';
-	import { DoctorManagerBase } from '$lib/services/DoctorManagerBase';
+	import { DoctorManagerMock } from '$lib/services/DoctorManagerMock';
 
 	const sessionId = new Date().getTime() + '-' + Math.floor(1000 + Math.random() * 9000);
 	const questionsService = new TimestampQuestionServiceIDB(sessionId);
 	const connectLogger = new ConnectLoggerIDB(sessionId);
 	const gazeSaver = new GazeSaverIDB(sessionId);
-	const doctorManager = new DoctorManagerBase();
+	const doctorManager = new DoctorManagerMock();
 
 	loadLocale('cs');
 	setLocale('cs');

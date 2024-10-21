@@ -3,6 +3,7 @@
 	import { fade } from 'svelte/transition';
 	import ExperimentL2Slide from './ExperimentL2Slide.svelte';
 	import { writable } from 'svelte/store';
+	import { createEventDispatcher } from 'svelte';
 
 	export let slideBackgroundColor: string = '#0097b2';
 	export let primaryColor: string = '#0097b2';
@@ -10,7 +11,12 @@
 
 	let activeDoctorIndex = writable(0);
 
+	const dispatch = createEventDispatcher();
 	const handleFinish = () => {
+		if ($activeDoctorIndex === doctors.length - 1) {
+			dispatch('experimentEnded');
+			return;
+		}
 		activeDoctorIndex.update((index) => index + 1);
 	};
 </script>

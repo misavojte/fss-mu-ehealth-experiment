@@ -25,17 +25,20 @@ export const Default: Story = {
 		reviewCount: 70,
 		reviews: [
 			{
+				id: '1',
 				title: 'A. K.',
 				rating: 5,
 				review:
 					'Doktorka je velmi příjemná a ochotná. Vždy se snaží poradit a pomoci. Vřele doporučuji.'
 			},
 			{
+				id: '2',
 				title: 'R. T.',
 				rating: 4,
 				review: 'Doktorka je trpělivá a vždy se snaží poradit. Jsem s ní velmi spokojená.'
 			},
 			{
+				id: '3',
 				title: 'E. N.',
 				rating: 2,
 				review: 'Doktorka je neochotná a nepříjemná. Nedoporučuji.'

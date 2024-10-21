@@ -17,18 +17,27 @@ export type IDoctorObjectL2 = {
 	rev_nr: string;
 	star_doc: string;
 	order: 'fixed' | 'random';
-	reviews: Array<{
+	reviews: {
 		nr: string;
 		nr2: string;
 		star_statement: string;
 		reviewer_nick: string;
 		statement: string;
 		type: 'distraktor' | 'com_high' | 'com_mid' | 'tech_high' | 'tech_mid';
-	}>;
+	}[];
 };
 
 export interface IDoctorManager {
 	getL1Object(id: string): IDoctorObjectL1;
 	getL1ObjectForPractice(): IDoctorObjectL1[];
 	getL1ObjectForTrial(): IDoctorObjectL1[];
+	getL2Object(id: string): IDoctorObjectL2;
+	getL2ObjectForPractice(): IDoctorObjectL2[];
+	getL2ObjectForTrial(): IDoctorObjectL2[];
+	logL1Start(id: string): void;
+	logL1Load(id: string): void;
+	logL1ShowLikert(id: string): void;
+	logL1Response(id: string, response: number): void;
+	logL2Start(id: string): void;
+	logL2Response(id: string, response: number): void;
 }
