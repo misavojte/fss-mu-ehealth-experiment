@@ -7,6 +7,8 @@ import { fisherYatesShuffle } from '$lib/utils/shuffle';
  * Using "data" as a data source
  */
 export class DoctorManagerMock implements IDoctorManager {
+	L1Answers: Record<string, number> = {};
+	L2Answers: Record<string, number> = {};
 	private logAction(type: string, value?: string): void {
 		console.log('Action log saved:', { type, value });
 	}
@@ -63,6 +65,7 @@ export class DoctorManagerMock implements IDoctorManager {
 	}
 
 	logL1Response(id: string, response: number): void {
+		this.L1Answers[id] = response;
 		this.logAction('L1_response', `${id}; ${response}`);
 	}
 
@@ -71,6 +74,7 @@ export class DoctorManagerMock implements IDoctorManager {
 	}
 
 	logL2Response(id: string, response: number): void {
+		this.L2Answers[id] = response;
 		this.logAction('L2_response', `${id}; ${response}`);
 	}
 }

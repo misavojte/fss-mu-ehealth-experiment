@@ -9,6 +9,8 @@ import { saveActionLog } from '$lib/database/repositories/ActionLog.repository';
  * Using "data" as a data source
  */
 export class DoctorManagerIDB implements IDoctorManager {
+	L1Answers: Record<string, number> = {};
+	L2Answers: Record<string, number> = {};
 	private sessionId: string;
 	constructor(sessionId: string) {
 		this.sessionId = sessionId;
@@ -75,6 +77,7 @@ export class DoctorManagerIDB implements IDoctorManager {
 	}
 
 	logL1Response(id: string, response: number): void {
+		this.L1Answers[id] = response;
 		this.logAction('L1_response', `${id}; ${response}`);
 	}
 
@@ -83,6 +86,7 @@ export class DoctorManagerIDB implements IDoctorManager {
 	}
 
 	logL2Response(id: string, response: number): void {
+		this.L2Answers[id] = response;
 		this.logAction('L2_response', `${id}; ${response}`);
 	}
 }

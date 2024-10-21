@@ -28,6 +28,8 @@ export type IDoctorObjectL2 = {
 };
 
 export interface IDoctorManager {
+	L1Answers: Record<string, number>;
+	L2Answers: Record<string, number>;
 	getL1Object(id: string): IDoctorObjectL1;
 	getL1ObjectForPractice(): IDoctorObjectL1[];
 	getL1ObjectForTrial(): IDoctorObjectL1[];
