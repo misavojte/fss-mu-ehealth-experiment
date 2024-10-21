@@ -25,19 +25,19 @@
 	 */
 	export let starOutlineWidth = '0px';
 
-	export let scalingFactor = 0.75;
+	export let size = 20;
 </script>
 
 <article class="flex flex-col gap-2 p-4">
-	<header class="flex items-center gap-1 justify-start">
-		<h2 class="mt-1 text-md font-bold">{title}</h2>
+	<header class="flex items-center gap-3 justify-start">
+		<h2 class="text-md font-bold">{title}</h2>
 		<ExperimentRating
 			{rating}
 			{starBackgroundColor}
 			{starFillColor}
 			{starOutlineColor}
 			{starOutlineWidth}
-			{scalingFactor}
+			{size}
 		/>
 	</header>
 	<main>
