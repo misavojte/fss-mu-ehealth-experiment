@@ -1,8 +1,9 @@
 
+import type { IDoctorObjectL2 } from "$lib/interfaces/IDoctor";
 /*
 Automatically generated stimuli data from the Excel sheet for level 2
 */
-export const doctorsL2 = [
+export const doctorsL2: IDoctorObjectL2[] = [
   {
     nr: "0",
     doctor_name: "MUDr. Marie Krejčí",
@@ -700,4 +701,4 @@ export const doctorsL2 = [
     }
     ]
   },
-] as const;
+];
