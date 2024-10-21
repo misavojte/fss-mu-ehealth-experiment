@@ -74,7 +74,7 @@
 		>
 			<ExperimentSlides
 				{pictureBase}
-				doctors={doctorManager.getDoctorObjectForPractice()}
+				doctors={doctorManager.getL1ObjectForPractice()}
 				on:experimentEnded={() => {
 					state = 'intermezzo';
 				}}
@@ -94,7 +94,7 @@
 		>
 			<ExperimentSlides
 				{pictureBase}
-				doctors={doctorManager.getDoctorObjectForTrial()}
+				doctors={doctorManager.getL1ObjectForTrial()}
 				on:experimentEnded={() => {
 					state = 'end';
 				}}

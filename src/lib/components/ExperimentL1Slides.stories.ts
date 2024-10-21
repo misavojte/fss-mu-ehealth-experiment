@@ -4,8 +4,8 @@ import { DoctorManagerBase } from '$lib/services/DoctorManagerBase';
 
 const doctorManager = new DoctorManagerBase();
 
-const practiceDoctors = doctorManager.getDoctorObjectForPractice();
-const trialDoctors = doctorManager.getDoctorObjectForTrial();
+const practiceDoctors = doctorManager.getL1ObjectForPractice();
+const trialDoctors = doctorManager.getL1ObjectForTrial();
 
 const meta = {
 	title: 'Experiment/ExperimentL1Slides',

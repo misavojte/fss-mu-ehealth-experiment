@@ -28,7 +28,7 @@ export type IDoctorObjectL2 = {
 };
 
 export interface IDoctorManager {
-	getDoctorObject(id: string): IDoctorObjectL1;
-	getDoctorObjectForPractice(): IDoctorObjectL1[];
-	getDoctorObjectForTrial(): IDoctorObjectL1[];
+	getL1Object(id: string): IDoctorObjectL1;
+	getL1ObjectForPractice(): IDoctorObjectL1[];
+	getL1ObjectForTrial(): IDoctorObjectL1[];
 }

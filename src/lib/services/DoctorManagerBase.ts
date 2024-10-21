@@ -6,7 +6,7 @@ import { data } from '$lib/data/doctors';
  * Using "data" as a data source
  */
 export class DoctorManagerBase implements IDoctorManager {
-	getDoctorObject(id: string): IDoctorObjectL1 {
+	getL1Object(id: string): IDoctorObjectL1 {
 		const doctor = data.find((doctor) => doctor.pict_id === id);
 		if (!doctor) {
 			throw new Error(`Doctor with id ${id} not found`);
@@ -14,12 +14,12 @@ export class DoctorManagerBase implements IDoctorManager {
 		return doctor;
 	}
 
-	getDoctorObjectForPractice(): IDoctorObjectL1[] {
+	getL1ObjectForPractice(): IDoctorObjectL1[] {
 		const doctors = data.filter((doctor) => doctor.type === 'practice');
 		return doctors;
 	}
 
-	getDoctorObjectForTrial(): IDoctorObjectL1[] {
+	getL1ObjectForTrial(): IDoctorObjectL1[] {
 		const doctors = data.filter((doctor) => doctor.type === 'trial');
 		// randomize the order of the doctors
 		doctors.sort(() => Math.random() - 0.5);
