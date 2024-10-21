@@ -1,15 +1,6 @@
 <script lang="ts">
-	import ExperimentDoctor from './ExperimentDoctor.svelte';
-	import ExperimentLikertScale from './ExperimentLikertScale.svelte';
-	import LayoutColumns from './LayoutColumns.svelte';
-
-	export let starBackgroundColor: string = '#fff';
-
-	export let starFillColor: string = '#0097b2';
-
-	export let starOutlineColor: string = '#0097b2';
-
-	export let starOutlineWidth: string = '1px';
+	import ExperimentDoctorHeader from './ExperimentDoctorHeader.svelte';
+	import ExperimentRatingDistribution from './ExperimentRatingDistribution.svelte';
 
 	export let pictureId: string;
 
@@ -31,28 +22,48 @@
 	export let numberOfFourStars: number = 22;
 	export let numberOfFiveStars: number = 48;
 
-	export let doctorAvgRating: number = 4.3;
 	export let doctorName: string = 'MUDr. Eva Malá';
+	export let doctorAvgRating: number = 4.3;
+
+	/**
+	 * Non-reactive
+	 */
+	export let starBackgroundColor = '#d4d4d4';
+
+	/**
+	 * Non-reactive
+	 */
+	export let starFillColor = '#eab308';
+
+	/**
+	 * Non-reactive
+	 */
+	export let starOutlineColor = 'transparent';
+
+	/**
+	 * Non-reactive
+	 */
+	export let starOutlineWidth = '1px';
 </script>
 
-<LayoutColumns>
-	<ExperimentDoctor
+<div class="flex flex-col items-center justify-center gap-8">
+	<ExperimentDoctorHeader
 		{pictureId}
 		{pictureBase}
-		{pictureCorrection}
 		{picureExtension}
+		{pictureCorrection}
+		{doctorAvgRating}
+		{doctorName}
+	/>
+	<ExperimentRatingDistribution
+		{starBackgroundColor}
+		{starFillColor}
+		{starOutlineColor}
+		{starOutlineWidth}
 		{numberOfOneStars}
 		{numberOfTwoStars}
 		{numberOfThreeStars}
 		{numberOfFourStars}
 		{numberOfFiveStars}
-		{doctorAvgRating}
-		{doctorName}
-		{starBackgroundColor}
-		{starFillColor}
-		{starOutlineColor}
-		{starOutlineWidth}
-		slot="left"
 	/>
-	<ExperimentLikertScale on:input slot="right" />
-</LayoutColumns>
+</div>

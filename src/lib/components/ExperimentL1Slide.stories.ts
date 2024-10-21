@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/svelte';
-import ExperimentSlide from './ExperimentSlide.svelte';
+import ExperimentSlide from './ExperimentL1Slide.svelte';
 
 // More on how to set up stories at: https://storybook.js.org/docs/writing-stories
 const meta = {
@@ -7,7 +7,6 @@ const meta = {
 	component: ExperimentSlide,
 	tags: ['autodocs'],
 	argTypes: {
-		backgroundColor: { control: 'color' },
 		starBackgroundColor: { control: 'color' },
 		starFillColor: { control: 'color' },
 		starOutlineColor: { control: 'color' }

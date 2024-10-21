@@ -3,9 +3,18 @@ import App from './App.svelte';
 
 import { setLocale } from '../../i18n/i18n-svelte';
 import { loadLocale } from '../../i18n/i18n-util.sync';
+import { TimestampQuestionServiceMock } from '$lib/services/TimestampQuestionServiceMock';
+import { GazeSaverMock } from '$lib/services/GazeSaverMock';
+import { ConnectLoggerMock } from '$lib/services/ConnectLoggerMock';
+import { DoctorManagerBase } from '$lib/services/DoctorManagerBase';
 
 loadLocale('cs');
 setLocale('cs');
+
+const questionsService = new TimestampQuestionServiceMock();
+const gazeSaver = new GazeSaverMock();
+const connectLogger = new ConnectLoggerMock();
+const doctorManager = new DoctorManagerBase();
 
 // More on how to set up stories at: https://storybook.js.org/docs/writing-stories
 const meta = {
@@ -20,6 +29,10 @@ type Story = StoryObj<typeof meta>;
 // More on writing stories with args: https://storybook.js.org/docs/writing-stories/args
 export const Default: Story = {
 	args: {
-		pictureBase: 'stimuli'
+		pictureBase: 'stimuli',
+		questionsService,
+		gazeSaver,
+		connectLogger,
+		doctorManager
 	}
 };

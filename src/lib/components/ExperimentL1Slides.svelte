@@ -1,6 +1,6 @@
 <script lang="ts">
 	import type { IDoctorObject } from '$lib/interfaces/IDoctor';
-	import ExperimentSlide from './ExperimentSlide.svelte';
+	import ExperimentSlide from './ExperimentL1Slide.svelte';
 	import { fade } from 'svelte/transition';
 	import { createEventDispatcher } from 'svelte';
 
