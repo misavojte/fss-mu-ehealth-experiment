@@ -21,6 +21,7 @@ export type IDoctorObjectL2 = {
 		nr2: string;
 		star_statement: string;
 		reviewer_nick: string;
+		statement: string;
 		type: 'distraktor' | 'com_high' | 'com_mid' | 'tech_high' | 'tech_mid';
 	}>;
 };
