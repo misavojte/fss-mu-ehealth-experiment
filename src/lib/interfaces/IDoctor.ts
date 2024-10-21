@@ -1,4 +1,4 @@
-export type IDoctorObject = {
+export type IDoctorObjectL1 = {
 	pict_id: string;
 	type: string;
 	order: string;
@@ -12,7 +12,7 @@ export type IDoctorObject = {
 };
 
 export interface IDoctorManager {
-	getDoctorObject(id: string): IDoctorObject;
-	getDoctorObjectForPractice(): IDoctorObject[];
-	getDoctorObjectForTrial(): IDoctorObject[];
+	getDoctorObject(id: string): IDoctorObjectL1;
+	getDoctorObjectForPractice(): IDoctorObjectL1[];
+	getDoctorObjectForTrial(): IDoctorObjectL1[];
 }

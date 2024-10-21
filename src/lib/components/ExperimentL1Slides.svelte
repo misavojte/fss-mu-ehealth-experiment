@@ -1,5 +1,5 @@
 <script lang="ts">
-	import type { IDoctorObject } from '$lib/interfaces/IDoctor';
+	import type { IDoctorObjectL1 } from '$lib/interfaces/IDoctor';
 	import ExperimentSlide from './ExperimentL1Slide.svelte';
 	import { fade } from 'svelte/transition';
 	import { createEventDispatcher } from 'svelte';
@@ -26,7 +26,7 @@
 	 */
 	export let pictureCorrection: number = 0.15;
 
-	export let doctors: IDoctorObject[];
+	export let doctors: IDoctorObjectL1[];
 
 	export let currentDoctorIndex: number = 0;
 

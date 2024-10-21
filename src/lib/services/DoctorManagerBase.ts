@@ -1,4 +1,4 @@
-import type { IDoctorManager, IDoctorObject } from '$lib/interfaces/IDoctor';
+import type { IDoctorManager, IDoctorObjectL1 } from '$lib/interfaces/IDoctor';
 import { data } from '$lib/data/doctors';
 
 /**
@@ -6,7 +6,7 @@ import { data } from '$lib/data/doctors';
  * Using "data" as a data source
  */
 export class DoctorManagerBase implements IDoctorManager {
-	getDoctorObject(id: string): IDoctorObject {
+	getDoctorObject(id: string): IDoctorObjectL1 {
 		const doctor = data.find((doctor) => doctor.pict_id === id);
 		if (!doctor) {
 			throw new Error(`Doctor with id ${id} not found`);
@@ -14,12 +14,12 @@ export class DoctorManagerBase implements IDoctorManager {
 		return doctor;
 	}
 
-	getDoctorObjectForPractice(): IDoctorObject[] {
+	getDoctorObjectForPractice(): IDoctorObjectL1[] {
 		const doctors = data.filter((doctor) => doctor.type === 'practice');
 		return doctors;
 	}
 
-	getDoctorObjectForTrial(): IDoctorObject[] {
+	getDoctorObjectForTrial(): IDoctorObjectL1[] {
 		const doctors = data.filter((doctor) => doctor.type === 'trial');
 		// randomize the order of the doctors
 		doctors.sort(() => Math.random() - 0.5);
