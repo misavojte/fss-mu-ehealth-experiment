@@ -4,7 +4,7 @@
 		waitForConditionCancellable,
 		waitForTimeoutCancellable
 	} from '$lib/utils/waitForCondition';
-	import { onDestroy, onMount } from 'svelte';
+	import { createEventDispatcher, onDestroy, onMount } from 'svelte';
 	import ExperimentDoctor from './ExperimentL1Doctor.svelte';
 	import ExperimentLikertScale from './ExperimentLikertScale.svelte';
 	import LayoutCardAbsolute from './LayoutCardAbsolute.svelte';
@@ -57,10 +57,14 @@
 		isLoaded.set(true);
 	};
 
+	const dispatch = createEventDispatcher();
+
 	const abortController = new AbortController();
 	const logic = async () => {
 		await waitForConditionCancellable(isLoaded, 0, abortController.signal);
+		dispatch('load');
 		await waitForTimeoutCancellable(timeoutBeforeLikert, abortController.signal);
+		dispatch('likertVisible');
 		isLikertVisible = true;
 	};
 

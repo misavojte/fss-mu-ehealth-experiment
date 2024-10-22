@@ -19,11 +19,11 @@
 	export let width = 720;
 
 	const dispatch = createEventDispatcher();
-	const wasDoctorClicked = writable(false);
+	const wasDoctorClicked = writable<string | false>(false);
 	const abortController = new AbortController();
 	const logic = async () => {
 		await waitForConditionCancellable(wasDoctorClicked, 0, abortController.signal);
-		dispatch('finish');
+		dispatch('finish', $wasDoctorClicked as string);
 	};
 
 	onMount(() => {
@@ -35,7 +35,7 @@
 	});
 
 	const handleLikertInput = (event: CustomEvent<string>) => {
-		wasDoctorClicked.set(true);
+		wasDoctorClicked.set(event.detail);
 	};
 </script>
 

@@ -4,8 +4,8 @@ import { DoctorManagerMock } from '$lib/services/DoctorManagerMock';
 
 const doctorManager = new DoctorManagerMock();
 
-const doctorsBad = doctorManager.getL2ObjectForPractice();
-const doctorsGood = doctorManager.getL1ObjectForTrial();
+const doctorsBad = doctorManager.getL3ObjectBad();
+const doctorsGood = doctorManager.getL3ObjectGood();
 
 const meta = {
 	title: 'Experiment/ExperimentL3Slides',
@@ -21,13 +21,7 @@ type Story = StoryObj<typeof meta>;
 
 export const Default: Story = {
 	args: {
-		doctors: practiceDoctors // Pass the resolved data here
-	}
-};
-
-export const GoldenStars: Story = {
-	args: {
-		doctorsGood: trialDoctors.good,
-		doctorsBad: trialDoctors.bad
+		doctorsBad,
+		doctorsGood
 	}
 };

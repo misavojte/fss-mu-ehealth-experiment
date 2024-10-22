@@ -96,17 +96,17 @@ export class DoctorManagerMock implements IDoctorManager {
 		this.logAction('L1_show_likert', id);
 	}
 
-	logL1Response(id: string, response: number): void {
-		this.L1Answers[id] = response;
-		this.logAction('L1_response', `${id}; ${response}`);
+	logL1Response(id: string, response: number, reactionTime: number): void {
+		this.L1Answers.push({ id, response, reactionTime });
+		this.logAction('L1_response', `${id}; ${response}; ${reactionTime}`);
 	}
 
 	logL2Start(id: string): void {
 		this.logAction('L2_start', id);
 	}
 
-	logL2Response(id: string, response: number): void {
-		this.L2Answers[id] = response;
-		this.logAction('L2_response', `${id}; ${response}`);
+	logL2Response(id: string, response: number, reactionTime: number): void {
+		this.L2Answers.push({ id, response, reactionTime });
+		this.logAction('L2_response', `${id}; ${response}; ${reactionTime}`);
 	}
 }

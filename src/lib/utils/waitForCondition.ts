@@ -32,21 +32,21 @@ class InstantFailError extends Error {
  * @throws {InstantFailError} When the instant fail condition is met
  */
 export const waitForCondition = (
-	store: Readable<boolean>,
+	store: Readable<unknown>,
 	maxTimeout: number,
-	instantFailStore?: Readable<boolean>
+	instantFailStore?: Readable<unknown>
 ): Promise<void> => {
 	return new Promise((resolve, reject) => {
 		const unsubscribers: Array<() => void> = [];
 
-		const onSuccess = (value: boolean) => {
+		const onSuccess = (value: unknown) => {
 			if (value) {
 				cleanup(...unsubscribers);
 				resolve();
 			}
 		};
 
-		const onFail = (failValue: boolean) => {
+		const onFail = (failValue: unknown) => {
 			if (failValue) {
 				cleanup(...unsubscribers);
 				reject(new InstantFailError('Instant fail condition met'));
@@ -109,10 +109,10 @@ export const getCancellableAsync = <T>(
  * @throws {InstantFailError} When the instant fail condition is met
  */
 export const waitForConditionCancellable = (
-	store: Readable<boolean>,
+	store: Readable<unknown>,
 	maxTimeout: number,
 	signal: AbortSignal,
-	instantFailStore?: Readable<boolean>
+	instantFailStore?: Readable<unknown>
 ): Promise<void> => {
 	return getCancellableAsync(() => waitForCondition(store, maxTimeout, instantFailStore), signal);
 };

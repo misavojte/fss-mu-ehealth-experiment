@@ -41,7 +41,7 @@ export interface IDoctorManager {
 	logL1Start(id: string): void;
 	logL1Load(id: string): void;
 	logL1ShowLikert(id: string): void;
-	logL1Response(id: string, response: number): void;
+	logL1Response(id: string, response: number, reactionTime: number): void;
 	logL2Start(id: string): void;
-	logL2Response(id: string, response: number): void;
+	logL2Response(id: string, response: number, reactionTime: number): void;
 }

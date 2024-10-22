@@ -9,8 +9,8 @@ import { saveActionLog } from '$lib/database/repositories/ActionLog.repository';
  * Using "data" as a data source
  */
 export class DoctorManagerIDB implements IDoctorManager {
-	L1Answers: Record<string, number> = {};
-	L2Answers: Record<string, number> = {};
+	L1Answers: { id: string; response: number; reactionTime: number }[] = [];
+	L2Answers: { id: string; response: number; reactionTime: number }[] = [];
 	private sessionId: string;
 	constructor(sessionId: string) {
 		this.sessionId = sessionId;
@@ -64,6 +64,33 @@ export class DoctorManagerIDB implements IDoctorManager {
 		return newDoctors;
 	}
 
+	/**
+	 * Get two worst evaluated doctors by user from this.L2Answers
+	 * @returns {IDoctorObjectL2[]}
+	 */
+	getL3ObjectBad(): IDoctorObjectL2[] {
+		// primary sorting by the lowest response, secondary be lowest reactionTime
+		const sorted = this.L2Answers.sort(
+			(a, b) => a.response - b.response || a.reactionTime - b.reactionTime
+		);
+		const worst = sorted.slice(0, 2);
+		return worst.map((answer) => this.getL2Object(answer.id));
+	}
+
+	/**
+	 * Get two best evaluated doctors by user from this.L2Answers
+	 * If more than two doctors have the same rating, only two with the lowest reactionTime are returned
+	 * @returns {IDoctorObjectL2[]}
+	 */
+	getL3ObjectGood(): IDoctorObjectL2[] {
+		// primary sorting by the best response, secondary by lowest reactionTime
+		const sorted = this.L2Answers.sort(
+			(a, b) => b.response - a.response || a.reactionTime - b.reactionTime
+		);
+		const best = sorted.slice(0, 2);
+		return best.map((answer) => this.getL2Object(answer.id));
+	}
+
 	logL1Start(id: string): void {
 		this.logAction('L1_start', id);
 	}
@@ -76,17 +103,17 @@ export class DoctorManagerIDB implements IDoctorManager {
 		this.logAction('L1_show_likert', id);
 	}
 
-	logL1Response(id: string, response: number): void {
-		this.L1Answers[id] = response;
-		this.logAction('L1_response', `${id}; ${response}`);
+	logL1Response(id: string, response: number, reactionTime: number): void {
+		this.L1Answers.push({ id, response, reactionTime });
+		this.logAction('L1_response', `${id}; ${response}; ${reactionTime}`);
 	}
 
 	logL2Start(id: string): void {
 		this.logAction('L2_start', id);
 	}
 
-	logL2Response(id: string, response: number): void {
-		this.L2Answers[id] = response;
-		this.logAction('L2_response', `${id}; ${response}`);
+	logL2Response(id: string, response: number, reactionTime: number): void {
+		this.L2Answers.push({ id, response, reactionTime });
+		this.logAction('L2_response', `${id}; ${response}; ${reactionTime}`);
 	}
 }
