@@ -21,15 +21,19 @@
 	const logic = async () => {
 		for await (const doctor of doctorsGood) {
 			activeDoctor.set(doctor);
+			doctorManager.logL3Start(doctor.nr);
 			await waitForConditionCancellable(wasCurrentDoctorFinished, 0, abortController.signal);
 			wasCurrentDoctorFinished.set(false);
 			activeDoctor.set(null);
+			doctorManager.logL3End(doctor.nr);
 		}
 		for await (const doctor of doctorsBad) {
 			activeDoctor.set(doctor);
+			doctorManager.logL3Start(doctor.nr);
 			await waitForConditionCancellable(wasCurrentDoctorFinished, 0, abortController.signal);
 			wasCurrentDoctorFinished.set(false);
 			activeDoctor.set(null);
+			doctorManager.logL3End(doctor.nr);
 		}
 		dispatch('finish');
 	};
