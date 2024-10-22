@@ -27,6 +27,7 @@
 			activeDoctor.set(null);
 			doctorManager.logL3End(doctor.nr);
 		}
+		currentType = 'bad';
 		for await (const doctor of doctorsBad) {
 			activeDoctor.set(doctor);
 			doctorManager.logL3Start(doctor.nr);
@@ -51,29 +52,33 @@
 	};
 
 	let activeDoctor: Writable<IDoctorObjectL2 | null> = writable(null);
+	let currentType: 'good' | 'bad' = 'good';
 </script>
 
 <div class="relative w-screen h-screen" style="background: {slideBackgroundColor};">
-	{#if $activeDoctor !== null}
-		<div
-			class="absolute w-screen h-screen flex items-center justify-center"
-			in:fade={{ duration: 200, delay: 400 }}
-			out:fade={{ duration: 200 }}
-		>
-			<ExperimentL3Slide
-				id={$activeDoctor.nr}
-				name={$activeDoctor.doctor_name}
-				rating={Number($activeDoctor.star_doc)}
-				reviewCount={Number($activeDoctor.rev_nr)}
-				reviews={$activeDoctor.reviews.map((review) => ({
-					title: review.reviewer_nick,
-					rating: Number(review.star_statement),
-					review: review.statement,
-					id: review.nr + '_' + $activeDoctor.nr
-				}))}
-				{primaryColor}
-				on:finish={handleFinish}
-			/>
-		</div>
-	{/if}
+	{#each [...doctorsGood, ...doctorsBad] as doctor}
+		{#if $activeDoctor && $activeDoctor.nr === doctor.nr}
+			<div
+				class="absolute w-screen h-screen flex items-center justify-center"
+				in:fade={{ duration: 200, delay: 200 }}
+				out:fade={{ duration: 200 }}
+			>
+				<ExperimentL3Slide
+					id={$activeDoctor.nr}
+					name={$activeDoctor.doctor_name}
+					rating={Number($activeDoctor.star_doc)}
+					reviewCount={Number($activeDoctor.rev_nr)}
+					reviews={$activeDoctor.reviews.map((review) => ({
+						title: review.reviewer_nick,
+						rating: Number(review.star_statement),
+						review: review.statement,
+						id: review.nr + '_' + $activeDoctor.nr
+					}))}
+					{primaryColor}
+					type={currentType}
+					on:finish={handleFinish}
+				/>
+			</div>
+		{/if}
+	{/each}
 </div>

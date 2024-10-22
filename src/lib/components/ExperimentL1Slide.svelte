@@ -59,7 +59,7 @@
 
 	const dispatch = createEventDispatcher();
 
-	const abortController = new AbortController();
+	let abortController = new AbortController();
 	const logic = async () => {
 		await waitForConditionCancellable(isLoaded, 0, abortController.signal);
 		dispatch('load');

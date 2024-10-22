@@ -13,7 +13,7 @@
 	export let primaryColor: string = '#0097b2';
 	export let reviews: Array<{ id: string; title: string; rating: number; review: string }>;
 
-	export let heightOfDoctor = 500;
+	export let heightOfDoctor = 620;
 	export let heightOfLikert = 280;
 	export let gapHeight = 20;
 	export let width = 720;

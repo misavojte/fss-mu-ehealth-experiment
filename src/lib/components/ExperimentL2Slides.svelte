@@ -50,27 +50,29 @@
 </script>
 
 <div class="relative w-screen h-screen" style="background: {slideBackgroundColor};">
-	{#if $stateActiveDoctor}
-		{@const reviews = $stateActiveDoctor.reviews.map((review) => ({
-			title: review.reviewer_nick,
-			rating: Number(review.star_statement),
-			review: review.statement,
-			id: review.nr + '_' + $stateActiveDoctor.nr
-		}))}
-		<div
-			class="absolute w-screen h-screen flex items-center justify-center"
-			in:fade={{ duration: 200, delay: 400 }}
-			out:fade={{ duration: 200 }}
-		>
-			<ExperimentL2Slide
-				id={$stateActiveDoctor.nr}
-				name={$stateActiveDoctor.doctor_name}
-				rating={Number($stateActiveDoctor.star_doc)}
-				reviewCount={Number($stateActiveDoctor.rev_nr)}
-				{reviews}
-				{primaryColor}
-				on:finish={handleFinish}
-			/>
-		</div>
-	{/if}
+	{#each doctors as doctor}
+		{#if $stateActiveDoctor && $stateActiveDoctor.nr === doctor.nr}
+			{@const reviews = $stateActiveDoctor.reviews.map((review) => ({
+				title: review.reviewer_nick,
+				rating: Number(review.star_statement),
+				review: review.statement,
+				id: review.nr + '_' + $stateActiveDoctor.nr
+			}))}
+			<div
+				class="absolute w-screen h-screen flex items-center justify-center"
+				in:fade={{ duration: 200, delay: 400 }}
+				out:fade={{ duration: 200 }}
+			>
+				<ExperimentL2Slide
+					id={$stateActiveDoctor.nr}
+					name={$stateActiveDoctor.doctor_name}
+					rating={Number($stateActiveDoctor.star_doc)}
+					reviewCount={Number($stateActiveDoctor.rev_nr)}
+					{reviews}
+					{primaryColor}
+					on:finish={handleFinish}
+				/>
+			</div>
+		{/if}
+	{/each}
 </div>

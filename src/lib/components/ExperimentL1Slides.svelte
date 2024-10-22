@@ -49,9 +49,9 @@
 			stateActiveDoctor.set(doctor);
 			doctorManager.logL1Start(doctor.pict_id);
 			await waitForConditionCancellable(stateDoctorWasLoaded, 0, abortController.signal);
-			timerStart = Date.now();
 			doctorManager.logL1Load(doctor.pict_id);
 			await waitForConditionCancellable(stateDoctorLikerVisible, 0, abortController.signal);
+			timerStart = Date.now();
 			doctorManager.logL1ShowLikert(doctor.pict_id);
 			await waitForConditionCancellable(stateDoctorWasClicked, 0, abortController.signal);
 			timerEnd = Date.now();
@@ -90,32 +90,34 @@
 </script>
 
 <div class="relative w-screen h-screen" style="background: {slideBackgroundColor};">
-	{#if $stateActiveDoctor}
-		<div
-			class="absolute w-screen h-screen flex items-center justify-center"
-			in:fade={{ duration: 200, delay: 400 }}
-			out:fade={{ duration: 200 }}
-		>
-			<ExperimentSlide
-				pictureId={$stateActiveDoctor.pict_id}
-				numberOfFiveStars={$stateActiveDoctor.star_5}
-				numberOfFourStars={$stateActiveDoctor.star_4}
-				numberOfThreeStars={$stateActiveDoctor.star_3}
-				numberOfTwoStars={$stateActiveDoctor.star_2}
-				numberOfOneStars={$stateActiveDoctor.star_1}
-				doctorAvgRating={$stateActiveDoctor.stars_avg}
-				doctorName={$stateActiveDoctor.doctor_name}
-				{pictureBase}
-				{pictureCorrection}
-				{picureExtension}
-				{starBackgroundColor}
-				{starFillColor}
-				{starOutlineColor}
-				{starOutlineWidth}
-				on:load={handleLoad}
-				on:input={handleInput}
-				on:likertVisible={handleLikertVisible}
-			/>
-		</div>
-	{/if}
+	{#each doctors as doctor}
+		{#if $stateActiveDoctor && $stateActiveDoctor.pict_id === doctor.pict_id}
+			<div
+				class="absolute w-screen h-screen flex items-center justify-center"
+				in:fade={{ duration: 200, delay: 200 }}
+				out:fade={{ duration: 200 }}
+			>
+				<ExperimentSlide
+					pictureId={$stateActiveDoctor.pict_id}
+					numberOfFiveStars={$stateActiveDoctor.star_5}
+					numberOfFourStars={$stateActiveDoctor.star_4}
+					numberOfThreeStars={$stateActiveDoctor.star_3}
+					numberOfTwoStars={$stateActiveDoctor.star_2}
+					numberOfOneStars={$stateActiveDoctor.star_1}
+					doctorAvgRating={$stateActiveDoctor.stars_avg}
+					doctorName={$stateActiveDoctor.doctor_name}
+					{pictureBase}
+					{pictureCorrection}
+					{picureExtension}
+					{starBackgroundColor}
+					{starFillColor}
+					{starOutlineColor}
+					{starOutlineWidth}
+					on:load={handleLoad}
+					on:input={handleInput}
+					on:likertVisible={handleLikertVisible}
+				/>
+			</div>
+		{/if}
+	{/each}
 </div>
