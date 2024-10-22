@@ -1,5 +1,4 @@
 <script lang="ts">
-	import ExperimentSlides from './ExperimentL1Slides.svelte';
 	import InstructionIntermezzo from './InstructionIntermezzo.svelte';
 	import InstructionEnd from './InstructionEnd.svelte';
 	import { fade } from 'svelte/transition';
@@ -12,8 +11,9 @@
 	import type { IGazeSaver } from '$lib/interfaces/IGazeSaver';
 	import { onDestroy, onMount, setContext } from 'svelte';
 	import type { AcceptedIntersect } from '$lib/database/repositories/Gaze.repository';
+	import ExperimentL1Slides from './ExperimentL1Slides.svelte';
 
-	export let state: 'connect' | 'start' | 'practice' | 'intermezzo' | 'experiment' | 'end' =
+	export let state: 'connect' | 'start' | 'practicel1' | 'intermezzol1' | 'triall1' | 'end' =
 		'connect';
 
 	export let pictureBase: string;
@@ -26,11 +26,11 @@
 	const gazeManager = new GazeManager();
 
 	const handlePostStart = async () => {
-		state = 'practice';
+		state = 'practicel1';
 	};
 
 	const handlePostIntermezzo = async () => {
-		state = 'experiment';
+		state = 'triall1';
 	};
 
 	const handlePostConnect = async () => {
@@ -67,35 +67,35 @@
 		>
 			<AppQuestion {questionsService} on:finished={handlePostStart} />
 		</div>
-	{:else if state === 'practice'}
+	{:else if state === 'practicel1'}
 		<div
 			transition:fade={{ duration: 200 }}
 			class="absolute w-screen h-screen flex items-center justify-center"
 		>
-			<ExperimentSlides
+			<ExperimentL1Slides
 				{pictureBase}
 				doctors={doctorManager.getL1ObjectForPractice()}
-				on:experimentEnded={() => {
-					state = 'intermezzo';
+				on:finish={() => {
+					state = 'intermezzol1';
 				}}
 			/>
 		</div>
-	{:else if state === 'intermezzo'}
+	{:else if state === 'intermezzol1'}
 		<div
 			transition:fade={{ duration: 200 }}
 			class="absolute w-screen h-screen flex items-center justify-center"
 		>
 			<InstructionIntermezzo on:next={handlePostIntermezzo} />
 		</div>
-	{:else if state === 'experiment'}
+	{:else if state === 'triall1'}
 		<div
 			transition:fade={{ duration: 200 }}
 			class="absolute w-screen h-screen flex items-center justify-center"
 		>
-			<ExperimentSlides
+			<ExperimentL1Slides
 				{pictureBase}
 				doctors={doctorManager.getL1ObjectForTrial()}
-				on:experimentEnded={() => {
+				on:finish={() => {
 					state = 'end';
 				}}
 			/>
