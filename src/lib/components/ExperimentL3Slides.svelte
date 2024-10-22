@@ -6,7 +6,6 @@
 	import { fade } from 'svelte/transition';
 	import ExperimentL3Slide from './ExperimentL3Slide.svelte';
 	import { DoctorManagerMock } from '$lib/services/DoctorManagerMock';
-	import { act } from 'react';
 
 	export let slideBackgroundColor: string = '#0097b2';
 	export let primaryColor: string = '#0097b2';
