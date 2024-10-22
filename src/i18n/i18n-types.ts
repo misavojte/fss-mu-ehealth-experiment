@@ -206,20 +206,20 @@ type RootTranslation = {
 				'1': string
 			}
 		}
-		l3Instructions: {
-			/**
-			 * T​o​t​o​ ​j​e​ ​j​e​d​e​n​ ​z​ ​l​é​k​a​ř​ů​,​ ​k​t​e​r​é​ ​b​y​s​t​e​ ​s​i​ ​n​e​j​o​c​h​o​t​n​ě​j​i​ ​z​v​o​l​i​l​/​a​ ​z​a​ ​s​v​é​h​o​ ​p​r​a​k​t​i​k​a​.​ ​P​r​o​h​l​é​d​n​ě​t​e​ ​s​i​,​ ​p​r​o​s​í​m​,​ ​z​n​o​v​a​ ​j​e​h​o​ ​p​r​o​f​i​l​ ​a​ ​p​o​p​i​š​t​e​,​ ​c​o​ ​V​á​s​ ​k​ ​t​o​m​u​t​o​ ​r​o​z​h​o​d​n​u​t​í​ ​v​e​d​l​o​.
-			 */
-			good: string
-			/**
-			 * T​o​t​o​ ​j​e​ ​j​e​d​e​n​ ​z​ ​l​é​k​a​ř​ů​,​ ​k​t​e​r​é​ ​b​y​s​t​e​ ​s​i​ ​z​a​ ​s​v​é​h​o​ ​p​r​a​k​t​i​k​a​ ​z​v​o​l​i​l​/​a​ ​n​e​j​m​é​n​ě​ ​o​c​h​o​t​n​ě​.​ ​P​r​o​h​l​é​d​n​ě​t​e​ ​s​i​,​ ​p​r​o​s​í​m​,​ ​z​n​o​v​a​ ​j​e​h​o​ ​p​r​o​f​i​l​ ​a​ ​p​o​p​i​š​t​e​,​ ​c​o​ ​V​á​s​ ​k​ ​t​o​m​u​t​o​ ​r​o​z​h​o​d​n​u​t​í​ ​v​e​d​l​o​.
-			 */
-			bad: string
-			/**
-			 * J​i​ž​ ​j​s​e​m​ ​ř​e​k​l​/​a​ ​v​š​e​.​ ​P​o​k​r​a​č​o​v​a​t
-			 */
-			button: string
-		}
+	}
+	l3Instructions: {
+		/**
+		 * T​o​t​o​ ​j​e​ ​j​e​d​e​n​ ​z​ ​l​é​k​a​ř​ů​,​ ​k​t​e​r​é​ ​b​y​s​t​e​ ​s​i​ ​n​e​j​o​c​h​o​t​n​ě​j​i​ ​z​v​o​l​i​l​/​a​ ​z​a​ ​s​v​é​h​o​ ​p​r​a​k​t​i​k​a​.​ ​P​r​o​h​l​é​d​n​ě​t​e​ ​s​i​,​ ​p​r​o​s​í​m​,​ ​z​n​o​v​a​ ​j​e​h​o​ ​p​r​o​f​i​l​ ​a​ ​p​o​p​i​š​t​e​,​ ​c​o​ ​V​á​s​ ​k​ ​t​o​m​u​t​o​ ​r​o​z​h​o​d​n​u​t​í​ ​v​e​d​l​o​.
+		 */
+		good: string
+		/**
+		 * T​o​t​o​ ​j​e​ ​j​e​d​e​n​ ​z​ ​l​é​k​a​ř​ů​,​ ​k​t​e​r​é​ ​b​y​s​t​e​ ​s​i​ ​z​a​ ​s​v​é​h​o​ ​p​r​a​k​t​i​k​a​ ​z​v​o​l​i​l​/​a​ ​n​e​j​m​é​n​ě​ ​o​c​h​o​t​n​ě​.​ ​P​r​o​h​l​é​d​n​ě​t​e​ ​s​i​,​ ​p​r​o​s​í​m​,​ ​z​n​o​v​a​ ​j​e​h​o​ ​p​r​o​f​i​l​ ​a​ ​p​o​p​i​š​t​e​,​ ​c​o​ ​V​á​s​ ​k​ ​t​o​m​u​t​o​ ​r​o​z​h​o​d​n​u​t​í​ ​v​e​d​l​o​.
+		 */
+		bad: string
+		/**
+		 * J​i​ž​ ​j​s​e​m​ ​ř​e​k​l​/​a​ ​v​š​e​.​ ​P​o​k​r​a​č​o​v​a​t
+		 */
+		button: string
 	}
 }
 
@@ -417,20 +417,20 @@ export type TranslationFunctions = {
 				'1': () => LocalizedString
 			}
 		}
-		l3Instructions: {
-			/**
-			 * Toto je jeden z lékařů, které byste si nejochotněji zvolil/a za svého praktika. Prohlédněte si, prosím, znova jeho profil a popište, co Vás k tomuto rozhodnutí vedlo.
-			 */
-			good: () => LocalizedString
-			/**
-			 * Toto je jeden z lékařů, které byste si za svého praktika zvolil/a nejméně ochotně. Prohlédněte si, prosím, znova jeho profil a popište, co Vás k tomuto rozhodnutí vedlo.
-			 */
-			bad: () => LocalizedString
-			/**
-			 * Již jsem řekl/a vše. Pokračovat
-			 */
-			button: () => LocalizedString
-		}
+	}
+	l3Instructions: {
+		/**
+		 * Toto je jeden z lékařů, které byste si nejochotněji zvolil/a za svého praktika. Prohlédněte si, prosím, znova jeho profil a popište, co Vás k tomuto rozhodnutí vedlo.
+		 */
+		good: () => LocalizedString
+		/**
+		 * Toto je jeden z lékařů, které byste si za svého praktika zvolil/a nejméně ochotně. Prohlédněte si, prosím, znova jeho profil a popište, co Vás k tomuto rozhodnutí vedlo.
+		 */
+		bad: () => LocalizedString
+		/**
+		 * Již jsem řekl/a vše. Pokračovat
+		 */
+		button: () => LocalizedString
 	}
 }
 

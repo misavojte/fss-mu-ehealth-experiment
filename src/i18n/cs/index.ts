@@ -77,6 +77,11 @@ const cs = {
 				1: 'Ne, potřebuji zopakovat praxi'
 			}
 		}
+	},
+	l3Instructions: {
+		good: 'Toto je jeden z lékařů, které byste si nejochotněji zvolil/a za svého praktika. Prohlédněte si, prosím, znova jeho profil a popište, co Vás k tomuto rozhodnutí vedlo.',
+		bad: 'Toto je jeden z lékařů, které byste si za svého praktika zvolil/a nejméně ochotně. Prohlédněte si, prosím, znova jeho profil a popište, co Vás k tomuto rozhodnutí vedlo.',
+		button: 'Již jsem řekl/a vše. Pokračovat'
 	}
 } satisfies BaseTranslation;
 
