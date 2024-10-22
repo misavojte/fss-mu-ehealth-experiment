@@ -38,12 +38,15 @@ export interface IDoctorManager {
 	getL2ObjectForTrial(): IDoctorObjectL2[];
 	getL3ObjectGood(): IDoctorObjectL2[];
 	getL3ObjectBad(): IDoctorObjectL2[];
+	logL1Init(objects: IDoctorObjectL1[]): void;
 	logL1Start(id: string): void;
 	logL1Load(id: string): void;
 	logL1ShowLikert(id: string): void;
 	logL1Response(id: string, response: number, reactionTime: number): void;
+	logL2Init(objects: IDoctorObjectL2[]): void;
 	logL2Start(id: string): void;
 	logL2Response(id: string, response: number, reactionTime: number): void;
+	logL3Init(objects: IDoctorObjectL2[]): void;
 	logL3Start(id: string): void;
 	logL3End(id: string): void;
 }

@@ -25,6 +25,14 @@ export class DoctorManagerIDB implements IDoctorManager {
 		});
 	}
 
+	private extractIdFromL1S(l1s: IDoctorObjectL1[]): string[] {
+		return l1s.map((l1) => l1.pict_id);
+	}
+
+	private extractIdFromL2S(l2s: IDoctorObjectL2[]): string[] {
+		return l2s.map((l2) => l2.nr);
+	}
+
 	getL1Object(id: string): IDoctorObjectL1 {
 		const doctor = data.find((doctor) => doctor.pict_id === id);
 		if (!doctor) {
@@ -91,6 +99,11 @@ export class DoctorManagerIDB implements IDoctorManager {
 		return best.map((answer) => this.getL2Object(answer.id));
 	}
 
+	logL1Init(objects: IDoctorObjectL1[]): void {
+		const ids = this.extractIdFromL1S(objects);
+		this.logAction('L1_init', ids.join(';'));
+	}
+
 	logL1Start(id: string): void {
 		this.logAction('L1_start', id);
 	}
@@ -108,6 +121,11 @@ export class DoctorManagerIDB implements IDoctorManager {
 		this.logAction('L1_response', `${id}; ${response}; ${reactionTime}`);
 	}
 
+	logL2Init(objects: IDoctorObjectL2[]): void {
+		const ids = this.extractIdFromL2S(objects);
+		this.logAction('L2_init', ids.join(';'));
+	}
+
 	logL2Start(id: string): void {
 		this.logAction('L2_start', id);
 	}
@@ -115,6 +133,11 @@ export class DoctorManagerIDB implements IDoctorManager {
 	logL2Response(id: string, response: number, reactionTime: number): void {
 		this.L2Answers.push({ id, response, reactionTime });
 		this.logAction('L2_response', `${id}; ${response}; ${reactionTime}`);
+	}
+
+	logL3Init(objects: IDoctorObjectL2[]): void {
+		const ids = this.extractIdFromL2S(objects);
+		this.logAction('L3_init', ids.join(';'));
 	}
 
 	logL3Start(id: string): void {
