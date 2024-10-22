@@ -18,6 +18,7 @@
 
 	const abortController = new AbortController();
 	const logic = async () => {
+		doctorManager.logL3Init([...doctorsGood, ...doctorsBad]);
 		for await (const doctor of doctorsGood) {
 			activeDoctor.set(doctor);
 			doctorManager.logL3Start(doctor.nr);

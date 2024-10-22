@@ -44,6 +44,7 @@
 	const stateActiveDoctor = writable<IDoctorObjectL1 | null>(null);
 	const abortController = new AbortController();
 	const logic = async () => {
+		doctorManager.logL1Init(doctors);
 		for await (const doctor of doctors) {
 			stateActiveDoctor.set(doctor);
 			doctorManager.logL1Start(doctor.pict_id);
