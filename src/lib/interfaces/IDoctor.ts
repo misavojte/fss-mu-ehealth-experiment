@@ -28,14 +28,16 @@ export type IDoctorObjectL2 = {
 };
 
 export interface IDoctorManager {
-	L1Answers: Record<string, number>;
-	L2Answers: Record<string, number>;
+	L1Answers: { id: string; response: number; reactionTime: number }[];
+	L2Answers: { id: string; response: number; reactionTime: number }[];
 	getL1Object(id: string): IDoctorObjectL1;
 	getL1ObjectForPractice(): IDoctorObjectL1[];
 	getL1ObjectForTrial(): IDoctorObjectL1[];
 	getL2Object(id: string): IDoctorObjectL2;
 	getL2ObjectForPractice(): IDoctorObjectL2[];
 	getL2ObjectForTrial(): IDoctorObjectL2[];
+	getL3ObjectGood(): IDoctorObjectL2[];
+	getL3ObjectBad(): IDoctorObjectL2[];
 	logL1Start(id: string): void;
 	logL1Load(id: string): void;
 	logL1ShowLikert(id: string): void;
