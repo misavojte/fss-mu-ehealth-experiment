@@ -1,7 +1,6 @@
 <script lang="ts">
 	import { getCancellableAsync, waitForConditionCancellable } from '$lib/utils/waitForCondition';
 	import { createEventDispatcher, onDestroy, onMount } from 'svelte';
-	import ExperimentLikertScale from './ExperimentLikertScale.svelte';
 	import LayoutCardAbsolute from './LayoutCardAbsolute.svelte';
 	import { writable } from 'svelte/store';
 	import ExperimentL2Doctor from './ExperimentL2Doctor.svelte';

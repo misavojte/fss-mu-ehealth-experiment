@@ -1,15 +1,18 @@
 <script lang="ts">
-	import type { IDoctorObjectL2 } from '$lib/interfaces/IDoctor';
+	import type { IDoctorManager, IDoctorObjectL2 } from '$lib/interfaces/IDoctor';
 	import { getCancellableAsync, waitForConditionCancellable } from '$lib/utils/waitForCondition';
 	import { createEventDispatcher, onDestroy, onMount } from 'svelte';
 	import { writable, type Writable } from 'svelte/store';
 	import { fade } from 'svelte/transition';
 	import ExperimentL3Slide from './ExperimentL3Slide.svelte';
+	import { DoctorManagerMock } from '$lib/services/DoctorManagerMock';
+	import { act } from 'react';
 
 	export let slideBackgroundColor: string = '#0097b2';
 	export let primaryColor: string = '#0097b2';
 	export let doctorsGood: IDoctorObjectL2[];
 	export let doctorsBad: IDoctorObjectL2[];
+	export let doctorManager: IDoctorManager = new DoctorManagerMock();
 
 	const dispatch = createEventDispatcher();
 	const wasCurrentDoctorFinished = writable(false);
@@ -20,11 +23,13 @@
 			activeDoctor.set(doctor);
 			await waitForConditionCancellable(wasCurrentDoctorFinished, 0, abortController.signal);
 			wasCurrentDoctorFinished.set(false);
+			activeDoctor.set(null);
 		}
 		for await (const doctor of doctorsBad) {
 			activeDoctor.set(doctor);
 			await waitForConditionCancellable(wasCurrentDoctorFinished, 0, abortController.signal);
 			wasCurrentDoctorFinished.set(false);
+			activeDoctor.set(null);
 		}
 		dispatch('finish');
 	};

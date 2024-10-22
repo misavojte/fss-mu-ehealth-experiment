@@ -116,4 +116,12 @@ export class DoctorManagerIDB implements IDoctorManager {
 		this.L2Answers.push({ id, response, reactionTime });
 		this.logAction('L2_response', `${id}; ${response}; ${reactionTime}`);
 	}
+
+	logL3Start(id: string): void {
+		this.logAction('L3_start', id);
+	}
+
+	logL3End(id: string): void {
+		this.logAction('L3_end', id);
+	}
 }

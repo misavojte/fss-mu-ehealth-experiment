@@ -44,4 +44,6 @@ export interface IDoctorManager {
 	logL1Response(id: string, response: number, reactionTime: number): void;
 	logL2Start(id: string): void;
 	logL2Response(id: string, response: number, reactionTime: number): void;
+	logL3Start(id: string): void;
+	logL3End(id: string): void;
 }
