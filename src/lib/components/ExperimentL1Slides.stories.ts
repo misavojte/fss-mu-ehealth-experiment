@@ -1,11 +1,11 @@
 import type { Meta, StoryObj } from '@storybook/svelte';
 import ExperimentL1Slides from './ExperimentL1Slides.svelte';
-import { DoctorManagerBase } from '$lib/services/DoctorManagerBase';
+import { DoctorManagerMock } from '$lib/services/DoctorManagerMock';
 
-const doctorManager = new DoctorManagerBase();
+const doctorManager = new DoctorManagerMock();
 
-const practiceDoctors = doctorManager.getDoctorObjectForPractice();
-const trialDoctors = doctorManager.getDoctorObjectForTrial();
+const practiceDoctors = doctorManager.getL1ObjectForPractice();
+const trialDoctors = doctorManager.getL1ObjectForTrial();
 
 const meta = {
 	title: 'Experiment/ExperimentL1Slides',

@@ -1,10 +1,15 @@
 <script lang="ts">
-	import { getCancellableAsync, waitForTimeoutCancellable } from '$lib/utils/waitForCondition';
-	import { onDestroy, onMount } from 'svelte';
+	import {
+		getCancellableAsync,
+		waitForConditionCancellable,
+		waitForTimeoutCancellable
+	} from '$lib/utils/waitForCondition';
+	import { createEventDispatcher, onDestroy, onMount } from 'svelte';
 	import ExperimentDoctor from './ExperimentL1Doctor.svelte';
 	import ExperimentLikertScale from './ExperimentLikertScale.svelte';
 	import LayoutCardAbsolute from './LayoutCardAbsolute.svelte';
 	import { fly } from 'svelte/transition';
+	import { writable } from 'svelte/store';
 
 	export let starBackgroundColor: string = '#fff';
 
@@ -47,9 +52,19 @@
 
 	let isLikertVisible = false;
 
-	const abortController = new AbortController();
+	const isLoaded = writable(false);
+	const handleLoad = () => {
+		isLoaded.set(true);
+	};
+
+	const dispatch = createEventDispatcher();
+
+	let abortController = new AbortController();
 	const logic = async () => {
+		await waitForConditionCancellable(isLoaded, 0, abortController.signal);
+		dispatch('load');
 		await waitForTimeoutCancellable(timeoutBeforeLikert, abortController.signal);
+		dispatch('likertVisible');
 		isLikertVisible = true;
 	};
 
@@ -63,7 +78,9 @@
 </script>
 
 <div
-	class="relative"
+	class="relative {isLoaded
+		? 'opacity-100'
+		: 'opacity-0 select-none pointer-events-none'} transition-opacity duration-200"
 	style="height: {heightOfDoctor + heightOfLikert + gapHeight}px; width: {width}px;"
 >
 	<LayoutCardAbsolute {width} height={heightOfDoctor} top={0} left={0}>
@@ -83,6 +100,7 @@
 			{starFillColor}
 			{starOutlineColor}
 			{starOutlineWidth}
+			on:load={handleLoad}
 		/>
 	</LayoutCardAbsolute>
 	{#if isLikertVisible}

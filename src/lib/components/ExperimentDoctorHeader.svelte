@@ -21,7 +21,7 @@
 </script>
 
 <div class="flex gap-6 items-center">
-	<ExperimentDoctorImage {pictureId} {pictureBase} {picureExtension} {pictureCorrection} />
+	<ExperimentDoctorImage on:load {pictureId} {pictureBase} {picureExtension} {pictureCorrection} />
 	<div>
 		<div class="text-2xl font-bold text-neutral-700 mb-2">
 			{doctorName}

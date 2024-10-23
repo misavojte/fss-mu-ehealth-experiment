@@ -6,7 +6,7 @@ import { loadLocale } from '../../i18n/i18n-util.sync';
 import { TimestampQuestionServiceMock } from '$lib/services/TimestampQuestionServiceMock';
 import { GazeSaverMock } from '$lib/services/GazeSaverMock';
 import { ConnectLoggerMock } from '$lib/services/ConnectLoggerMock';
-import { DoctorManagerBase } from '$lib/services/DoctorManagerBase';
+import { DoctorManagerMock } from '$lib/services/DoctorManagerMock';
 
 loadLocale('cs');
 setLocale('cs');
@@ -14,7 +14,7 @@ setLocale('cs');
 const questionsService = new TimestampQuestionServiceMock();
 const gazeSaver = new GazeSaverMock();
 const connectLogger = new ConnectLoggerMock();
-const doctorManager = new DoctorManagerBase();
+const doctorManager = new DoctorManagerMock();
 
 // More on how to set up stories at: https://storybook.js.org/docs/writing-stories
 const meta = {

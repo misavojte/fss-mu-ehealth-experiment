@@ -54,6 +54,7 @@
 		{pictureCorrection}
 		{doctorAvgRating}
 		{doctorName}
+		on:load
 	/>
 	<ExperimentRatingDistribution
 		{starBackgroundColor}

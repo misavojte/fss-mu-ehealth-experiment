@@ -11,9 +11,11 @@
 	export let starOutlineColor = 'transparent';
 
 	export let starOutlineWidth = '0px';
+
+	export let size = 32;
 </script>
 
-<svg xmlns="http://www.w3.org/2000/svg" width="32" height="31" viewBox="0 0 51 48">
+<svg xmlns="http://www.w3.org/2000/svg" width={size} height={size} viewBox="0 0 51 48">
 	<!-- Create a clipPath to control the fill percentage -->
 	<clipPath id={`clip-${fillRate}`}>
 		<rect x="0" y="0" width={51 * fillRate} height="48" />

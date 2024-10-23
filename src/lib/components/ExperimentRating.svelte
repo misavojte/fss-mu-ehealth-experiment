@@ -25,6 +25,11 @@
 	 */
 	export let starOutlineWidth = '0px';
 
+	export let size = 32;
+
+	// give quadratic root of size to margin-left
+	const sqrt = (x: number) => Math.sqrt(x) / 2;
+
 	// Reactive statement for calculating fill rates
 	$: fillRates = Array(numStars)
 		.fill(0)
@@ -50,15 +55,18 @@
 </script>
 
 <div class="flex gap-4 items-center">
-	<div class="flex space-x-1">
-		{#each fillRates as fillRate}
-			<ExperimentRatingStar
-				{fillRate}
-				{starBackgroundColor}
-				{starFillColor}
-				{starOutlineColor}
-				{starOutlineWidth}
-			/>
+	<div class="flex">
+		{#each fillRates as fillRate, i}
+			<span style="margin-left: {i === 0 ? 0 : sqrt(size)}px">
+				<ExperimentRatingStar
+					{size}
+					{fillRate}
+					{starBackgroundColor}
+					{starFillColor}
+					{starOutlineColor}
+					{starOutlineWidth}
+				/>
+			</span>
 		{/each}
 	</div>
 </div>
