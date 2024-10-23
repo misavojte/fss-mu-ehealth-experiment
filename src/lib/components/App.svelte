@@ -1,8 +1,5 @@
 <script lang="ts">
-	import InstructionIntermezzo from './InstructionIntermezzo.svelte';
-	import InstructionEnd from './InstructionEnd.svelte';
 	import { fade } from 'svelte/transition';
-	import AppQuestion from './AppQuestion.svelte';
 	import type { ITimestampQuestionService } from '$lib/interfaces/IQuestion';
 	import AppConnect from './AppConnect.svelte';
 	import { GazeManager } from '@473783/develex-core';
@@ -11,10 +8,31 @@
 	import type { IGazeSaver } from '$lib/interfaces/IGazeSaver';
 	import { onDestroy, onMount, setContext } from 'svelte';
 	import type { AcceptedIntersect } from '$lib/database/repositories/Gaze.repository';
-	import ExperimentL1Slides from './ExperimentL1Slides.svelte';
+	import AppL1Instruction from './AppL1Instruction.svelte';
+	import AppL1Practice from './AppL1Practice.svelte';
+	import AppL1Intermezzo from './AppL1Intermezzo.svelte';
+	import AppL2Intermezzo from './AppL2Intermezzo.svelte';
+	import AppL2Trial from './AppL2Trial.svelte';
+	import AppL3Trial from './AppL3Trial.svelte';
+	import AppEnd from './AppEnd.svelte';
+	import AppL2Instruction from './AppL2Instruction.svelte';
+	import AppL2Practice from './AppL2Practice.svelte';
+	import AppL1Trial from './AppL1Trial.svelte';
+	import AppL3Instruction from './AppL3Instruction.svelte';
 
-	export let state: 'connect' | 'start' | 'practicel1' | 'intermezzol1' | 'triall1' | 'end' =
-		'connect';
+	export let state:
+		| 'connect'
+		| 'l1instruction'
+		| 'l1practice'
+		| 'l1intermezzo'
+		| 'l1trial'
+		| 'l2instruction'
+		| 'l2practice'
+		| 'l2intermezzo'
+		| 'l2trial'
+		| 'l3instruction'
+		| 'l3trial'
+		| 'end' = 'connect';
 
 	export let pictureBase: string;
 
@@ -24,18 +42,6 @@
 	export let gazeSaver: IGazeSaver;
 
 	const gazeManager = new GazeManager();
-
-	const handlePostStart = async () => {
-		state = 'practicel1';
-	};
-
-	const handlePostIntermezzo = async () => {
-		state = 'triall1';
-	};
-
-	const handlePostConnect = async () => {
-		state = 'start';
-	};
 
 	const onIntersect = (entry: AcceptedIntersect) => {
 		gazeSaver.saveGazeInteraction(entry);
@@ -50,6 +56,14 @@
 	onDestroy(() => {
 		gazeManager.off('intersect', onIntersect);
 	});
+
+	const handlePostConnect = () => {
+		state = 'l1instruction';
+	};
+
+	const handlePostL1Instruction = () => {
+		state = 'l1practice';
+	};
 </script>
 
 <main class="w-screen h-screen relative">
@@ -60,52 +74,92 @@
 		>
 			<AppConnect {connectLogger} {gazeManager} on:finished={handlePostConnect} />
 		</div>
-	{:else if state === 'start'}
+	{:else if state === 'l1instruction'}
 		<div
 			transition:fade={{ duration: 200 }}
 			class="absolute w-screen h-screen flex items-center justify-center"
 		>
-			<AppQuestion {questionsService} on:finished={handlePostStart} />
+			<AppL1Instruction {questionsService} on:finished={handlePostL1Instruction} />
 		</div>
-	{:else if state === 'practicel1'}
+	{:else if state === 'l1practice'}
 		<div
 			transition:fade={{ duration: 200 }}
 			class="absolute w-screen h-screen flex items-center justify-center"
 		>
-			<ExperimentL1Slides
+			<AppL1Practice
 				{pictureBase}
-				doctors={doctorManager.getL1ObjectForPractice()}
-				on:finish={() => {
-					state = 'intermezzol1';
-				}}
+				{doctorManager}
+				{gazeSaver}
+				on:finish={() => (state = 'l1intermezzo')}
 			/>
 		</div>
-	{:else if state === 'intermezzol1'}
+	{:else if state === 'l1intermezzo'}
 		<div
 			transition:fade={{ duration: 200 }}
 			class="absolute w-screen h-screen flex items-center justify-center"
 		>
-			<InstructionIntermezzo on:next={handlePostIntermezzo} />
+			<AppL1Intermezzo {questionsService} on:finished={() => (state = 'l1trial')} />
 		</div>
-	{:else if state === 'triall1'}
+	{:else if state === 'l1trial'}
 		<div
 			transition:fade={{ duration: 200 }}
 			class="absolute w-screen h-screen flex items-center justify-center"
 		>
-			<ExperimentL1Slides
+			<AppL1Trial
 				{pictureBase}
-				doctors={doctorManager.getL1ObjectForTrial()}
-				on:finish={() => {
-					state = 'end';
-				}}
+				{doctorManager}
+				{gazeSaver}
+				on:finish={() => (state = 'l2instruction')}
 			/>
+		</div>
+	{:else if state === 'l2instruction'}
+		<div
+			transition:fade={{ duration: 200 }}
+			class="absolute w-screen h-screen flex items-center justify-center"
+		>
+			<AppL2Instruction {questionsService} on:finished={() => (state = 'l2practice')} />
+		</div>
+	{:else if state === 'l2practice'}
+		<div
+			transition:fade={{ duration: 200 }}
+			class="absolute w-screen h-screen flex items-center justify-center"
+		>
+			<AppL2Practice {doctorManager} {gazeSaver} on:finish={() => (state = 'l2intermezzo')} />
+		</div>
+	{:else if state === 'l2intermezzo'}
+		<div
+			transition:fade={{ duration: 200 }}
+			class="absolute w-screen h-screen flex items-center justify-center"
+		>
+			<AppL2Intermezzo {questionsService} on:finished={() => (state = 'l2trial')} />
+		</div>
+	{:else if state === 'l2trial'}
+		<div
+			transition:fade={{ duration: 200 }}
+			class="absolute w-screen h-screen flex items-center justify-center"
+		>
+			<AppL2Trial {doctorManager} {gazeSaver} on:finish={() => (state = 'l3instruction')} />
+		</div>
+	{:else if state === 'l3instruction'}
+		<div
+			transition:fade={{ duration: 200 }}
+			class="absolute w-screen h-screen flex items-center justify-center"
+		>
+			<AppL3Instruction {questionsService} on:finished={() => (state = 'l3trial')} />
+		</div>
+	{:else if state === 'l3trial'}
+		<div
+			transition:fade={{ duration: 200 }}
+			class="absolute w-screen h-screen flex items-center justify-center"
+		>
+			<AppL3Trial {doctorManager} {gazeSaver} on:finish={() => (state = 'end')} />
 		</div>
 	{:else if state === 'end'}
 		<div
 			transition:fade={{ duration: 200 }}
 			class="absolute w-screen h-screen flex items-center justify-center"
 		>
-			<InstructionEnd />
+			<AppEnd />
 		</div>
 	{/if}
 </main>

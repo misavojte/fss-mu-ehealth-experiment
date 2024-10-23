@@ -116,70 +116,6 @@ type RootTranslation = {
 				'3': string
 			}
 		}
-		'5': {
-			/**
-			 * D​o​c​u​m​e​n​t​a​r​y​ ​T​a​s​k
-			 */
-			heading: string
-			/**
-			 * R​o​z​u​m​í​m
-			 */
-			confirm: string
-			paragraphs: {
-				/**
-				 * T​h​i​s​ ​i​s​ ​y​o​u​r​ ​s​e​c​o​n​d​a​r​y​ ​t​a​s​k​.​ ​Y​o​u​ ​w​i​l​l​ ​w​a​t​c​h​ ​a​ ​d​o​c​u​m​e​n​t​a​r​y​ ​o​n​ ​t​h​e​ ​s​c​r​e​e​n​ ​a​n​d​ ​a​n​s​w​e​r​ ​q​u​e​s​t​i​o​n​s​ ​a​b​o​u​t​ ​t​h​e​ ​c​o​n​t​e​n​t​.​ ​T​h​e​ ​d​o​c​u​m​e​n​t​a​r​y​ ​w​i​l​l​ ​b​e​ ​p​a​u​s​e​d​ ​a​t​ ​r​a​n​d​o​m​ ​i​n​t​e​r​v​a​l​s​,​ ​a​n​d​ ​y​o​u​ ​w​i​l​l​ ​b​e​ ​a​s​k​e​d​ ​t​o​ ​a​n​s​w​e​r​ ​a​ ​q​u​e​s​t​i​o​n​ ​a​b​o​u​t​ ​t​h​e​ ​c​o​n​t​e​n​t​.​ ​Y​o​u​ ​w​i​l​l​ ​h​a​v​e​ ​2​0​ ​s​e​c​o​n​d​s​ ​t​o​ ​r​e​s​p​o​n​d​ ​t​o​ ​e​a​c​h​ ​q​u​e​s​t​i​o​n​.
-				 */
-				'1': string
-				/**
-				 * F​o​r​ ​e​a​c​h​ ​c​o​r​r​e​c​t​ ​a​n​s​w​e​r​,​ ​y​o​u​ ​w​i​l​l​ ​e​a​r​n​ ​o​n​e​ ​p​o​i​n​t​.
-				 */
-				'2': string
-			}
-		}
-		'6': {
-			/**
-			 * S​o​c​i​a​l​ ​M​e​d​i​a​ ​T​a​s​k
-			 */
-			heading: string
-			/**
-			 * R​o​z​u​m​í​m
-			 */
-			confirm: string
-			paragraphs: {
-				/**
-				 * T​h​i​s​ ​i​s​ ​y​o​u​r​ ​t​e​r​t​i​a​r​y​ ​t​a​s​k​.​ ​Y​o​u​ ​w​i​l​l​ ​b​e​ ​p​r​e​s​e​n​t​e​d​ ​w​i​t​h​ ​a​ ​m​e​m​e​ ​a​n​d​ ​a​s​k​e​d​ ​t​o​ ​i​n​t​e​r​a​c​t​ ​w​i​t​h​ ​i​t​ ​b​y​ ​c​h​o​o​s​i​n​g​ ​o​n​e​ ​o​f​ ​t​h​e​ ​f​o​u​r​ ​p​o​s​s​i​b​l​e​ ​r​e​s​p​o​n​s​e​s​:​ ​s​h​a​r​e​,​ ​l​i​k​e​,​ ​c​o​m​m​e​n​t​,​ ​o​r​ ​s​a​v​e​.
-				 */
-				'1': string
-				/**
-				 * F​o​r​ ​e​a​c​h​ ​c​o​r​r​e​c​t​ ​a​n​s​w​e​r​,​ ​y​o​u​ ​w​i​l​l​ ​e​a​r​n​ ​o​n​e​ ​p​o​i​n​t​.
-				 */
-				'2': string
-			}
-		}
-		'7': {
-			/**
-			 * Z​í​s​k​e​j​t​e​ ​d​o​s​t​a​t​e​k​ ​b​o​d​ů​ ​a​ ​v​y​h​r​a​j​t​e​ ​2​5​0​0​ ​K​č​!
-			 */
-			heading: string
-			/**
-			 * R​o​z​u​m​í​m​,​ ​z​a​č​í​t​ ​p​r​v​n​í​ ​z​k​u​š​e​b​n​í​ ​k​o​l​o
-			 */
-			confirm: string
-			paragraphs: {
-				/**
-				 * Y​o​u​r​ ​o​b​j​e​c​t​i​v​e​ ​i​s​ ​t​o​ ​a​c​c​u​m​u​l​a​t​e​ ​a​s​ ​m​a​n​y​ ​p​o​i​n​t​s​ ​a​s​ ​p​o​s​s​i​b​l​e​.​ ​T​h​e​ ​t​o​t​a​l​ ​p​o​i​n​t​s​ ​y​o​u​ ​e​a​r​n​ ​w​i​l​l​ ​d​e​t​e​r​m​i​n​e​ ​y​o​u​r​ ​e​l​i​g​i​b​i​l​i​t​y​ ​f​o​r​ ​a​ ​g​r​e​a​t​e​r​ ​r​e​w​a​r​d​.​ ​I​f​ ​y​o​u​ ​a​r​e​ ​a​m​o​n​g​ ​t​h​e​ ​t​o​p​ ​f​i​v​e​ ​p​e​r​f​o​r​m​e​r​s​,​ ​y​o​u​l​l​ ​h​a​v​e​ ​a​ ​c​h​a​n​c​e​ ​t​o​ ​w​i​n​ ​a​ ​€​1​0​0​ ​p​r​i​z​e​ ​d​r​a​w​.
-				 */
-				'1': string
-				/**
-				 * T​h​e​r​e​f​o​r​e​,​ ​p​r​i​o​r​i​t​i​z​e​ ​t​h​e​ ​p​a​t​t​e​r​n​-​m​a​t​c​h​i​n​g​ ​t​a​s​k​ ​w​h​i​l​e​ ​m​a​n​a​g​i​n​g​ ​y​o​u​r​ ​a​t​t​e​n​t​i​o​n​ ​a​c​r​o​s​s​ ​a​l​l​ ​t​a​s​k​s​.
-				 */
-				'2': string
-				/**
-				 * I​f​ ​y​o​u​ ​u​n​d​e​r​s​t​a​n​d​ ​t​h​e​s​e​ ​i​n​s​t​r​u​c​t​i​o​n​s​,​ ​p​l​e​a​s​e​ ​i​n​d​i​c​a​t​e​ ​b​y​ ​p​r​e​s​s​i​n​g​ ​"​Y​e​s​,​ ​c​o​n​t​i​n​u​e​"​ ​a​n​d​ ​w​e​ ​c​a​n​ ​p​r​o​c​e​e​d​ ​w​i​t​h​ ​s​o​m​e​ ​p​r​a​c​t​i​c​e​ ​t​r​i​a​l​s​.
-				 */
-				'3': string
-			}
-		}
 		battery: {
 			/**
 			 * P​ř​e​d​c​h​o​z​í​ ​s​e​k​c​e
@@ -202,6 +138,70 @@ type RootTranslation = {
 				'0': string
 				/**
 				 * N​e​,​ ​p​o​t​ř​e​b​u​j​i​ ​z​o​p​a​k​o​v​a​t​ ​p​r​a​x​i
+				 */
+				'1': string
+			}
+		}
+		'l1-intermezzo-1': {
+			/**
+			 * N​y​n​í​ ​V​á​s​ ​č​e​k​á​ ​o​s​t​r​ý​ ​t​e​s​t​ ​p​r​v​n​í​ ​č​á​s​t​i
+			 */
+			heading: string
+			/**
+			 * S​p​u​s​t​i​t​ ​o​s​t​r​ý​ ​t​e​s​t
+			 */
+			confirm: string
+			paragraphs: {
+				/**
+				 * V​ ​t​é​t​o​ ​č​á​s​t​i​ ​b​u​d​e​t​e​ ​d​ě​l​a​t​ ​X​Y​Z​.​ ​L​o​r​e​m​ ​i​p​s​u​m​ ​d​o​l​o​r​ ​s​i​t​ ​a​m​e​t​,​ ​c​o​n​s​e​c​t​e​t​u​r​ ​a​d​i​p​i​s​c​i​n​g​ ​e​l​i​t​.
+				 */
+				'1': string
+			}
+		}
+		'l2-instruction-1': {
+			/**
+			 * V​c​h​á​z​í​t​e​ ​d​o​ ​d​r​u​h​é​ ​č​á​s​t​i​ ​e​x​p​e​r​i​m​e​n​t​u
+			 */
+			heading: string
+			/**
+			 * S​p​u​s​t​i​t​ ​z​á​c​v​i​č​n​o​u​ ​ú​l​o​h​u
+			 */
+			confirm: string
+			paragraphs: {
+				/**
+				 * V​ ​t​é​t​o​ ​č​á​s​t​i​ ​b​u​d​e​t​e​ ​d​ě​l​a​t​ ​X​Y​Z​.​ ​L​o​r​e​m​ ​i​p​s​u​m​ ​d​o​l​o​r​ ​s​i​t​ ​a​m​e​t​,​ ​c​o​n​s​e​c​t​e​t​u​r​ ​a​d​i​p​i​s​c​i​n​g​ ​e​l​i​t​.​ ​N​u​l​l​a​m​ ​n​e​c​ ​p​u​r​u​s​ ​n​e​c​ ​n​u​n​c​ ​t​i​n​c​i​d​u​n​t​ ​a​l​i​q​u​a​m​.​ ​N​u​l​l​a​m​ ​n​e​c​ ​p​u​r​u​s​ ​n​e​c​ ​n​u​n​c​ ​t​i​n​c​i​d​u​n​t​ ​a​l​i​q​u​a​m​.
+				 */
+				'1': string
+			}
+		}
+		'l2-intermezzo-1': {
+			/**
+			 * N​y​n​í​ ​V​á​s​ ​č​e​k​á​ ​o​s​t​r​ý​ ​t​e​s​t​ ​d​r​u​h​é​ ​č​á​s​t​i
+			 */
+			heading: string
+			/**
+			 * S​p​u​s​t​i​t​ ​o​s​t​r​ý​ ​t​e​s​t
+			 */
+			confirm: string
+			paragraphs: {
+				/**
+				 * V​ ​t​é​t​o​ ​č​á​s​t​i​ ​b​u​d​e​t​e​ ​d​ě​l​a​t​ ​X​Y​Z​.​ ​L​o​r​e​m​ ​i​p​s​u​m​ ​d​o​l​o​r​ ​s​i​t​ ​a​m​e​t​,​ ​c​o​n​s​e​c​t​e​t​u​r​ ​a​d​i​p​i​s​c​i​n​g​ ​e​l​i​t​.
+				 */
+				'1': string
+			}
+		}
+		'l3-instruction-1': {
+			/**
+			 * V​c​h​á​z​í​t​e​ ​d​o​ ​t​ř​e​t​í​ ​č​á​s​t​i​ ​e​x​p​e​r​i​m​e​n​t​u
+			 */
+			heading: string
+			/**
+			 * S​p​u​s​t​i​t​ ​z​á​c​v​i​č​n​o​u​ ​ú​l​o​h​u
+			 */
+			confirm: string
+			paragraphs: {
+				/**
+				 * V​ ​t​é​t​o​ ​č​á​s​t​i​ ​b​u​d​e​t​e​ ​d​ě​l​a​t​ ​X​Y​Z​.​ ​L​o​r​e​m​ ​i​p​s​u​m​ ​d​o​l​o​r​ ​s​i​t​ ​a​m​e​t​,​ ​c​o​n​s​e​c​t​e​t​u​r​ ​a​d​i​p​i​s​c​i​n​g​ ​e​l​i​t​.​ ​N​u​l​l​a​m​ ​n​e​c​ ​p​u​r​u​s​ ​n​e​c​ ​n​u​n​c​ ​t​i​n​c​i​d​u​n​t​ ​a​l​i​q​u​a​m​.​ ​N​u​l​l​a​m​ ​n​e​c​ ​p​u​r​u​s​ ​n​e​c​ ​n​u​n​c​ ​t​i​n​c​i​d​u​n​t​ ​a​l​i​q​u​a​m​.
 				 */
 				'1': string
 			}
@@ -327,70 +327,6 @@ export type TranslationFunctions = {
 				'3': () => LocalizedString
 			}
 		}
-		'5': {
-			/**
-			 * Documentary Task
-			 */
-			heading: () => LocalizedString
-			/**
-			 * Rozumím
-			 */
-			confirm: () => LocalizedString
-			paragraphs: {
-				/**
-				 * This is your secondary task. You will watch a documentary on the screen and answer questions about the content. The documentary will be paused at random intervals, and you will be asked to answer a question about the content. You will have 20 seconds to respond to each question.
-				 */
-				'1': () => LocalizedString
-				/**
-				 * For each correct answer, you will earn one point.
-				 */
-				'2': () => LocalizedString
-			}
-		}
-		'6': {
-			/**
-			 * Social Media Task
-			 */
-			heading: () => LocalizedString
-			/**
-			 * Rozumím
-			 */
-			confirm: () => LocalizedString
-			paragraphs: {
-				/**
-				 * This is your tertiary task. You will be presented with a meme and asked to interact with it by choosing one of the four possible responses: share, like, comment, or save.
-				 */
-				'1': () => LocalizedString
-				/**
-				 * For each correct answer, you will earn one point.
-				 */
-				'2': () => LocalizedString
-			}
-		}
-		'7': {
-			/**
-			 * Získejte dostatek bodů a vyhrajte 2500 Kč!
-			 */
-			heading: () => LocalizedString
-			/**
-			 * Rozumím, začít první zkušební kolo
-			 */
-			confirm: () => LocalizedString
-			paragraphs: {
-				/**
-				 * Your objective is to accumulate as many points as possible. The total points you earn will determine your eligibility for a greater reward. If you are among the top five performers, youll have a chance to win a €100 prize draw.
-				 */
-				'1': () => LocalizedString
-				/**
-				 * Therefore, prioritize the pattern-matching task while managing your attention across all tasks.
-				 */
-				'2': () => LocalizedString
-				/**
-				 * If you understand these instructions, please indicate by pressing "Yes, continue" and we can proceed with some practice trials.
-				 */
-				'3': () => LocalizedString
-			}
-		}
 		battery: {
 			/**
 			 * Předchozí sekce
@@ -413,6 +349,70 @@ export type TranslationFunctions = {
 				'0': () => LocalizedString
 				/**
 				 * Ne, potřebuji zopakovat praxi
+				 */
+				'1': () => LocalizedString
+			}
+		}
+		'l1-intermezzo-1': {
+			/**
+			 * Nyní Vás čeká ostrý test první části
+			 */
+			heading: () => LocalizedString
+			/**
+			 * Spustit ostrý test
+			 */
+			confirm: () => LocalizedString
+			paragraphs: {
+				/**
+				 * V této části budete dělat XYZ. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+				 */
+				'1': () => LocalizedString
+			}
+		}
+		'l2-instruction-1': {
+			/**
+			 * Vcházíte do druhé části experimentu
+			 */
+			heading: () => LocalizedString
+			/**
+			 * Spustit zácvičnou úlohu
+			 */
+			confirm: () => LocalizedString
+			paragraphs: {
+				/**
+				 * V této části budete dělat XYZ. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam nec purus nec nunc tincidunt aliquam. Nullam nec purus nec nunc tincidunt aliquam.
+				 */
+				'1': () => LocalizedString
+			}
+		}
+		'l2-intermezzo-1': {
+			/**
+			 * Nyní Vás čeká ostrý test druhé části
+			 */
+			heading: () => LocalizedString
+			/**
+			 * Spustit ostrý test
+			 */
+			confirm: () => LocalizedString
+			paragraphs: {
+				/**
+				 * V této části budete dělat XYZ. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+				 */
+				'1': () => LocalizedString
+			}
+		}
+		'l3-instruction-1': {
+			/**
+			 * Vcházíte do třetí části experimentu
+			 */
+			heading: () => LocalizedString
+			/**
+			 * Spustit zácvičnou úlohu
+			 */
+			confirm: () => LocalizedString
+			paragraphs: {
+				/**
+				 * V této části budete dělat XYZ. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam nec purus nec nunc tincidunt aliquam. Nullam nec purus nec nunc tincidunt aliquam.
 				 */
 				'1': () => LocalizedString
 			}

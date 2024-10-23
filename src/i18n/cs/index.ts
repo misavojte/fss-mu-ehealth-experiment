@@ -45,36 +45,39 @@ const cs = {
 				3: 'There is no time limit for each response. The next trial will begin after the response is made. For each correct answer, you will earn three points.'
 			}
 		},
-		5: {
-			heading: 'Documentary Task',
-			confirm: 'Rozumím',
-			paragraphs: {
-				1: 'This is your secondary task. You will watch a documentary on the screen and answer questions about the content. The documentary will be paused at random intervals, and you will be asked to answer a question about the content. You will have 20 seconds to respond to each question.',
-				2: 'For each correct answer, you will earn one point.'
-			}
-		},
-		6: {
-			heading: 'Social Media Task',
-			confirm: 'Rozumím',
-			paragraphs: {
-				1: 'This is your tertiary task. You will be presented with a meme and asked to interact with it by choosing one of the four possible responses: share, like, comment, or save.',
-				2: 'For each correct answer, you will earn one point.'
-			}
-		},
-		7: {
-			heading: 'Získejte dostatek bodů a vyhrajte 2500 Kč!',
-			confirm: 'Rozumím, začít první zkušební kolo',
-			paragraphs: {
-				1: 'Your objective is to accumulate as many points as possible. The total points you earn will determine your eligibility for a greater reward. If you are among the top five performers, youll have a chance to win a €100 prize draw.',
-				2: 'Therefore, prioritize the pattern-matching task while managing your attention across all tasks.',
-				3: 'If you understand these instructions, please indicate by pressing "Yes, continue" and we can proceed with some practice trials.'
-			}
-		},
 		'ap-1': {
 			heading: 'Je Vám vše jasné?',
 			options: {
 				0: 'Ano, pokračovat na ostrý test',
 				1: 'Ne, potřebuji zopakovat praxi'
+			}
+		},
+		'l1-intermezzo-1': {
+			heading: 'Nyní Vás čeká ostrý test první části',
+			confirm: 'Spustit ostrý test',
+			paragraphs: {
+				1: 'V této části budete dělat XYZ. Lorem ipsum dolor sit amet, consectetur adipiscing elit.'
+			}
+		},
+		'l2-instruction-1': {
+			heading: 'Vcházíte do druhé části experimentu',
+			confirm: 'Spustit zácvičnou úlohu',
+			paragraphs: {
+				1: 'V této části budete dělat XYZ. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam nec purus nec nunc tincidunt aliquam. Nullam nec purus nec nunc tincidunt aliquam.'
+			}
+		},
+		'l2-intermezzo-1': {
+			heading: 'Nyní Vás čeká ostrý test druhé části',
+			confirm: 'Spustit ostrý test',
+			paragraphs: {
+				1: 'V této části budete dělat XYZ. Lorem ipsum dolor sit amet, consectetur adipiscing elit.'
+			}
+		},
+		'l3-instruction-1': {
+			heading: 'Vcházíte do třetí části experimentu',
+			confirm: 'Spustit zácvičnou úlohu',
+			paragraphs: {
+				1: 'V této části budete dělat XYZ. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam nec purus nec nunc tincidunt aliquam. Nullam nec purus nec nunc tincidunt aliquam.'
 			}
 		}
 	},

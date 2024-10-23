@@ -6,11 +6,14 @@
 	import { createEventDispatcher, onDestroy, onMount } from 'svelte';
 	import { getCancellableAsync, waitForConditionCancellable } from '$lib/utils/waitForCondition';
 	import { DoctorManagerMock } from '$lib/services/DoctorManagerMock';
+	import type { IGazeSaver } from '$lib/interfaces/IGazeSaver';
 
 	export let slideBackgroundColor: string = '#0097b2';
 	export let primaryColor: string = '#0097b2';
 	export let doctors: IDoctorObjectL2[];
 	export let doctorManager: IDoctorManager = new DoctorManagerMock();
+
+	export let gazeSaver: IGazeSaver;
 
 	const dispatch = createEventDispatcher();
 
