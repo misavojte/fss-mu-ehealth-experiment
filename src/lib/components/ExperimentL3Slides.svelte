@@ -6,15 +6,12 @@
 	import { fade } from 'svelte/transition';
 	import ExperimentL3Slide from './ExperimentL3Slide.svelte';
 	import { DoctorManagerMock } from '$lib/services/DoctorManagerMock';
-	import type { IGazeSaver } from '$lib/interfaces/IGazeSaver';
 
 	export let slideBackgroundColor: string = '#0097b2';
 	export let primaryColor: string = '#0097b2';
 	export let doctorsGood: IDoctorObjectL2[];
 	export let doctorsBad: IDoctorObjectL2[];
 	export let doctorManager: IDoctorManager = new DoctorManagerMock();
-
-	export let gazeSaver: IGazeSaver;
 
 	const dispatch = createEventDispatcher();
 	const wasCurrentDoctorFinished = writable(false);

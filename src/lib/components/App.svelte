@@ -64,7 +64,7 @@
 			transition:fade={{ duration: 200 }}
 			class="absolute w-screen h-screen flex items-center justify-center"
 		>
-			<AppConnect {connectLogger} {gazeManager} on:continue={() => (state = 'l1instruction')} />
+			<AppConnect {gazeManager} {connectLogger} on:continue={() => (state = 'l1instruction')} />
 		</div>
 	{:else if state === 'l1instruction'}
 		<div
@@ -78,12 +78,7 @@
 			transition:fade={{ duration: 200 }}
 			class="absolute w-screen h-screen flex items-center justify-center"
 		>
-			<AppL1Practice
-				{pictureBase}
-				{doctorManager}
-				{gazeSaver}
-				on:finish={() => (state = 'l1intermezzo')}
-			/>
+			<AppL1Practice {pictureBase} {doctorManager} on:finish={() => (state = 'l1intermezzo')} />
 		</div>
 	{:else if state === 'l1intermezzo'}
 		<div
@@ -97,12 +92,7 @@
 			transition:fade={{ duration: 200 }}
 			class="absolute w-screen h-screen flex items-center justify-center"
 		>
-			<AppL1Trial
-				{pictureBase}
-				{doctorManager}
-				{gazeSaver}
-				on:finish={() => (state = 'l2instruction')}
-			/>
+			<AppL1Trial {pictureBase} {doctorManager} on:finish={() => (state = 'l2instruction')} />
 		</div>
 	{:else if state === 'l2instruction'}
 		<div
@@ -116,7 +106,7 @@
 			transition:fade={{ duration: 200 }}
 			class="absolute w-screen h-screen flex items-center justify-center"
 		>
-			<AppL2Practice {doctorManager} {gazeSaver} on:finish={() => (state = 'l2intermezzo')} />
+			<AppL2Practice {doctorManager} on:finish={() => (state = 'l2intermezzo')} />
 		</div>
 	{:else if state === 'l2intermezzo'}
 		<div
@@ -130,7 +120,7 @@
 			transition:fade={{ duration: 200 }}
 			class="absolute w-screen h-screen flex items-center justify-center"
 		>
-			<AppL2Trial {doctorManager} {gazeSaver} on:finish={() => (state = 'l3instruction')} />
+			<AppL2Trial {doctorManager} on:finish={() => (state = 'l3instruction')} />
 		</div>
 	{:else if state === 'l3instruction'}
 		<div
@@ -144,7 +134,7 @@
 			transition:fade={{ duration: 200 }}
 			class="absolute w-screen h-screen flex items-center justify-center"
 		>
-			<AppL3Trial {doctorManager} {gazeSaver} on:finish={() => (state = 'end')} />
+			<AppL3Trial {doctorManager} on:finish={() => (state = 'end')} />
 		</div>
 	{:else if state === 'end'}
 		<div
