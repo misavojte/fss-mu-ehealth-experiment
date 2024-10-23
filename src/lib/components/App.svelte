@@ -56,14 +56,6 @@
 	onDestroy(() => {
 		gazeManager.off('intersect', onIntersect);
 	});
-
-	const handlePostConnect = () => {
-		state = 'l1instruction';
-	};
-
-	const handlePostL1Instruction = () => {
-		state = 'l1practice';
-	};
 </script>
 
 <main class="w-screen h-screen relative">
@@ -72,14 +64,14 @@
 			transition:fade={{ duration: 200 }}
 			class="absolute w-screen h-screen flex items-center justify-center"
 		>
-			<AppConnect {connectLogger} {gazeManager} on:finished={handlePostConnect} />
+			<AppConnect {connectLogger} {gazeManager} on:continue={() => (state = 'l1instruction')} />
 		</div>
 	{:else if state === 'l1instruction'}
 		<div
 			transition:fade={{ duration: 200 }}
 			class="absolute w-screen h-screen flex items-center justify-center"
 		>
-			<AppL1Instruction {questionsService} on:finished={handlePostL1Instruction} />
+			<AppL1Instruction {questionsService} on:finished={() => (state = 'l1practice')} />
 		</div>
 	{:else if state === 'l1practice'}
 		<div
