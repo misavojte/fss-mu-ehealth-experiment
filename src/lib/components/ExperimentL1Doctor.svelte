@@ -1,6 +1,7 @@
 <script lang="ts">
 	import ExperimentDoctorHeader from './ExperimentDoctorHeader.svelte';
 	import ExperimentRatingDistribution from './ExperimentRatingDistribution.svelte';
+	import Intersecter from './Intersecter.svelte';
 
 	export let pictureId: string;
 
@@ -47,24 +48,28 @@
 </script>
 
 <div class="flex flex-col items-center justify-center gap-8">
-	<ExperimentDoctorHeader
-		{pictureId}
-		{pictureBase}
-		{picureExtension}
-		{pictureCorrection}
-		{doctorAvgRating}
-		{doctorName}
-		on:load
-	/>
-	<ExperimentRatingDistribution
-		{starBackgroundColor}
-		{starFillColor}
-		{starOutlineColor}
-		{starOutlineWidth}
-		{numberOfOneStars}
-		{numberOfTwoStars}
-		{numberOfThreeStars}
-		{numberOfFourStars}
-		{numberOfFiveStars}
-	/>
+	<Intersecter id="doctor-l1_{pictureId}_header">
+		<ExperimentDoctorHeader
+			{pictureId}
+			{pictureBase}
+			{picureExtension}
+			{pictureCorrection}
+			{doctorAvgRating}
+			{doctorName}
+			on:load
+		/>
+	</Intersecter>
+	<Intersecter id="doctor-l1_{pictureId}_rating">
+		<ExperimentRatingDistribution
+			{starBackgroundColor}
+			{starFillColor}
+			{starOutlineColor}
+			{starOutlineWidth}
+			{numberOfOneStars}
+			{numberOfTwoStars}
+			{numberOfThreeStars}
+			{numberOfFourStars}
+			{numberOfFiveStars}
+		/>
+	</Intersecter>
 </div>

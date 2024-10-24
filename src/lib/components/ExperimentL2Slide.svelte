@@ -5,6 +5,7 @@
 	import LayoutCardAbsolute from './LayoutCardAbsolute.svelte';
 	import { writable } from 'svelte/store';
 	import ExperimentL2Doctor from './ExperimentL2Doctor.svelte';
+	import Intersecter from './Intersecter.svelte';
 
 	export let id: string;
 	export let name: string;
@@ -47,6 +48,8 @@
 		<ExperimentL2Doctor {id} {name} {rating} {reviewCount} {primaryColor} {reviews} />
 	</LayoutCardAbsolute>
 	<LayoutCardAbsolute {width} height={heightOfLikert} top={heightOfDoctor + gapHeight} left={0}>
-		<ExperimentLikertScale on:input={handleLikertInput} />
+		<Intersecter id="doctor-l2_{id}_likert">
+			<ExperimentLikertScale on:input={handleLikertInput} />
+		</Intersecter>
 	</LayoutCardAbsolute>
 </div>

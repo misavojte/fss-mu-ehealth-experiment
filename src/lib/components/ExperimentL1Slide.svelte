@@ -10,6 +10,7 @@
 	import LayoutCardAbsolute from './LayoutCardAbsolute.svelte';
 	import { fly } from 'svelte/transition';
 	import { writable } from 'svelte/store';
+	import Intersecter from './Intersecter.svelte';
 
 	export let starBackgroundColor: string = '#fff';
 
@@ -105,9 +106,16 @@
 	</LayoutCardAbsolute>
 	{#if isLikertVisible}
 		<div in:fly={{ duration: 200, y: 50 }}>
-			<LayoutCardAbsolute {width} height={heightOfLikert} top={heightOfDoctor + gapHeight} left={0}>
-				<ExperimentLikertScale on:input />
-			</LayoutCardAbsolute>
+			<Intersecter id="doctor-l1_{pictureId}likert">
+				<LayoutCardAbsolute
+					{width}
+					height={heightOfLikert}
+					top={heightOfDoctor + gapHeight}
+					left={0}
+				>
+					<ExperimentLikertScale on:input />
+				</LayoutCardAbsolute>
+			</Intersecter>
 		</div>
 	{/if}
 </div>

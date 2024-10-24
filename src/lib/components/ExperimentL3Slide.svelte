@@ -5,6 +5,7 @@
 	import { writable } from 'svelte/store';
 	import ExperimentL2Doctor from './ExperimentL2Doctor.svelte';
 	import LL from '../../i18n/i18n-svelte';
+	import Intersecter from './Intersecter.svelte';
 
 	export let id: string;
 	export let name: string;
@@ -49,15 +50,17 @@
 		2 * gapHeight}px; width: {width}px;"
 >
 	<LayoutCardAbsolute {width} height={heightOfInstruction} top={0} left={0}>
-		<div class="flex items-center justify-center h-full p-2">
-			<p class="text-lg text-gray-700">
-				{#if type === 'good'}
-					{$LL.l3Instructions.good()}
-				{:else}
-					{$LL.l3Instructions.bad()}
-				{/if}
-			</p>
-		</div>
+		<Intersecter id="doctor-l3_{id}_instruction">
+			<div class="flex items-center justify-center h-full p-2">
+				<p class="text-lg text-gray-700">
+					{#if type === 'good'}
+						{$LL.l3Instructions.good()}
+					{:else}
+						{$LL.l3Instructions.bad()}
+					{/if}
+				</p>
+			</div>
+		</Intersecter>
 	</LayoutCardAbsolute>
 	<LayoutCardAbsolute
 		{width}
@@ -67,11 +70,13 @@
 	>
 		<ExperimentL2Doctor {id} {name} {rating} {reviewCount} {primaryColor} {reviews} />
 	</LayoutCardAbsolute>
-	<button
-		class="rounded-xl absolute bg-blue-500 text-white hover:bg-blue-700"
-		on:click={handleNext}
-		style="width: {width}px; height: {heightOfButton}px; bottom: 0;"
-	>
-		{$LL.l3Instructions.button()}
-	</button>
+	<Intersecter id="doctor-l3_{id}_button">
+		<button
+			class="rounded-xl absolute bg-blue-500 text-white hover:bg-blue-700"
+			on:click={handleNext}
+			style="width: {width}px; height: {heightOfButton}px; bottom: 0;"
+		>
+			{$LL.l3Instructions.button()}
+		</button>
+	</Intersecter>
 </div>
