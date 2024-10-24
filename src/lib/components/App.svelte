@@ -58,7 +58,6 @@
 	});
 
 	const onDestroyOrUnload = () => {
-		gazeManager.stop();
 		gazeManager.disconnect();
 		gazeManager.off('intersect', onIntersect);
 	};
