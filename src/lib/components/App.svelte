@@ -54,10 +54,17 @@
 	});
 
 	onDestroy(() => {
+		onDestroyOrUnload();
+	});
+
+	const onDestroyOrUnload = () => {
+		gazeManager.stop();
 		gazeManager.disconnect();
 		gazeManager.off('intersect', onIntersect);
-	});
+	};
 </script>
+
+<svelte:window on:beforeunload={onDestroyOrUnload} />
 
 <main class="w-screen h-screen relative">
 	{#if state === 'connect'}
