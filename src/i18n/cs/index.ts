@@ -5,7 +5,8 @@ const cs = {
 	pleaseWait: 'Prosím, počkejte na načtení všech dat',
 	end: {
 		title: 'Děkujeme za Vaši účast!',
-		text: 'Jste na konci testování. Děkujeme, že jste si našli čas a pomohli nám s testováním..'
+		text: 'Jste na konci testování. Děkujeme, že jste si našli čas a pomohli nám s testováním.',
+		button: 'Ukončit testování'
 	},
 	intermezzo: {
 		title: 'Ostré testování',

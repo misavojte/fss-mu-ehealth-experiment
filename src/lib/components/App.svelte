@@ -54,6 +54,7 @@
 	});
 
 	onDestroy(() => {
+		gazeManager.disconnect();
 		gazeManager.off('intersect', onIntersect);
 	});
 </script>

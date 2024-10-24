@@ -27,9 +27,13 @@ type RootTranslation = {
 		 */
 		title: string
 		/**
-		 * J​s​t​e​ ​n​a​ ​k​o​n​c​i​ ​t​e​s​t​o​v​á​n​í​.​ ​D​ě​k​u​j​e​m​e​,​ ​ž​e​ ​j​s​t​e​ ​s​i​ ​n​a​š​l​i​ ​č​a​s​ ​a​ ​p​o​m​o​h​l​i​ ​n​á​m​ ​s​ ​t​e​s​t​o​v​á​n​í​m​.​.
+		 * J​s​t​e​ ​n​a​ ​k​o​n​c​i​ ​t​e​s​t​o​v​á​n​í​.​ ​D​ě​k​u​j​e​m​e​,​ ​ž​e​ ​j​s​t​e​ ​s​i​ ​n​a​š​l​i​ ​č​a​s​ ​a​ ​p​o​m​o​h​l​i​ ​n​á​m​ ​s​ ​t​e​s​t​o​v​á​n​í​m​.
 		 */
 		text: string
+		/**
+		 * U​k​o​n​č​i​t​ ​t​e​s​t​o​v​á​n​í
+		 */
+		button: string
 	}
 	intermezzo: {
 		/**
@@ -238,9 +242,13 @@ export type TranslationFunctions = {
 		 */
 		title: () => LocalizedString
 		/**
-		 * Jste na konci testování. Děkujeme, že jste si našli čas a pomohli nám s testováním..
+		 * Jste na konci testování. Děkujeme, že jste si našli čas a pomohli nám s testováním.
 		 */
 		text: () => LocalizedString
+		/**
+		 * Ukončit testování
+		 */
+		button: () => LocalizedString
 	}
 	intermezzo: {
 		/**
