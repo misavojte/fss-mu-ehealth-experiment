@@ -15,7 +15,10 @@
 			id: 'l3-instruction-1',
 			headingText: $LL['question']['l3-instruction-1']['heading'](),
 			confirmText: $LL['question']['l3-instruction-1']['confirm'](),
-			paragraphs: [get(LL).question['l3-instruction-1'].paragraphs[1]()],
+			paragraphs: [
+				get(LL).question['l3-instruction-1'].paragraphs[1](),
+				get(LL).question['l3-instruction-1'].paragraphs[2]()
+			],
 			type: 'instruction',
 			required: true
 		}

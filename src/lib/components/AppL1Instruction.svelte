@@ -39,7 +39,7 @@
 			headingText: $LL.question[4].heading(),
 			confirmText: $LL.question[4].confirm(),
 			type: 'instruction',
-			paragraphs: [get(LL).question[4].paragraphs[1](), get(LL).question[4].paragraphs[2]()],
+			paragraphs: [get(LL).question[4].paragraphs[1]()],
 			required: true
 		}
 	];

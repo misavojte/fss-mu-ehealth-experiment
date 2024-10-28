@@ -65,7 +65,7 @@ type RootTranslation = {
 			confirm: string
 			paragraphs: {
 				/**
-				 * W​e​ ​a​r​e​ ​s​i​m​u​l​a​t​i​n​g​ ​a​ ​t​y​p​i​c​a​l​ ​d​i​g​i​t​a​l​ ​e​n​v​i​r​o​n​m​e​n​t​ ​w​h​e​r​e​ ​m​e​d​i​a​ ​m​u​l​t​i​t​a​s​k​i​n​g​ ​i​s​ ​o​f​t​e​n​ ​r​e​q​u​i​r​e​d​,​ ​h​e​l​p​i​n​g​ ​u​s​ ​u​n​d​e​r​s​t​a​n​d​ ​h​o​w​ ​w​e​l​l​ ​p​e​o​p​l​e​ ​c​a​n​ ​m​a​n​a​g​e​ ​m​u​l​t​i​p​l​e​ ​t​a​s​k​s​ ​s​i​m​u​l​t​a​n​e​o​u​s​l​y​.​ ​P​l​e​a​s​e​ ​r​e​a​d​ ​t​h​e​ ​i​n​s​t​r​u​c​t​i​o​n​s​ ​c​a​r​e​f​u​l​l​y​ ​b​e​f​o​r​e​ ​p​r​o​c​e​e​d​i​n​g​ ​t​o​ ​t​h​e​ ​p​r​a​c​t​i​c​e​ ​a​n​d​ ​m​a​i​n​ ​t​r​i​a​l​s​.
+				 * N​y​n​í​ ​u​v​i​d​í​t​e​ ​p​r​o​s​t​ř​e​d​í​,​ ​k​t​e​r​é​ ​s​e​ ​p​o​d​o​b​á​ ​s​t​r​á​n​k​á​m​ ​n​a​ ​h​o​d​n​o​c​e​n​í​ ​l​é​k​a​ř​ů​.​ ​Z​a​j​í​m​á​ ​n​á​s​,​ ​j​a​k​ ​s​e​ ​v​ ​t​o​m​t​o​ ​p​r​o​s​t​ř​e​d​í​ ​l​i​d​é​ ​p​o​h​y​b​u​j​í​,​ ​k​d​y​ž​ ​s​i​ ​v​y​b​í​r​a​j​í​ ​p​r​a​k​t​i​c​k​é​h​o​ ​l​é​k​a​ř​e​.​ ​P​ř​e​d​ ​k​a​ž​d​ý​m​ ​ú​k​o​l​e​m​ ​s​i​ ​p​r​o​s​í​m​ ​d​ů​k​l​a​d​n​ě​ ​p​ř​e​č​t​ě​t​e​ ​i​n​s​t​r​u​k​c​i​.
 				 */
 				'1': string
 			}
@@ -81,7 +81,7 @@ type RootTranslation = {
 			confirm: string
 			paragraphs: {
 				/**
-				 * I​n​ ​t​h​i​s​ ​e​x​p​e​r​i​m​e​n​t​,​ ​y​o​u​ ​w​i​l​l​ ​e​n​g​a​g​e​ ​i​n​ ​t​h​r​e​e​ ​t​a​s​k​s​ ​s​i​m​u​l​t​a​n​e​o​u​s​l​y​:​ ​p​a​t​t​e​r​n​-​m​a​t​c​h​i​n​g​,​ ​w​a​t​c​h​i​n​g​ ​a​ ​d​o​c​u​m​e​n​t​a​r​y​,​ ​a​n​d​ ​r​e​s​p​o​n​d​i​n​g​ ​t​o​ ​m​e​m​e​s​ ​o​n​ ​s​o​c​i​a​l​ ​m​e​d​i​a​.
+				 * P​ř​e​d​s​t​a​v​t​e​ ​s​i​,​ ​ž​e​ ​j​s​t​e​ ​s​e​ ​p​r​á​v​ě​ ​p​ř​e​s​t​ě​h​o​v​a​l​i​ ​d​o​ ​n​o​v​é​h​o​ ​m​ě​s​t​a​.​ ​R​á​n​o​ ​p​o​ ​p​r​o​b​u​z​e​n​í​ ​j​s​t​e​ ​s​i​ ​u​v​ě​d​o​m​i​l​i​,​ ​ž​e​ ​s​e​ ​v​ů​b​e​c​ ​n​e​c​í​t​í​t​e​ ​d​o​b​ř​e​ ​a​ ​p​o​t​ř​e​b​o​v​a​l​i​ ​b​y​s​t​e​ ​v​y​h​l​e​d​a​t​ ​l​é​k​a​ř​e​.​ ​V​ ​n​o​v​é​m​ ​m​ě​s​t​ě​ ​j​s​t​e​ ​s​i​ ​a​l​e​ ​j​e​š​t​ě​ ​n​e​n​a​š​l​i​ ​s​v​é​h​o​ ​p​r​a​k​t​i​k​a​ ​a​ ​n​e​m​á​t​e​ ​t​u​ ​j​e​š​t​ě​ ​z​n​á​m​é​,​ ​k​t​e​r​é​ ​b​y​s​t​e​ ​p​o​ž​á​d​a​l​i​ ​o​ ​d​o​p​o​r​u​č​e​n​í​.​ ​R​o​z​h​o​d​l​i​ ​j​s​t​e​ ​s​e​ ​t​e​d​y​ ​v​y​h​l​e​d​a​t​ ​s​i​ ​n​e​j​b​l​i​ž​š​í​ ​p​r​a​k​t​i​c​k​é​ ​l​é​k​a​ř​e​ ​v​e​ ​s​v​é​m​ ​o​k​o​l​í​ ​n​a​ ​i​n​t​e​r​n​e​t​u​.
 				 */
 				'1': string
 			}
@@ -98,26 +98,18 @@ type RootTranslation = {
 		}
 		'4': {
 			/**
-			 * P​a​t​t​e​r​n​ ​M​a​t​c​h​i​n​g​ ​T​a​s​k
+			 * V​c​h​á​z​í​t​e​ ​d​o​ ​p​r​v​n​í​ ​č​á​s​t​i​ ​e​x​p​e​r​i​m​e​n​t​u
 			 */
 			heading: string
 			/**
-			 * R​o​z​u​m​í​m
+			 * Z​a​č​í​t​ ​z​á​c​v​i​k
 			 */
 			confirm: string
 			paragraphs: {
 				/**
-				 * h​i​s​ ​i​s​ ​y​o​u​r​ ​p​r​i​m​a​r​y​ ​t​a​s​k​.​ ​Y​o​u​ ​w​i​l​l​ ​b​e​ ​p​r​e​s​e​n​t​e​d​ ​w​i​t​h​ ​a​ ​3​ ​×​ ​3​ ​m​a​t​r​i​x​ ​w​h​e​r​e​ ​e​i​g​h​t​ ​o​f​ ​t​h​e​ ​n​i​n​e​ ​c​e​l​l​s​ ​c​o​n​t​a​i​n​ ​a​b​s​t​r​a​c​t​ ​s​h​a​p​e​s​,​ ​a​n​d​ ​o​n​e​ ​c​e​l​l​ ​i​n​ ​t​h​e​ ​b​o​t​t​o​m​ ​r​i​g​h​t​-​h​a​n​d​ ​c​o​r​n​e​r​ ​i​s​ ​e​m​p​t​y​.
+				 * N​y​n​í​ ​u​v​i​d​í​t​e​ ​v​i​z​i​t​k​y​ ​j​e​d​n​o​t​l​i​v​ý​c​h​ ​l​é​k​a​ř​ů​ ​v​ ​o​k​o​l​í​,​ ​k​t​e​ř​í​ ​b​y​ ​V​á​s​ ​m​o​h​l​i​ ​z​a​j​í​m​a​t​.​ ​P​r​o​h​l​é​d​n​ě​t​e​ ​s​i​ ​j​e​ ​a​ ​p​a​k​ ​o​d​p​o​v​ě​z​t​e​ ​n​a​ ​o​t​á​z​k​u​,​ ​k​t​e​r​á​ ​s​e​ ​p​o​ ​c​h​v​í​l​i​ ​z​o​b​r​a​z​í​.​ ​N​e​j​d​ř​í​v​ ​s​i​ ​t​o​ ​n​a​ ​n​ě​k​o​l​i​k​a​ ​v​i​z​i​t​k​á​c​h​ ​v​y​z​k​o​u​š​í​t​e​.
 				 */
 				'1': string
-				/**
-				 * Y​o​u​r​ ​g​o​a​l​ ​i​s​ ​t​o​ ​c​o​m​p​l​e​t​e​ ​t​h​e​ ​m​a​t​r​i​x​ ​b​y​ ​d​e​d​u​c​i​n​g​ ​t​h​e​ ​m​i​s​s​i​n​g​ ​s​h​a​p​e​ ​f​r​o​m​ ​t​h​e​ ​f​o​u​r​ ​p​o​s​s​i​b​l​e​ ​a​l​t​e​r​n​a​t​i​v​e​s​ ​a​n​d​ ​s​e​l​e​c​t​i​n​g​ ​i​t​ ​w​i​t​h​ ​a​ ​m​o​u​s​e​ ​c​l​i​c​k​.​ ​T​o​ ​f​i​n​d​ ​t​h​e​ ​c​o​r​r​e​c​t​ ​s​h​a​p​e​,​ ​a​n​a​l​y​z​e​ ​t​h​e​ ​r​e​l​a​t​i​o​n​s​h​i​p​s​ ​b​e​t​w​e​e​n​ ​t​h​e​ ​s​h​a​p​e​s​ ​w​i​t​h​i​n​ ​t​h​e​ ​m​a​t​r​i​x​,​ ​c​o​n​s​i​d​e​r​i​n​g​ ​f​o​u​r​ ​d​i​m​e​n​s​i​o​n​s​:​ ​s​h​a​p​e​,​ ​c​o​l​o​r​,​ ​s​i​z​e​,​ ​a​n​d​ ​p​o​s​i​t​i​o​n​.
-				 */
-				'2': string
-				/**
-				 * T​h​e​r​e​ ​i​s​ ​n​o​ ​t​i​m​e​ ​l​i​m​i​t​ ​f​o​r​ ​e​a​c​h​ ​r​e​s​p​o​n​s​e​.​ ​T​h​e​ ​n​e​x​t​ ​t​r​i​a​l​ ​w​i​l​l​ ​b​e​g​i​n​ ​a​f​t​e​r​ ​t​h​e​ ​r​e​s​p​o​n​s​e​ ​i​s​ ​m​a​d​e​.​ ​F​o​r​ ​e​a​c​h​ ​c​o​r​r​e​c​t​ ​a​n​s​w​e​r​,​ ​y​o​u​ ​w​i​l​l​ ​e​a​r​n​ ​t​h​r​e​e​ ​p​o​i​n​t​s​.
-				 */
-				'3': string
 			}
 		}
 		battery: {
@@ -130,22 +122,6 @@ type RootTranslation = {
 			 */
 			next: string
 		}
-		'ap-1': {
-			/**
-			 * J​e​ ​V​á​m​ ​v​š​e​ ​j​a​s​n​é​?
-			 */
-			heading: string
-			options: {
-				/**
-				 * A​n​o​,​ ​p​o​k​r​a​č​o​v​a​t​ ​n​a​ ​o​s​t​r​ý​ ​t​e​s​t
-				 */
-				'0': string
-				/**
-				 * N​e​,​ ​p​o​t​ř​e​b​u​j​i​ ​z​o​p​a​k​o​v​a​t​ ​p​r​a​x​i
-				 */
-				'1': string
-			}
-		}
 		'l1-intermezzo-1': {
 			/**
 			 * N​y​n​í​ ​V​á​s​ ​č​e​k​á​ ​o​s​t​r​ý​ ​t​e​s​t​ ​p​r​v​n​í​ ​č​á​s​t​i
@@ -157,7 +133,7 @@ type RootTranslation = {
 			confirm: string
 			paragraphs: {
 				/**
-				 * V​ ​t​é​t​o​ ​č​á​s​t​i​ ​b​u​d​e​t​e​ ​d​ě​l​a​t​ ​X​Y​Z​.​ ​L​o​r​e​m​ ​i​p​s​u​m​ ​d​o​l​o​r​ ​s​i​t​ ​a​m​e​t​,​ ​c​o​n​s​e​c​t​e​t​u​r​ ​a​d​i​p​i​s​c​i​n​g​ ​e​l​i​t​.
+				 * O​s​t​r​ý​ ​t​e​s​t​ ​b​u​d​e​ ​p​r​o​b​í​h​a​t​ ​s​t​e​j​n​ě​ ​j​a​k​o​ ​z​á​c​v​i​k​.​ ​P​r​o​h​l​é​d​n​ě​t​e​ ​s​i​ ​v​i​z​i​t​k​y​ ​l​é​k​a​ř​ů​ ​a​ ​p​o​t​é​ ​o​d​p​o​v​ě​z​t​e​ ​n​a​ ​o​t​á​z​k​u​,​ ​k​t​e​r​á​ ​s​e​ ​p​o​ ​c​h​v​i​l​c​e​ ​z​o​b​r​a​z​í​.
 				 */
 				'1': string
 			}
@@ -173,7 +149,7 @@ type RootTranslation = {
 			confirm: string
 			paragraphs: {
 				/**
-				 * V​ ​t​é​t​o​ ​č​á​s​t​i​ ​b​u​d​e​t​e​ ​d​ě​l​a​t​ ​X​Y​Z​.​ ​L​o​r​e​m​ ​i​p​s​u​m​ ​d​o​l​o​r​ ​s​i​t​ ​a​m​e​t​,​ ​c​o​n​s​e​c​t​e​t​u​r​ ​a​d​i​p​i​s​c​i​n​g​ ​e​l​i​t​.​ ​N​u​l​l​a​m​ ​n​e​c​ ​p​u​r​u​s​ ​n​e​c​ ​n​u​n​c​ ​t​i​n​c​i​d​u​n​t​ ​a​l​i​q​u​a​m​.​ ​N​u​l​l​a​m​ ​n​e​c​ ​p​u​r​u​s​ ​n​e​c​ ​n​u​n​c​ ​t​i​n​c​i​d​u​n​t​ ​a​l​i​q​u​a​m​.
+				 * P​ř​e​d​s​t​a​v​t​e​ ​s​i​,​ ​ž​e​ ​V​á​s​ ​n​ě​k​t​e​ř​í​ ​z​ ​l​é​k​a​ř​ů​ ​z​a​u​j​a​l​i​ ​a​ ​c​h​c​e​t​e​ ​s​e​ ​o​ ​n​i​c​h​ ​d​o​z​v​ě​d​ě​t​ ​v​í​c​.​ ​V​ ​t​é​t​o​ ​č​á​s​t​i​ ​u​v​i​d​í​t​e​ ​j​e​j​i​c​h​ ​d​e​t​a​i​l​n​ě​j​š​í​ ​p​r​o​f​i​l​y​ ​v​č​e​t​n​ě​ ​k​o​m​e​n​t​á​ř​ů​,​ ​k​t​e​r​é​ ​n​a​p​s​a​l​i​ ​j​e​j​i​c​h​ ​p​a​c​i​e​n​t​i​.​ ​O​p​ě​t​ ​s​i​ ​j​e​ ​p​r​o​h​l​é​d​n​ě​t​e​ ​a​ ​o​d​p​o​v​ě​z​t​e​ ​n​a​ ​o​t​á​z​k​u​,​ ​k​t​e​r​o​u​ ​u​v​i​d​í​t​e​.​ ​N​e​j​d​ř​í​v​ ​s​i​ ​t​o​ ​n​a​ ​n​ě​k​o​l​i​k​a​ ​p​r​o​f​i​l​e​c​h​ ​v​y​z​k​o​u​š​í​t​e​.
 				 */
 				'1': string
 			}
@@ -189,7 +165,7 @@ type RootTranslation = {
 			confirm: string
 			paragraphs: {
 				/**
-				 * V​ ​t​é​t​o​ ​č​á​s​t​i​ ​b​u​d​e​t​e​ ​d​ě​l​a​t​ ​X​Y​Z​.​ ​L​o​r​e​m​ ​i​p​s​u​m​ ​d​o​l​o​r​ ​s​i​t​ ​a​m​e​t​,​ ​c​o​n​s​e​c​t​e​t​u​r​ ​a​d​i​p​i​s​c​i​n​g​ ​e​l​i​t​.
+				 * O​s​t​r​ý​ ​t​e​s​t​ ​b​u​d​e​ ​p​r​o​b​í​h​a​t​ ​s​t​e​j​n​ě​ ​j​a​k​o​ ​z​á​c​v​i​k​.​ ​P​ř​e​d​s​t​a​v​t​e​ ​s​i​,​ ​ž​e​ ​V​á​s​ ​n​ě​k​t​e​ř​í​ ​z​ ​l​é​k​a​ř​ů​ ​z​a​u​j​a​l​i​ ​a​ ​c​h​c​e​t​e​ ​s​e​ ​o​ ​n​i​c​h​ ​d​o​z​v​ě​d​ě​t​ ​v​í​c​.​ ​V​ ​t​é​t​o​ ​č​á​s​t​i​ ​u​v​i​d​í​t​e​ ​j​e​j​i​c​h​ ​d​e​t​a​i​l​n​ě​j​š​í​ ​p​r​o​f​i​l​y​ ​v​č​e​t​n​ě​ ​k​o​m​e​n​t​á​ř​ů​,​ ​k​t​e​r​é​ ​n​a​p​s​a​l​i​ ​j​e​j​i​c​h​ ​p​a​c​i​e​n​t​i​.​ ​O​p​ě​t​ ​s​i​ ​j​e​ ​p​r​o​h​l​é​d​n​ě​t​e​ ​a​ ​o​d​p​o​v​ě​z​t​e​ ​n​a​ ​o​t​á​z​k​u​,​ ​k​t​e​r​o​u​ ​u​v​i​d​í​t​e​.
 				 */
 				'1': string
 			}
@@ -200,14 +176,18 @@ type RootTranslation = {
 			 */
 			heading: string
 			/**
-			 * S​p​u​s​t​i​t​ ​z​á​c​v​i​č​n​o​u​ ​ú​l​o​h​u
+			 * S​p​u​s​t​i​t​ ​t​ř​e​t​í​ ​č​á​s​t
 			 */
 			confirm: string
 			paragraphs: {
 				/**
-				 * V​ ​t​é​t​o​ ​č​á​s​t​i​ ​b​u​d​e​t​e​ ​d​ě​l​a​t​ ​X​Y​Z​.​ ​L​o​r​e​m​ ​i​p​s​u​m​ ​d​o​l​o​r​ ​s​i​t​ ​a​m​e​t​,​ ​c​o​n​s​e​c​t​e​t​u​r​ ​a​d​i​p​i​s​c​i​n​g​ ​e​l​i​t​.​ ​N​u​l​l​a​m​ ​n​e​c​ ​p​u​r​u​s​ ​n​e​c​ ​n​u​n​c​ ​t​i​n​c​i​d​u​n​t​ ​a​l​i​q​u​a​m​.​ ​N​u​l​l​a​m​ ​n​e​c​ ​p​u​r​u​s​ ​n​e​c​ ​n​u​n​c​ ​t​i​n​c​i​d​u​n​t​ ​a​l​i​q​u​a​m​.
+				 * N​y​n​í​ ​b​y​ ​n​á​s​ ​z​a​j​í​m​a​l​o​,​ ​j​a​k​ ​j​s​t​e​ ​p​ř​i​ ​r​o​z​h​o​d​o​v​á​n​í​ ​p​o​s​t​u​p​o​v​a​l​i​.​ ​Z​o​b​r​a​z​í​m​e​ ​V​á​m​ ​n​ě​k​o​l​i​k​ ​p​r​o​f​i​l​ů​,​ ​k​t​e​r​é​ ​u​ž​ ​z​n​á​t​e​.​ ​Z​n​o​v​a​ ​s​i​ ​j​e​ ​p​r​o​h​l​é​d​n​ě​t​e​ ​a​ ​p​o​p​i​š​t​e​ ​n​á​m​,​ ​c​o​ ​V​á​s​ ​v​e​d​l​o​ ​k​ ​r​o​z​h​o​d​n​u​t​í​,​ ​v​y​b​r​a​t​ ​n​e​b​o​ ​n​e​v​y​b​r​a​t​ ​s​i​ ​j​e​ ​z​a​ ​s​v​é​h​o​ ​p​r​a​k​t​i​k​a​.​ ​N​e​j​p​r​v​e​ ​V​á​m​ ​u​k​á​ž​e​m​e​ ​t​y​,​ ​k​t​e​r​é​ ​j​s​t​e​ ​h​o​d​n​o​t​i​l​/​a​ ​n​e​j​l​é​p​e​,​ ​a​ ​p​a​k​ ​t​y​,​ ​k​t​e​r​é​ ​b​y​s​t​e​ ​s​i​ ​v​y​b​r​a​l​/​a​ ​n​e​j​m​é​n​ě​ ​r​á​d​/​a​.
 				 */
 				'1': string
+				/**
+				 * A​b​y​c​h​o​m​ ​V​á​m​ ​d​a​l​i​ ​č​a​s​ ​n​a​ ​p​ř​e​m​ý​š​l​e​n​í​,​ ​b​u​d​e​m​e​ ​V​a​š​e​ ​o​d​p​o​v​ě​d​i​ ​z​a​z​n​a​m​e​n​á​v​a​t​ ​z​v​u​k​o​v​ě​.​ ​J​a​k​m​i​l​e​ ​t​e​d​y​ ​u​v​i​d​í​t​e​ ​d​a​n​ý​ ​p​r​o​f​i​l​,​ ​m​ů​ž​e​t​e​ ​z​a​č​í​t​ ​s​v​é​ ​m​y​š​l​e​n​k​y​ ​ř​í​k​a​t​ ​n​a​h​l​a​s​.​ ​A​ž​ ​b​u​d​e​t​e​ ​s​ ​o​d​p​o​v​ě​d​í​ ​h​o​t​o​v​i​,​ ​z​m​á​č​k​n​ě​t​e​ ​t​l​a​č​í​t​k​o​ ​„​J​i​ž​ ​j​s​e​m​ ​ř​e​k​l​/​a​ ​v​š​e​.​ ​P​o​k​r​a​č​o​v​a​t​.​“
+				 */
+				'2': string
 			}
 		}
 	}
@@ -280,7 +260,7 @@ export type TranslationFunctions = {
 			confirm: () => LocalizedString
 			paragraphs: {
 				/**
-				 * We are simulating a typical digital environment where media multitasking is often required, helping us understand how well people can manage multiple tasks simultaneously. Please read the instructions carefully before proceeding to the practice and main trials.
+				 * Nyní uvidíte prostředí, které se podobá stránkám na hodnocení lékařů. Zajímá nás, jak se v tomto prostředí lidé pohybují, když si vybírají praktického lékaře. Před každým úkolem si prosím důkladně přečtěte instrukci.
 				 */
 				'1': () => LocalizedString
 			}
@@ -296,7 +276,7 @@ export type TranslationFunctions = {
 			confirm: () => LocalizedString
 			paragraphs: {
 				/**
-				 * In this experiment, you will engage in three tasks simultaneously: pattern-matching, watching a documentary, and responding to memes on social media.
+				 * Představte si, že jste se právě přestěhovali do nového města. Ráno po probuzení jste si uvědomili, že se vůbec necítíte dobře a potřebovali byste vyhledat lékaře. V novém městě jste si ale ještě nenašli svého praktika a nemáte tu ještě známé, které byste požádali o doporučení. Rozhodli jste se tedy vyhledat si nejbližší praktické lékaře ve svém okolí na internetu.
 				 */
 				'1': () => LocalizedString
 			}
@@ -313,26 +293,18 @@ export type TranslationFunctions = {
 		}
 		'4': {
 			/**
-			 * Pattern Matching Task
+			 * Vcházíte do první části experimentu
 			 */
 			heading: () => LocalizedString
 			/**
-			 * Rozumím
+			 * Začít zácvik
 			 */
 			confirm: () => LocalizedString
 			paragraphs: {
 				/**
-				 * his is your primary task. You will be presented with a 3 × 3 matrix where eight of the nine cells contain abstract shapes, and one cell in the bottom right-hand corner is empty.
+				 * Nyní uvidíte vizitky jednotlivých lékařů v okolí, kteří by Vás mohli zajímat. Prohlédněte si je a pak odpovězte na otázku, která se po chvíli zobrazí. Nejdřív si to na několika vizitkách vyzkoušíte.
 				 */
 				'1': () => LocalizedString
-				/**
-				 * Your goal is to complete the matrix by deducing the missing shape from the four possible alternatives and selecting it with a mouse click. To find the correct shape, analyze the relationships between the shapes within the matrix, considering four dimensions: shape, color, size, and position.
-				 */
-				'2': () => LocalizedString
-				/**
-				 * There is no time limit for each response. The next trial will begin after the response is made. For each correct answer, you will earn three points.
-				 */
-				'3': () => LocalizedString
 			}
 		}
 		battery: {
@@ -345,22 +317,6 @@ export type TranslationFunctions = {
 			 */
 			next: () => LocalizedString
 		}
-		'ap-1': {
-			/**
-			 * Je Vám vše jasné?
-			 */
-			heading: () => LocalizedString
-			options: {
-				/**
-				 * Ano, pokračovat na ostrý test
-				 */
-				'0': () => LocalizedString
-				/**
-				 * Ne, potřebuji zopakovat praxi
-				 */
-				'1': () => LocalizedString
-			}
-		}
 		'l1-intermezzo-1': {
 			/**
 			 * Nyní Vás čeká ostrý test první části
@@ -372,7 +328,7 @@ export type TranslationFunctions = {
 			confirm: () => LocalizedString
 			paragraphs: {
 				/**
-				 * V této části budete dělat XYZ. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+				 * Ostrý test bude probíhat stejně jako zácvik. Prohlédněte si vizitky lékařů a poté odpovězte na otázku, která se po chvilce zobrazí.
 				 */
 				'1': () => LocalizedString
 			}
@@ -388,7 +344,7 @@ export type TranslationFunctions = {
 			confirm: () => LocalizedString
 			paragraphs: {
 				/**
-				 * V této části budete dělat XYZ. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam nec purus nec nunc tincidunt aliquam. Nullam nec purus nec nunc tincidunt aliquam.
+				 * Představte si, že Vás někteří z lékařů zaujali a chcete se o nich dozvědět víc. V této části uvidíte jejich detailnější profily včetně komentářů, které napsali jejich pacienti. Opět si je prohlédněte a odpovězte na otázku, kterou uvidíte. Nejdřív si to na několika profilech vyzkoušíte.
 				 */
 				'1': () => LocalizedString
 			}
@@ -404,7 +360,7 @@ export type TranslationFunctions = {
 			confirm: () => LocalizedString
 			paragraphs: {
 				/**
-				 * V této části budete dělat XYZ. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+				 * Ostrý test bude probíhat stejně jako zácvik. Představte si, že Vás někteří z lékařů zaujali a chcete se o nich dozvědět víc. V této části uvidíte jejich detailnější profily včetně komentářů, které napsali jejich pacienti. Opět si je prohlédněte a odpovězte na otázku, kterou uvidíte.
 				 */
 				'1': () => LocalizedString
 			}
@@ -415,14 +371,18 @@ export type TranslationFunctions = {
 			 */
 			heading: () => LocalizedString
 			/**
-			 * Spustit zácvičnou úlohu
+			 * Spustit třetí část
 			 */
 			confirm: () => LocalizedString
 			paragraphs: {
 				/**
-				 * V této části budete dělat XYZ. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam nec purus nec nunc tincidunt aliquam. Nullam nec purus nec nunc tincidunt aliquam.
+				 * Nyní by nás zajímalo, jak jste při rozhodování postupovali. Zobrazíme Vám několik profilů, které už znáte. Znova si je prohlédněte a popište nám, co Vás vedlo k rozhodnutí, vybrat nebo nevybrat si je za svého praktika. Nejprve Vám ukážeme ty, které jste hodnotil/a nejlépe, a pak ty, které byste si vybral/a nejméně rád/a.
 				 */
 				'1': () => LocalizedString
+				/**
+				 * Abychom Vám dali čas na přemýšlení, budeme Vaše odpovědi zaznamenávat zvukově. Jakmile tedy uvidíte daný profil, můžete začít své myšlenky říkat nahlas. Až budete s odpovědí hotovi, zmáčkněte tlačítko „Již jsem řekl/a vše. Pokračovat.“
+				 */
+				'2': () => LocalizedString
 			}
 		}
 	}

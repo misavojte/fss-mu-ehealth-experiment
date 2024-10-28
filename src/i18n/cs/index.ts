@@ -23,14 +23,14 @@ const cs = {
 			heading: 'Vítejte v eHealth Experimentu',
 			confirm: 'Pokračovat',
 			paragraphs: {
-				1: 'We are simulating a typical digital environment where media multitasking is often required, helping us understand how well people can manage multiple tasks simultaneously. Please read the instructions carefully before proceeding to the practice and main trials.'
+				1: 'Nyní uvidíte prostředí, které se podobá stránkám na hodnocení lékařů. Zajímá nás, jak se v tomto prostředí lidé pohybují, když si vybírají praktického lékaře. Před každým úkolem si prosím důkladně přečtěte instrukci.'
 			}
 		},
 		2: {
 			heading: 'Co budete dělat?',
 			confirm: 'Pokračovat',
 			paragraphs: {
-				1: 'In this experiment, you will engage in three tasks simultaneously: pattern-matching, watching a documentary, and responding to memes on social media.'
+				1: 'Představte si, že jste se právě přestěhovali do nového města. Ráno po probuzení jste si uvědomili, že se vůbec necítíte dobře a potřebovali byste vyhledat lékaře. V novém městě jste si ale ještě nenašli svého praktika a nemáte tu ještě známé, které byste požádali o doporučení. Rozhodli jste se tedy vyhledat si nejbližší praktické lékaře ve svém okolí na internetu.'
 			}
 		},
 		3: {
@@ -38,47 +38,39 @@ const cs = {
 			confirm: 'Potvrdit'
 		},
 		4: {
-			heading: 'Pattern Matching Task',
-			confirm: 'Rozumím',
+			heading: 'Vcházíte do první části experimentu',
+			confirm: 'Začít zácvik',
 			paragraphs: {
-				1: 'his is your primary task. You will be presented with a 3 × 3 matrix where eight of the nine cells contain abstract shapes, and one cell in the bottom right-hand corner is empty.',
-				2: 'Your goal is to complete the matrix by deducing the missing shape from the four possible alternatives and selecting it with a mouse click. To find the correct shape, analyze the relationships between the shapes within the matrix, considering four dimensions: shape, color, size, and position.',
-				3: 'There is no time limit for each response. The next trial will begin after the response is made. For each correct answer, you will earn three points.'
-			}
-		},
-		'ap-1': {
-			heading: 'Je Vám vše jasné?',
-			options: {
-				0: 'Ano, pokračovat na ostrý test',
-				1: 'Ne, potřebuji zopakovat praxi'
+				1: 'Nyní uvidíte vizitky jednotlivých lékařů v okolí, kteří by Vás mohli zajímat. Prohlédněte si je a pak odpovězte na otázku, která se po chvíli zobrazí. Nejdřív si to na několika vizitkách vyzkoušíte.'
 			}
 		},
 		'l1-intermezzo-1': {
 			heading: 'Nyní Vás čeká ostrý test první části',
 			confirm: 'Spustit ostrý test',
 			paragraphs: {
-				1: 'V této části budete dělat XYZ. Lorem ipsum dolor sit amet, consectetur adipiscing elit.'
+				1: 'Ostrý test bude probíhat stejně jako zácvik. Prohlédněte si vizitky lékařů a poté odpovězte na otázku, která se po chvilce zobrazí.'
 			}
 		},
 		'l2-instruction-1': {
 			heading: 'Vcházíte do druhé části experimentu',
 			confirm: 'Spustit zácvičnou úlohu',
 			paragraphs: {
-				1: 'V této části budete dělat XYZ. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam nec purus nec nunc tincidunt aliquam. Nullam nec purus nec nunc tincidunt aliquam.'
+				1: 'Představte si, že Vás někteří z lékařů zaujali a chcete se o nich dozvědět víc. V této části uvidíte jejich detailnější profily včetně komentářů, které napsali jejich pacienti. Opět si je prohlédněte a odpovězte na otázku, kterou uvidíte. Nejdřív si to na několika profilech vyzkoušíte.'
 			}
 		},
 		'l2-intermezzo-1': {
 			heading: 'Nyní Vás čeká ostrý test druhé části',
 			confirm: 'Spustit ostrý test',
 			paragraphs: {
-				1: 'V této části budete dělat XYZ. Lorem ipsum dolor sit amet, consectetur adipiscing elit.'
+				1: 'Ostrý test bude probíhat stejně jako zácvik. Představte si, že Vás někteří z lékařů zaujali a chcete se o nich dozvědět víc. V této části uvidíte jejich detailnější profily včetně komentářů, které napsali jejich pacienti. Opět si je prohlédněte a odpovězte na otázku, kterou uvidíte.'
 			}
 		},
 		'l3-instruction-1': {
 			heading: 'Vcházíte do třetí části experimentu',
-			confirm: 'Spustit zácvičnou úlohu',
+			confirm: 'Spustit třetí část',
 			paragraphs: {
-				1: 'V této části budete dělat XYZ. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam nec purus nec nunc tincidunt aliquam. Nullam nec purus nec nunc tincidunt aliquam.'
+				1: 'Nyní by nás zajímalo, jak jste při rozhodování postupovali. Zobrazíme Vám několik profilů, které už znáte. Znova si je prohlédněte a popište nám, co Vás vedlo k rozhodnutí, vybrat nebo nevybrat si je za svého praktika. Nejprve Vám ukážeme ty, které jste hodnotil/a nejlépe, a pak ty, které byste si vybral/a nejméně rád/a.',
+				2: 'Abychom Vám dali čas na přemýšlení, budeme Vaše odpovědi zaznamenávat zvukově. Jakmile tedy uvidíte daný profil, můžete začít své myšlenky říkat nahlas. Až budete s odpovědí hotovi, zmáčkněte tlačítko „Již jsem řekl/a vše. Pokračovat.“'
 			}
 		}
 	},
