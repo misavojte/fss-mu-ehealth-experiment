@@ -127,7 +127,13 @@
 			transition:fade={{ duration: 200 }}
 			class="absolute w-screen h-screen flex items-center justify-center"
 		>
-			<AppL2Trial {doctorManager} on:finish={() => (state = 'l3instruction')} />
+			<AppL2Trial
+				{doctorManager}
+				on:finish={() => {
+					state = 'l3instruction';
+					gazeManager.disconnect();
+				}}
+			/>
 		</div>
 	{:else if state === 'l3instruction'}
 		<div

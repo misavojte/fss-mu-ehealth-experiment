@@ -25,7 +25,7 @@
 	 */
 	export let starOutlineWidth = '0px';
 
-	export let size = 20;
+	export let size = 16;
 </script>
 
 <article class="flex flex-col gap-2 p-4">
@@ -41,6 +41,6 @@
 		/>
 	</header>
 	<main>
-		<p class="text-sm">{review}</p>
+		<p class="text-neutral-700">{review}</p>
 	</main>
 </article>

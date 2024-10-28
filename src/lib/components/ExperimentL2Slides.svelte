@@ -56,7 +56,7 @@
 				title: review.reviewer_nick,
 				rating: Number(review.star_statement),
 				review: review.statement,
-				id: review.nr + '_' + $stateActiveDoctor.nr
+				id: review.nr + '__' + $stateActiveDoctor.nr
 			}))}
 			<div
 				class="absolute w-screen h-screen flex items-center justify-center"

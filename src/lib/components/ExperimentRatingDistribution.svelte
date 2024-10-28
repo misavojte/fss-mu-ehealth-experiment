@@ -1,5 +1,6 @@
 <script lang="ts">
 	import ExperimentRating from './ExperimentRating.svelte';
+	import Intersecter from './Intersecter.svelte';
 
 	export let numberOfOneStars: number = 0;
 	export let numberOfTwoStars: number = 0;
@@ -27,6 +28,10 @@
 	 */
 	export let starOutlineWidth = '1px';
 
+	export let size = 26;
+
+	export let pictureId: string = 'id-test';
+
 	let numberOfStarsDistribution: { [key: number]: number };
 	$: numberOfStarsDistribution = {
 		1: numberOfOneStars,
@@ -37,15 +42,22 @@
 	};
 </script>
 
-<div class="grid items-center text-neutral-700 w-fit gap-x-4 gap-y-2 rating-grid">
+<h3 class="text-lg font-bold text-center mb-4 text-neutral-700">Distribuce hodnocení</h3>
+<div class="grid items-center text-neutral-700 w-fit gap-x-4 gap-y-4 rating-grid">
 	{#each [5, 4, 3, 2, 1] as i}
-		<ExperimentRating
-			rating={i}
-			{starBackgroundColor}
-			{starFillColor}
-			{starOutlineColor}
-			{starOutlineWidth}
-		/><span class="w-fit">{numberOfStarsDistribution[i]} recenzí</span>
+		<Intersecter bufferSize={10} id="doctor-l1_{pictureId}_rating_star_{i}">
+			<ExperimentRating
+				rating={i}
+				{starBackgroundColor}
+				{starFillColor}
+				{starOutlineColor}
+				{starOutlineWidth}
+				{size}
+			/>
+		</Intersecter>
+		<Intersecter bufferSize={10} id="doctor-l1_{pictureId}_rating_star_{i}_count">
+			<span class="w-fit">{numberOfStarsDistribution[i]} recenzí</span>
+		</Intersecter>
 	{/each}
 </div>
 

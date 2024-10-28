@@ -25,6 +25,7 @@
 
 	export let doctorName: string = 'MUDr. Eva Malá';
 	export let doctorAvgRating: number = 4.3;
+	export let doctorNrRating: number = 22;
 
 	/**
 	 * Non-reactive
@@ -56,11 +57,16 @@
 			{pictureCorrection}
 			{doctorAvgRating}
 			{doctorName}
+			{doctorNrRating}
+			{starBackgroundColor}
+			{starFillColor}
+			{starOutlineColor}
 			on:load
 		/>
 	</Intersecter>
 	<Intersecter id="doctor-l1_{pictureId}_rating">
 		<ExperimentRatingDistribution
+			{pictureId}
 			{starBackgroundColor}
 			{starFillColor}
 			{starOutlineColor}

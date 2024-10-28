@@ -14,6 +14,7 @@ export const data: IDoctorObjectL1[] = [
     star_3: 0,
     star_4: 22,
     star_5: 35,
+    nr_ratings: 57,
     doctor_name: "MUDr. Eva Malá"
   },
   {
@@ -26,6 +27,7 @@ export const data: IDoctorObjectL1[] = [
     star_3: 10,
     star_4: 15,
     star_5: 40,
+    nr_ratings: 70,
     doctor_name: "MUDr. Jan Král"
   },
   {
@@ -38,6 +40,7 @@ export const data: IDoctorObjectL1[] = [
     star_3: 42,
     star_4: 23,
     star_5: 0,
+    nr_ratings: 70,
     doctor_name: "MUDr. Iva Černá"
   },
   {
@@ -50,6 +53,7 @@ export const data: IDoctorObjectL1[] = [
     star_3: 14,
     star_4: 16,
     star_5: 10,
+    nr_ratings: 68,
     doctor_name: "MUDr. Petr Dušek"
   },
   {
@@ -62,6 +66,7 @@ export const data: IDoctorObjectL1[] = [
     star_3: 3,
     star_4: 29,
     star_5: 38,
+    nr_ratings: 70,
     doctor_name: "MUDr. Tomáš Havel"
   },
   {
@@ -74,6 +79,7 @@ export const data: IDoctorObjectL1[] = [
     star_3: 3,
     star_4: 29,
     star_5: 38,
+    nr_ratings: 70,
     doctor_name: "MUDr. Jana Nová"
   },
   {
@@ -86,6 +92,7 @@ export const data: IDoctorObjectL1[] = [
     star_3: 9,
     star_4: 16,
     star_5: 43,
+    nr_ratings: 69,
     doctor_name: "MUDr. David Skalica"
   },
   {
@@ -98,6 +105,7 @@ export const data: IDoctorObjectL1[] = [
     star_3: 9,
     star_4: 16,
     star_5: 43,
+    nr_ratings: 69,
     doctor_name: "MUDr. Olga Pavlová"
   },
   {
@@ -110,6 +118,7 @@ export const data: IDoctorObjectL1[] = [
     star_3: 52,
     star_4: 9,
     star_5: 0,
+    nr_ratings: 70,
     doctor_name: "MUDr. Marek Urban"
   },
   {
@@ -122,6 +131,7 @@ export const data: IDoctorObjectL1[] = [
     star_3: 52,
     star_4: 9,
     star_5: 0,
+    nr_ratings: 70,
     doctor_name: "MUDr. Dana Kočí"
   },
   {
@@ -134,6 +144,7 @@ export const data: IDoctorObjectL1[] = [
     star_3: 20,
     star_4: 9,
     star_5: 15,
+    nr_ratings: 70,
     doctor_name: "MUDr. Pavel Krejčí"
   },
   {
@@ -146,6 +157,7 @@ export const data: IDoctorObjectL1[] = [
     star_3: 20,
     star_4: 9,
     star_5: 15,
+    nr_ratings: 70,
     doctor_name: "MUDr. Zora Čechová"
   },
   {
@@ -158,6 +170,7 @@ export const data: IDoctorObjectL1[] = [
     star_3: 1,
     star_4: 33,
     star_5: 46,
+    nr_ratings: 80,
     doctor_name: "MUDr. Milan Dvořák"
   },
   {
@@ -170,6 +183,7 @@ export const data: IDoctorObjectL1[] = [
     star_3: 1,
     star_4: 33,
     star_5: 46,
+    nr_ratings: 80,
     doctor_name: "MUDr. Lada Křížová"
   },
   {
@@ -182,6 +196,7 @@ export const data: IDoctorObjectL1[] = [
     star_3: 5,
     star_4: 23,
     star_5: 50,
+    nr_ratings: 80,
     doctor_name: "MUDr. Martin Horák"
   },
   {
@@ -194,6 +209,7 @@ export const data: IDoctorObjectL1[] = [
     star_3: 5,
     star_4: 23,
     star_5: 50,
+    nr_ratings: 80,
     doctor_name: "MUDr. Hana Pokorná"
   },
   {
@@ -206,6 +222,7 @@ export const data: IDoctorObjectL1[] = [
     star_3: 57,
     star_4: 14,
     star_5: 0,
+    nr_ratings: 80,
     doctor_name: "MUDr. Karel Beneš"
   },
   {
@@ -218,6 +235,7 @@ export const data: IDoctorObjectL1[] = [
     star_3: 57,
     star_4: 14,
     star_5: 0,
+    nr_ratings: 80,
     doctor_name: "MUDr. Věra Jarošová"
   },
   {
@@ -230,6 +248,7 @@ export const data: IDoctorObjectL1[] = [
     star_3: 17,
     star_4: 21,
     star_5: 13,
+    nr_ratings: 80,
     doctor_name: "MUDr. Jiří Mach"
   },
   {
@@ -242,6 +261,7 @@ export const data: IDoctorObjectL1[] = [
     star_3: 17,
     star_4: 21,
     star_5: 13,
+    nr_ratings: 80,
     doctor_name: "MUDr. Ida Novotná"
   },
   {
@@ -254,6 +274,7 @@ export const data: IDoctorObjectL1[] = [
     star_3: 0,
     star_4: 3,
     star_5: 4,
+    nr_ratings: 7,
     doctor_name: "MUDr. Roman Štěpán"
   },
   {
@@ -266,6 +287,7 @@ export const data: IDoctorObjectL1[] = [
     star_3: 0,
     star_4: 3,
     star_5: 4,
+    nr_ratings: 7,
     doctor_name: "MUDr. Ema Bartošová"
   },
   {
@@ -278,6 +300,7 @@ export const data: IDoctorObjectL1[] = [
     star_3: 1,
     star_4: 2,
     star_5: 6,
+    nr_ratings: 9,
     doctor_name: "MUDr. Jan Mareš"
   },
   {
@@ -290,6 +313,7 @@ export const data: IDoctorObjectL1[] = [
     star_3: 1,
     star_4: 2,
     star_5: 6,
+    nr_ratings: 9,
     doctor_name: "MUDr. Alice Malinová"
   },
   {
@@ -302,6 +326,7 @@ export const data: IDoctorObjectL1[] = [
     star_3: 2,
     star_4: 3,
     star_5: 0,
+    nr_ratings: 7,
     doctor_name: "MUDr. Ivan Veselý"
   },
   {
@@ -314,6 +339,7 @@ export const data: IDoctorObjectL1[] = [
     star_3: 2,
     star_4: 3,
     star_5: 0,
+    nr_ratings: 7,
     doctor_name: "MUDr. Milena Holá"
   },
   {
@@ -326,6 +352,7 @@ export const data: IDoctorObjectL1[] = [
     star_3: 3,
     star_4: 1,
     star_5: 2,
+    nr_ratings: 9,
     doctor_name: "MUDr. Ivo Procházka"
   },
   {
@@ -338,6 +365,7 @@ export const data: IDoctorObjectL1[] = [
     star_3: 3,
     star_4: 1,
     star_5: 2,
+    nr_ratings: 9,
     doctor_name: "MUDr. Nina Vávrová"
   },
   {
@@ -350,6 +378,7 @@ export const data: IDoctorObjectL1[] = [
     star_3: 0,
     star_4: 5,
     star_5: 3,
+    nr_ratings: 8,
     doctor_name: "MUDr. Igor Šimek"
   },
   {
@@ -362,6 +391,7 @@ export const data: IDoctorObjectL1[] = [
     star_3: 0,
     star_4: 5,
     star_5: 3,
+    nr_ratings: 8,
     doctor_name: "MUDr. Iva Sýkorová"
   },
   {
@@ -374,6 +404,7 @@ export const data: IDoctorObjectL1[] = [
     star_3: 0,
     star_4: 2,
     star_5: 5,
+    nr_ratings: 8,
     doctor_name: "MUDr. Viktor Bláha"
   },
   {
@@ -386,6 +417,7 @@ export const data: IDoctorObjectL1[] = [
     star_3: 0,
     star_4: 2,
     star_5: 5,
+    nr_ratings: 8,
     doctor_name: "MUDr. Ema Kubíčková"
   },
   {
@@ -398,6 +430,7 @@ export const data: IDoctorObjectL1[] = [
     star_3: 6,
     star_4: 2,
     star_5: 0,
+    nr_ratings: 8,
     doctor_name: "MUDr. Patrik Chládek"
   },
   {
@@ -410,6 +443,7 @@ export const data: IDoctorObjectL1[] = [
     star_3: 6,
     star_4: 2,
     star_5: 0,
+    nr_ratings: 8,
     doctor_name: "MUDr. Jana Šebestová"
   },
   {
@@ -422,6 +456,7 @@ export const data: IDoctorObjectL1[] = [
     star_3: 4,
     star_4: 0,
     star_5: 2,
+    nr_ratings: 8,
     doctor_name: "MUDr. Aleš Žák"
   },
   {
@@ -434,6 +469,7 @@ export const data: IDoctorObjectL1[] = [
     star_3: 4,
     star_4: 0,
     star_5: 2,
+    nr_ratings: 8,
     doctor_name: "MUDr. Anna Veselá"
   },
 ] as const;

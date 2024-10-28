@@ -8,7 +8,7 @@
 	export let rating: number;
 	export let reviewCount: number;
 	export let primaryColor: string = '#0097b2';
-	export let reviews: Array<{ title: string; rating: number; review: string }>;
+	export let reviews: Array<{ title: string; rating: number; review: string; id: string }>;
 </script>
 
 <div class="flex gap-6 bg-white justify-start items-start">
@@ -28,7 +28,7 @@
 				<p class="text-md font-bold leading-none" style="color: {primaryColor}">
 					Celkové hodnocení {rating}
 				</p>
-				<p class="text-sm leading-none" style="color: {primaryColor}">
+				<p class="leading-none" style="color: {primaryColor}">
 					Počet recenzí: {reviewCount}
 				</p>
 			</div>
@@ -37,8 +37,10 @@
 	<!-- Review Column -->
 	<Intersecter id="doctor-l2_{id}_reviews">
 		<div>
-			{#each reviews as { title, rating, review }}
-				<ExperimentDoctorReview {title} {rating} {review} starFillColor={primaryColor} />
+			{#each reviews as { title, rating, review, id }}
+				<Intersecter id="doctor-l2_{id}_review_{id}" bufferSize={10}>
+					<ExperimentDoctorReview {title} {rating} {review} starFillColor={primaryColor} />
+				</Intersecter>
 			{/each}
 		</div>
 	</Intersecter>

@@ -106,6 +106,7 @@
 					numberOfOneStars={$stateActiveDoctor.star_1}
 					doctorAvgRating={$stateActiveDoctor.stars_avg}
 					doctorName={$stateActiveDoctor.doctor_name}
+					doctorNrRating={$stateActiveDoctor.nr_ratings}
 					{pictureBase}
 					{pictureCorrection}
 					{picureExtension}

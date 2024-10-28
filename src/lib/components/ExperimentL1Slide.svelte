@@ -41,13 +41,14 @@
 	export let numberOfFiveStars: number = 48;
 
 	export let doctorAvgRating: number = 4.3;
+	export let doctorNrRating: number = 22;
 	export let doctorName: string = 'MUDr. Eva Malá';
 
 	export let timeoutBeforeLikert: number = 5000;
 
 	export let width: number = 720;
 
-	export let heightOfDoctor: number = 420;
+	export let heightOfDoctor: number = 460;
 	export let heightOfLikert: number = 280;
 	export let gapHeight: number = 30;
 
@@ -97,6 +98,7 @@
 			{numberOfFiveStars}
 			{doctorAvgRating}
 			{doctorName}
+			{doctorNrRating}
 			{starBackgroundColor}
 			{starFillColor}
 			{starOutlineColor}
@@ -106,7 +108,7 @@
 	</LayoutCardAbsolute>
 	{#if isLikertVisible}
 		<div in:fly={{ duration: 200, y: 50 }}>
-			<Intersecter id="doctor-l1_{pictureId}likert">
+			<Intersecter id="doctor-l1_{pictureId}_likert">
 				<LayoutCardAbsolute
 					{width}
 					height={heightOfLikert}

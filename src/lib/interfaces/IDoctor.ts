@@ -9,6 +9,7 @@ export type IDoctorObjectL1 = {
 	star_4: number;
 	star_5: number;
 	doctor_name: string;
+	nr_ratings: number;
 };
 
 export type IDoctorObjectL2 = {

@@ -15,7 +15,7 @@
 	export let reviews: Array<{ id: string; title: string; rating: number; review: string }>;
 	export let type: 'good' | 'bad' = 'good';
 
-	export let heightOfDoctor = 620;
+	export let heightOfDoctor = 680;
 	export let heightOfInstruction = 150;
 	export let heightOfButton = 60;
 	export let gapHeight = 20;

@@ -3,6 +3,7 @@
 	import { getContext, onDestroy, onMount } from 'svelte';
 
 	export let id: string;
+	export let bufferSize: number = 50;
 
 	const gazeManager = getContext<GazeManager>('gazeManager');
 
@@ -13,7 +14,7 @@
 			interaction: 'intersect',
 			element,
 			settings: {
-				bufferSize: 50
+				bufferSize
 			}
 		});
 	});
