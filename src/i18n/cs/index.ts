@@ -13,7 +13,7 @@ const cs = {
 		button: 'Pokračovat',
 		text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam nec purus nec nunc tincidunt aliquam. Nullam nec purus nec nunc tincidunt aliquam.'
 	},
-	footerText: 'Blah blah blah',
+	footerText: 'Aplikace je součástí výzkumu na Fakultě sociálních studií Masarykovy univerzity.',
 	question: {
 		battery: {
 			back: 'Předchozí sekce',
