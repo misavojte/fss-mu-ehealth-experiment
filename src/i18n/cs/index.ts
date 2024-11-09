@@ -70,7 +70,7 @@ const cs = {
 			confirm: 'Spustit třetí část',
 			paragraphs: {
 				1: 'Nyní by nás zajímalo, jak jste při rozhodování postupovali. Zobrazíme Vám několik profilů, které už znáte. Znova si je prohlédněte a popište nám, co Vás vedlo k rozhodnutí, vybrat nebo nevybrat si je za svého praktika. Nejprve Vám ukážeme ty, které jste hodnotil/a nejlépe, a pak ty, které byste si vybral/a nejméně rád/a.',
-				2: 'Abychom Vám dali čas na přemýšlení, budeme Vaše odpovědi zaznamenávat zvukově. Jakmile tedy uvidíte daný profil, můžete začít své myšlenky říkat nahlas. Až budete s odpovědí hotovi, zmáčkněte tlačítko „Již jsem řekl/a vše. Pokračovat.“'
+				2: 'Abychom Vám dali čas na přemýšlení, budeme Vaše odpovědi zaznamenávat zvukově. Jakmile dočtete tuto instrukci, řekněte to administrátorovi, který spustí nahrávání a vyzve Vás, abyste přešli k úkolu. Jakmile uvidíte daný profil, můžete začít své myšlenky říkat nahlas. Až budete s odpovědí hotovi, oznamte to administrátorovi a zmáčkněte tlačítko „Již jsem řekl/a vše. Pokračovat.“'
 			}
 		}
 	},
