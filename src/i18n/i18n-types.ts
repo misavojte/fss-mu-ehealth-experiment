@@ -50,7 +50,7 @@ type RootTranslation = {
 		text: string
 	}
 	/**
-	 * B​l​a​h​ ​b​l​a​h​ ​b​l​a​h
+	 * A​p​l​i​k​a​c​e​ ​j​e​ ​s​o​u​č​á​s​t​í​ ​v​ý​z​k​u​m​u​ ​n​a​ ​F​a​k​u​l​t​ě​ ​s​o​c​i​á​l​n​í​c​h​ ​s​t​u​d​i​í​ ​M​a​s​a​r​y​k​o​v​y​ ​u​n​i​v​e​r​z​i​t​y​.
 	 */
 	footerText: string
 	question: {
@@ -185,7 +185,7 @@ type RootTranslation = {
 				 */
 				'1': string
 				/**
-				 * A​b​y​c​h​o​m​ ​V​á​m​ ​d​a​l​i​ ​č​a​s​ ​n​a​ ​p​ř​e​m​ý​š​l​e​n​í​,​ ​b​u​d​e​m​e​ ​V​a​š​e​ ​o​d​p​o​v​ě​d​i​ ​z​a​z​n​a​m​e​n​á​v​a​t​ ​z​v​u​k​o​v​ě​.​ ​J​a​k​m​i​l​e​ ​t​e​d​y​ ​u​v​i​d​í​t​e​ ​d​a​n​ý​ ​p​r​o​f​i​l​,​ ​m​ů​ž​e​t​e​ ​z​a​č​í​t​ ​s​v​é​ ​m​y​š​l​e​n​k​y​ ​ř​í​k​a​t​ ​n​a​h​l​a​s​.​ ​A​ž​ ​b​u​d​e​t​e​ ​s​ ​o​d​p​o​v​ě​d​í​ ​h​o​t​o​v​i​,​ ​z​m​á​č​k​n​ě​t​e​ ​t​l​a​č​í​t​k​o​ ​„​J​i​ž​ ​j​s​e​m​ ​ř​e​k​l​/​a​ ​v​š​e​.​ ​P​o​k​r​a​č​o​v​a​t​.​“
+				 * A​b​y​c​h​o​m​ ​V​á​m​ ​d​a​l​i​ ​č​a​s​ ​n​a​ ​p​ř​e​m​ý​š​l​e​n​í​,​ ​b​u​d​e​m​e​ ​V​a​š​e​ ​o​d​p​o​v​ě​d​i​ ​z​a​z​n​a​m​e​n​á​v​a​t​ ​z​v​u​k​o​v​ě​.​ ​J​a​k​m​i​l​e​ ​d​o​č​t​e​t​e​ ​t​u​t​o​ ​i​n​s​t​r​u​k​c​i​,​ ​ř​e​k​n​ě​t​e​ ​t​o​ ​a​d​m​i​n​i​s​t​r​á​t​o​r​o​v​i​,​ ​k​t​e​r​ý​ ​s​p​u​s​t​í​ ​n​a​h​r​á​v​á​n​í​ ​a​ ​v​y​z​v​e​ ​V​á​s​,​ ​a​b​y​s​t​e​ ​p​ř​e​š​l​i​ ​k​ ​ú​k​o​l​u​.​ ​J​a​k​m​i​l​e​ ​u​v​i​d​í​t​e​ ​d​a​n​ý​ ​p​r​o​f​i​l​,​ ​m​ů​ž​e​t​e​ ​z​a​č​í​t​ ​s​v​é​ ​m​y​š​l​e​n​k​y​ ​ř​í​k​a​t​ ​n​a​h​l​a​s​.​ ​A​ž​ ​b​u​d​e​t​e​ ​s​ ​o​d​p​o​v​ě​d​í​ ​h​o​t​o​v​i​,​ ​o​z​n​a​m​t​e​ ​t​o​ ​a​d​m​i​n​i​s​t​r​á​t​o​r​o​v​i​ ​a​ ​z​m​á​č​k​n​ě​t​e​ ​t​l​a​č​í​t​k​o​ ​„​J​i​ž​ ​j​s​e​m​ ​ř​e​k​l​/​a​ ​v​š​e​.​ ​P​o​k​r​a​č​o​v​a​t​.​“
 				 */
 				'2': string
 			}
@@ -245,7 +245,7 @@ export type TranslationFunctions = {
 		text: () => LocalizedString
 	}
 	/**
-	 * Blah blah blah
+	 * Aplikace je součástí výzkumu na Fakultě sociálních studií Masarykovy univerzity.
 	 */
 	footerText: () => LocalizedString
 	question: {
@@ -380,7 +380,7 @@ export type TranslationFunctions = {
 				 */
 				'1': () => LocalizedString
 				/**
-				 * Abychom Vám dali čas na přemýšlení, budeme Vaše odpovědi zaznamenávat zvukově. Jakmile tedy uvidíte daný profil, můžete začít své myšlenky říkat nahlas. Až budete s odpovědí hotovi, zmáčkněte tlačítko „Již jsem řekl/a vše. Pokračovat.“
+				 * Abychom Vám dali čas na přemýšlení, budeme Vaše odpovědi zaznamenávat zvukově. Jakmile dočtete tuto instrukci, řekněte to administrátorovi, který spustí nahrávání a vyzve Vás, abyste přešli k úkolu. Jakmile uvidíte daný profil, můžete začít své myšlenky říkat nahlas. Až budete s odpovědí hotovi, oznamte to administrátorovi a zmáčkněte tlačítko „Již jsem řekl/a vše. Pokračovat.“
 				 */
 				'2': () => LocalizedString
 			}

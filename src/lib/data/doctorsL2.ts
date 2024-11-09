@@ -34,14 +34,6 @@ export const doctorsL2: IDoctorObjectL2[] = [
         statement: "MUDr. Krejčí mi pomohla s dlouhodobými bolestmi hlavy. Po několika návštěvách jsme našli správnou léčbu. Ordinace je v pořádku, ale na sestru jsem si musel zvyknout, působí trochu odměřeně.",
         reviewer_nick: "P.N.",
         type: "distraktor"
-    },
-    {
-        nr: "0",
-        nr2: "d",
-        star_statement: "4",
-        statement: "Paní doktorka Krejčí je velmi pečlivá, vše vždy vysvětlí a nechá mě spolurozhodovat. Čekací doby jsou krátké, což oceňuji. Ordinace je dobře vybavená, ale možná by mohla být trochu útulnější. ",
-        reviewer_nick: "T.V.",
-        type: "distraktor"
     }
     ]
   },
@@ -56,7 +48,7 @@ export const doctorsL2: IDoctorObjectL2[] = [
         nr: "1",
         nr2: "a",
         star_statement: "3",
-        statement: "Dr. Svoboda mi správně diagnostikoval vysoký krevní tlak, ale zanedbal vysvětlení ohledně změny životního stylu. Až po několika kontrolách jsme začali řešit i stravu a pohyb. Mohlo to být rovnou.",
+        statement: "Pan doktor Svoboda mi zjistil vysoký tlak a nasadil potřebné léky. Na každé kontrole sledoval, jak na to reaguju, a podle toho dávky měnil. Léčba probíhala podle potřeby a bez větších komplikací.",
         reviewer_nick: "A.H.",
         type: "tech_mid"
     },
@@ -64,7 +56,7 @@ export const doctorsL2: IDoctorObjectL2[] = [
         nr: "1",
         nr2: "b",
         star_statement: "5",
-        statement: "Měl jsem hrozné bolesti zad a pan doktor mě vzal bez čekání. V klidu mě vyslechl a navrhl další postup. Moc si cením, že jsem se u něj mohl na všechno zeptat a věděl jsem, co se bude dít.",
+        statement: "Měl jsem velké bolesti zad a pan doktor mě vzal hned. Byl moc ochotný, vyslechl mě a všechno mi v klidu vysvětlil. Oceňuju, že se zajímal, co mě trápí, a dal mi pocit, že na mě záleží.",
         reviewer_nick: "L.D.",
         type: "com_high"
     },
@@ -72,16 +64,8 @@ export const doctorsL2: IDoctorObjectL2[] = [
         nr: "1",
         nr2: "c",
         star_statement: "4",
-        statement: "U pana doktora je vždy příjemná atmosféra a ordinace je pěkně udržovaná. Jsem jeho pacient už několik let a nikdy jsem neměl problém. Celkově jsem spokojený, nemám co vytknout.",
+        statement: "Návštěvy probíhají bez problémů a nemám žádné stížnosti. Ordinace moderní a čistá, vždy se tam cítím dobře. Celkově spokojenost, i když prostředí by mohlo být trochu útulnější.",
         reviewer_nick: "R.B.",
-        type: "distraktor"
-    },
-    {
-        nr: "1",
-        nr2: "d",
-        star_statement: "4",
-        statement: "Pan doktor Svoboda se o mě i o manžela stará už dlouho a vždy jsme obě spokojené. Ordinace je čistá a útulná, vše probíhá hladce. Občas bych uvítala více pozornosti k detailům.",
-        reviewer_nick: "E.Z.",
         type: "distraktor"
     }
     ]
@@ -105,7 +89,7 @@ export const doctorsL2: IDoctorObjectL2[] = [
         nr: "10",
         nr2: "b",
         star_statement: "3",
-        statement: "Pan doktor vše srozumitelně vysvětlil, ale objednání bylo složité a čekací doba dlouhá. Na otázky nezbylo moc času, což mě mrzelo. Jinak je dobrý, ale očekával jsem trochu lepší komunikaci. ",
+        statement: "Pan doktor se snažil se odpovědět na mé otázky, ale neměl na mě moc času. Objednání bylo složité a čekací doba dlouhá, což nebylo příjemné. Jinak je ale vstřícný a dává pocit, že se zajímá.",
         reviewer_nick: "N.P.",
         type: "com_mid"
     },
@@ -113,16 +97,8 @@ export const doctorsL2: IDoctorObjectL2[] = [
         nr: "10",
         nr2: "c",
         star_statement: "4",
-        statement: "Pan doktor Král má moderní a klidnou ordinaci. Jsem jeho pacient už několik let a jsem spokojený. Mohl by ale zlepšit webové stránky, aby bylo možné se objednat i online.",
+        statement: "Pan doktor Král má moderní ordinaci, kde se vždy cítím dobře. Nemám si na co stěžovat, vše je v pořádku. Uvítal bych však hezčí webové stránky. ",
         reviewer_nick: "V.K.",
-        type: "distraktor"
-    },
-    {
-        nr: "10",
-        nr2: "d",
-        star_statement: "4",
-        statement: "Ordinace pana doktora je velmi čistá a moderní. Personál je milý a vše probíhá hladce. V čekárně by mohlo být více míst k sezení, jinak nemám žádné výhrady. ",
-        reviewer_nick: "E.S.",
         type: "distraktor"
     }
     ]
@@ -149,14 +125,6 @@ export const doctorsL2: IDoctorObjectL2[] = [
         statement: "Dr. Novotný je můj lékař už několik let, ale někdy působí odměřeně. Objednání je vždy bez problémů a rychlé, ale komunikace by mohla být vstřícnější. Celkově spokojenost, ale ne úplná",
         reviewer_nick: "D.M.",
         type: "com_mid"
-    },
-    {
-        nr: "11",
-        nr2: "c",
-        star_statement: "4",
-        statement: "MUDr. Novotný se stará o mě i o mého manžela a jsme oba spokojení. Ordinace je moderní a dobře udržovaná. Jen bych uvítala příjemnější prostředí v čekárně, občas je tam dost rušno. ",
-        reviewer_nick: "F.V.",
-        type: "distraktor"
     },
     {
         nr: "11",
@@ -190,14 +158,6 @@ export const doctorsL2: IDoctorObjectL2[] = [
         statement: "Výborný přístup pana doktora, objednání proběhlo hladce a čekání bylo krátké. Vždy si na mě udělal čas, vše vysvětlil a dal mi prostor se rozhodnout. Ordinace je klidná a příjemná. ",
         reviewer_nick: "L.M.",
         type: "com_high"
-    },
-    {
-        nr: "12",
-        nr2: "c",
-        star_statement: "4",
-        statement: "K panu doktorovi chodím už roky a vždy jsem spokojený. Prostředí ordinace je uklizené a moderní. Jediné, co by se dalo zlepšit, je čekárna, která by mohla být pohodlnější.",
-        reviewer_nick: "T.Č.",
-        type: "distraktor"
     },
     {
         nr: "12",
@@ -239,14 +199,6 @@ export const doctorsL2: IDoctorObjectL2[] = [
         statement: "Ordinace paní doktorky je vždy pěkně uklizená, což je pro mě důležité. Návštěvy probíhají v pořádku a nikdy nečekám dlouho. Celkově dobré, jen by mohla být čekárna trochu útulnější. ",
         reviewer_nick: "T.D.",
         type: "distraktor"
-    },
-    {
-        nr: "13",
-        nr2: "d",
-        star_statement: "4",
-        statement: "Paní doktorka Zemanová má moderní ordinaci, kde se vždy cítím dobře. Nemám si na co stěžovat, vše je v pořádku. Uvítal bych však lepší komunikaci přes jejich webové stránky. ",
-        reviewer_nick: "J.K.",
-        type: "distraktor"
     }
     ]
   },
@@ -269,17 +221,9 @@ export const doctorsL2: IDoctorObjectL2[] = [
         nr: "14",
         nr2: "b",
         star_statement: "3",
-        statement: "Paní doktorka Horáková je milá, ale čeká se u ní déle. Při návštěvě mi vše vysvětlila, ale měla málo času na mé otázky. Celkově spokojená, ale uvítala bych víc klidu na konzultaci.",
+        statement: "Paní doktorka Horáková je milá, ale čeká se u ní déle a má málo času na mé otázky. Celkově spokojená, ale uvítala bych víc klidu na konzultaci, bojím se, že něco zapomenu.",
         reviewer_nick: "L.B.",
         type: "com_mid"
-    },
-    {
-        nr: "14",
-        nr2: "c",
-        star_statement: "4",
-        statement: "MUDr. Horáková má pěknou ordinaci, kde se cítím pohodlně. K lékařce chodím už několik let a nemám žádné výhrady. Čekárna by však mohla být lepší, někdy je tam dost přeplněno. ",
-        reviewer_nick: "N.J.",
-        type: "distraktor"
     },
     {
         nr: "14",
@@ -302,7 +246,7 @@ export const doctorsL2: IDoctorObjectL2[] = [
         nr: "15",
         nr2: "a",
         star_statement: "3",
-        statement: "U pana doktora jsem dlouhodobým pacientem kvůli chronickým bolestem zad. Můj stav se zlepšuje, jen mě mrzí, že o žádanku na rehabilitaci jsem si musel vysloveně říct sám.",
+        statement: "U pana doktora jsem kvůli chronickým bolestem zad. Můj stav se zlepšuje, jen mě mrzí, že léčbu si vymýšlím spíš já (o žádanku na rehabilitaci jsem si musel vysloveně říct).",
         reviewer_nick: "E.R.",
         type: "tech_mid"
     },
@@ -318,16 +262,8 @@ export const doctorsL2: IDoctorObjectL2[] = [
         nr: "15",
         nr2: "c",
         star_statement: "4",
-        statement: "Ordinace je moderní a čistá, což oceňuji. Návštěvy probíhají hladce a vše je v pořádku. V čekárně někdy bývá hodně lidí, ale asi to svědčí o oblíbenosti pana doktora. Děkuji.",
+        statement: "Jsem dlouholetým pacientem a nemám žádné problémy s návštěvami. Přístup do budovy by mohla být pohodlnější, a v čekárně je občas málo místa k sezení. Jinak spokojenost.",
         reviewer_nick: "S.T.",
-        type: "distraktor"
-    },
-    {
-        nr: "15",
-        nr2: "d",
-        star_statement: "4",
-        statement: "Pan doktor Vávra má u nás doma dobrou pověst, chodí k němu celá naše rodina. Nemám si na co stěžovat, snad jen čekárna by mohla být pohodlnější. Celkově dobrý dojem.",
-        reviewer_nick: "D.K.",
         type: "distraktor"
     }
     ]
@@ -362,14 +298,6 @@ export const doctorsL2: IDoctorObjectL2[] = [
         statement: "Vše bylo v pořádku jako vždycky. K paní doktorce Benešové chodí i moje sestra a také je spokojená. Uvítal bych ale více pohodlné prostředí v čekárně, jinak bez výhrad. ",
         reviewer_nick: "I.B.",
         type: "distraktor"
-    },
-    {
-        nr: "16",
-        nr2: "d",
-        star_statement: "4",
-        statement: "Jsem dlouholetým pacientem a nemám žádné problémy s návštěvami. Přístup do budovy by mohla být pohodlnější, a v čekárně je občas málo místa k sezení. Jinak spokojenost.",
-        reviewer_nick: "R.L.",
-        type: "distraktor"
     }
     ]
   },
@@ -403,14 +331,6 @@ export const doctorsL2: IDoctorObjectL2[] = [
         statement: "V ordinaci paní doktorky Malé je vždy čisto a klid. Už několik let k ní chodím a nikdy jsem neměla důvod k nespokojenosti. Celkově jsem spokojená, asi je vždycky trochu co zlepšit.",
         reviewer_nick: "S.M.",
         type: "distraktor"
-    },
-    {
-        nr: "2",
-        nr2: "d",
-        star_statement: "4",
-        statement: "U paní doktorky je vždy klidná atmosféra a ordinace je velmi čistá. Chodím k ní už roky a jsem spokojená. Všechno probíhá hladce, nenapadá mě, co vytknout.",
-        reviewer_nick: "O.L.",
-        type: "distraktor"
     }
     ]
   },
@@ -425,7 +345,7 @@ export const doctorsL2: IDoctorObjectL2[] = [
         nr: "3",
         nr2: "a",
         star_statement: "3",
-        statement: "Paní doktorka Veselá mi léčila kožní problém, ale první léčba nebyla dostatečná. Když jsem se ptal na alternativy, dostal jsem odpovědi až později. Celkově spokojený, ale chyběla mi větší jasnost.",
+        statement: "Paní doktorka Veselá mi léčila kožní problém, ale první léčba nezabrala, jak se čekalo. Později mi nasadila jinou léčbu, která byla účinnější. Celkově jsem spokojený s výsledkem, ale léčba mohla být přesnější hned na začátku.",
         reviewer_nick: "F.K.",
         type: "tech_mid"
     },
@@ -436,14 +356,6 @@ export const doctorsL2: IDoctorObjectL2[] = [
         statement: "K MUDr. Veselé chodí moje maminka už delší dobu. Je pečlivá, ale někdy působí přísně. Objednací doba je rychlá, ale při návštěvách mám pocit, že bychom uvítaly více empatie.",
         reviewer_nick: "N.S.",
         type: "com_mid"
-    },
-    {
-        nr: "3",
-        nr2: "c",
-        star_statement: "4",
-        statement: "Paní doktorka má čistou a příjemnou ordinaci, kde se cítím dobře. Už několik let k ní chodím a nemám žádné vážné výhrady. Možná by mohla zlepšit vzhled webu, působí zastarale.",
-        reviewer_nick: "K.T.",
-        type: "distraktor"
     },
     {
         nr: "3",
@@ -485,14 +397,6 @@ export const doctorsL2: IDoctorObjectL2[] = [
         statement: "Ordinace pana doktora Marka působí moderně a čistě. Jsem jeho pacient už léta a s péčí jsem spokojený. Nemám zásadní výhrady, ale čekárna by mohla být pohodlnější.",
         reviewer_nick: "P.V.",
         type: "distraktor"
-    },
-    {
-        nr: "4",
-        nr2: "d",
-        star_statement: "4",
-        statement: "Každá návštěva u pana doktora probíhá v pořádku a nemám žádné výhrady. Celkově jsem spokojený, ale přístup sestry by mohl být trochu vřelejší. Prostředí ordinace čisté a moderní.",
-        reviewer_nick: "M.H.",
-        type: "distraktor"
     }
     ]
   },
@@ -525,14 +429,6 @@ export const doctorsL2: IDoctorObjectL2[] = [
         star_statement: "4",
         statement: "V ordinaci pana doktora Doležala je vždy uklizeno a čistota je na vysoké úrovni. Jsem jeho dlouhodobý pacient a vše probíhá v pořádku. Přál bych si jen trochu útulnější čekárnu.",
         reviewer_nick: "A.K.",
-        type: "distraktor"
-    },
-    {
-        nr: "5",
-        nr2: "d",
-        star_statement: "4",
-        statement: "Ordinace pana doktora je po rekonstrukci opravdu pěkná, vždy se tam cítím dobře. Všechno probíhá hladce, nic mě vyloženě nepřekvapilo. Celkově spokojenost.",
-        reviewer_nick: "R.T.",
         type: "distraktor"
     }
     ]
@@ -567,14 +463,6 @@ export const doctorsL2: IDoctorObjectL2[] = [
         statement: "Pan doktor Hruška má moderní a vždy uklizenou ordinaci. Jsem jeho pacient už nějakou dobu a neměl jsem důvod si stěžovat. Jediné, co by se dalo trochu zlepšit, je přístup personálu.",
         reviewer_nick: "V.J.",
         type: "distraktor"
-    },
-    {
-        nr: "6",
-        nr2: "d",
-        star_statement: "4",
-        statement: "Návštěvy probíhají bez problémů a nemám žádné stížnosti. Ordinace moderní a čistá, vždy se tam cítím dobře. Celkově spokojenost, i když prostředí by mohlo být trochu útulnější.",
-        reviewer_nick: "O.B.",
-        type: "distraktor"
     }
     ]
   },
@@ -589,7 +477,7 @@ export const doctorsL2: IDoctorObjectL2[] = [
         nr: "7",
         nr2: "a",
         star_statement: "3",
-        statement: "Paní doktorka mi při léčbě bolesti zad zapomněla zmínit důležité vedlejší účinky léků. Až když jsem měl problémy, léky změnila. Léčba pak pokračovala dobře, ale chyběla mi předchozí varování.",
+        statement: "Paní doktorka mi předepsala léky na bolest zad, ale neřekla o vedlejších účincích. Po problémech mi léky změnila. Léčba nakonec zabrala, ale ocenil bych přesnější nastavení hned na začátku.",
         reviewer_nick: "F.P.",
         type: "tech_mid"
     },
@@ -605,16 +493,8 @@ export const doctorsL2: IDoctorObjectL2[] = [
         nr: "7",
         nr2: "c",
         star_statement: "4",
-        statement: "Ordinace paní doktorky je klidná. Jsem u ní už několik let a všechno probíhá v pořádku. Celkově úplná spokojenost, i když bych snad uvítal trochu přátelštější přístup personálu.",
+        statement: "K paní doktorce chodím už roky a vždy jsem spokojený. Prostředí ordinace je uklizené a moderní. Jediné, co by se dalo zlepšit, je čekárna, která by mohla být pohodlnější.",
         reviewer_nick: "N.M.",
-        type: "distraktor"
-    },
-    {
-        nr: "7",
-        nr2: "d",
-        star_statement: "4",
-        statement: "MUDr. Pospíšilová má velmi klidnou a pěknou ordinaci. Jsem spokojená s každou návštěvou, všechno probíhá hladce. Chodí sem i moje maminka, obě se rády vracíme.",
-        reviewer_nick: "K.H.",
         type: "distraktor"
     }
     ]
@@ -641,14 +521,6 @@ export const doctorsL2: IDoctorObjectL2[] = [
         statement: "Paní doktorka byla moc empatická, moji maminku trpělivě vyslechla a všechno jí srozumitelně vysvětlila. Maminka se u ní cítila dobře a já jsem klidná, že je konečně v dobrých rukou.",
         reviewer_nick: "J.V.",
         type: "com_high"
-    },
-    {
-        nr: "8",
-        nr2: "c",
-        star_statement: "4",
-        statement: "U paní doktorky Kučerové jsem tři roky, nikdy jsem neměl problémy. Jsem spokojený, čekárna v nové ordinaci působí trochu průměrně, ale nic zásadního nechybí.",
-        reviewer_nick: "P.R.",
-        type: "distraktor"
     },
     {
         nr: "8",
@@ -682,14 +554,6 @@ export const doctorsL2: IDoctorObjectL2[] = [
         statement: "Paní doktorka Nováková mě vždy vyslechne a dá mi dostatek času. Objednání bývá jednoduché a nemusí se dlouho čekat. Vždy mi vše vysvětlí a připadám si, že mě bere vážně. Doporučuji! ",
         reviewer_nick: "R.V.",
         type: "com_high"
-    },
-    {
-        nr: "9",
-        nr2: "c",
-        star_statement: "4",
-        statement: "Ordinace paní doktorky je dobře udržovaná. Jsem spokojený s prostředím, nikdy jsem neměl problém. Webové stránky by mohly být přehlednější, někdy se špatně hledají informace. ",
-        reviewer_nick: "T.K.",
-        type: "distraktor"
     },
     {
         nr: "9",

@@ -25,23 +25,25 @@ export const Default: Story = {
 		reviewCount: 70,
 		reviews: [
 			{
-				id: '1',
-				title: 'A. K.',
+				id: '8_a',
 				rating: 5,
 				review:
-					'Doktorka je velmi příjemná a ochotná. Vždy se snaží poradit a pomoci. Vřele doporučuji.'
+					'Paní doktorka Kučerová mi zjistila ledvinové kameny a doporučila efektivní léčbu. Díky ní jsem se vyhnul operaci. Je opravdu profesionál a ví, jak nejlépe pomoct. Moc děkuji! ',
+				title: 'I.K.'
 			},
 			{
-				id: '2',
-				title: 'R. T.',
+				id: '8_b',
+				rating: 5,
+				review:
+					'Paní doktorka byla moc empatická, moji maminku trpělivě vyslechla a všechno jí srozumitelně vysvětlila. Maminka se u ní cítila dobře a já jsem klidná, že je konečně v dobrých rukou.',
+				title: 'J.V.'
+			},
+			{
+				id: '8_c',
 				rating: 4,
-				review: 'Doktorka je trpělivá a vždy se snaží poradit. Jsem s ní velmi spokojená.'
-			},
-			{
-				id: '3',
-				title: 'E. N.',
-				rating: 2,
-				review: 'Doktorka je neochotná a nepříjemná. Nedoporučuji.'
+				review:
+					'V ordinaci paní doktorky je vždy čisto a klid. Návštěvy probíhají bez problémů, ale občas mi chybí trochu víc přátelské atmosféry. Jinak všechno v pořádku, prostě praktický lékař.',
+				title: 'M.Š.'
 			}
 		]
 	}
