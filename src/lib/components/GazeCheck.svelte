@@ -122,14 +122,14 @@
 						<TableBodyCell
 							class={isMetricCritical(metrics.accuracy, 'accuracy') ? 'bg-red-100' : 'bg-green-100'}
 						>
-							{metrics.accuracy}
+							{roundToTwo(metrics.accuracy)}
 						</TableBodyCell>
 						<TableBodyCell
 							class={isMetricCritical(metrics.precision, 'precision')
 								? 'bg-red-100'
 								: 'bg-green-100'}
 						>
-							{metrics.precision}
+							{roundToTwo(metrics.precision)}
 						</TableBodyCell>
 						<TableBodyCell
 							class={isMetricCritical(metrics.gazePointCount, 'gazePointCount')

@@ -33,6 +33,8 @@
 
 	export let doctorManager: IDoctorManager = new DoctorManagerMock();
 
+	export let timeoutBeforeLikert: number = 3000;
+
 	const dispatch = createEventDispatcher();
 
 	let timerStart: number = 0;
@@ -114,6 +116,7 @@
 					{starFillColor}
 					{starOutlineColor}
 					{starOutlineWidth}
+					{timeoutBeforeLikert}
 					on:load={handleLoad}
 					on:input={handleInput}
 					on:likertVisible={handleLikertVisible}

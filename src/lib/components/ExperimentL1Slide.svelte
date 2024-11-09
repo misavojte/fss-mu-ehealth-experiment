@@ -44,7 +44,7 @@
 	export let doctorNrRating: number = 22;
 	export let doctorName: string = 'MUDr. Eva Malá';
 
-	export let timeoutBeforeLikert: number = 5000;
+	export let timeoutBeforeLikert: number = 3000;
 
 	export let width: number = 720;
 

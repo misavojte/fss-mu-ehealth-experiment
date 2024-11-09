@@ -5,7 +5,9 @@
 	export let pictureBase: string;
 	export let doctorManager: IDoctorManager;
 
+	const timeoutBeforeLikert: number = 3000;
+
 	const doctors = doctorManager.getL1ObjectForTrial();
 </script>
 
-<ExperimentL1Slides {pictureBase} {doctorManager} {doctors} on:finish />
+<ExperimentL1Slides {timeoutBeforeLikert} {pictureBase} {doctorManager} {doctors} on:finish />
